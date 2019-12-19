@@ -1,8 +1,4 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+require('semantic-ui-css/semantic.min.css')
 require("prismjs/themes/prism-tomorrow.css")
 require('prismjs/plugins/line-numbers/prism-line-numbers.css')
 require("./src/styles/markdown.css")

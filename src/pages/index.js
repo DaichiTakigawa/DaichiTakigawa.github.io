@@ -1,5 +1,9 @@
 import React from 'react'
 
+import Layout from '../components/organisms/homeLayout'
+
 export default () => (
-  <dev>Hello Takgiawa</dev>
+  <Layout>
+
+  </Layout>
 )

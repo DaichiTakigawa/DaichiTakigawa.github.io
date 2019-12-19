@@ -1,7 +1,7 @@
 import Typography from 'typography'
-import fiaryGatesTheme from 'typography-theme-fairy-gates'
+import fiaryGateTheme from 'typography-theme-fairy-gates'
 
-const typography = new Typography(fiaryGatesTheme)
+const typography = new Typography(fiaryGateTheme)
 
 export default typography
 
