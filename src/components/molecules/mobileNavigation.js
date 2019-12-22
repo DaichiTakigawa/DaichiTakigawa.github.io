@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import {Segment} from "semantic-ui-react"
 
 import { scale, rhythm } from "../../utils/typography"
 

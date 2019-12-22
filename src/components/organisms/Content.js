@@ -8,20 +8,23 @@ import MoblieNavigation from "../molecules/MobileNavigation"
 import breakpoints from "../../utils/breakpoint"
 
 export default class Content extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      type: "",
-    }
-  }
-
   render() {
     return (
       <div>
-        <Responsive minWidth={breakpoints.tabletLb} style={{ display: "flex" }}>
+        <Responsive
+          minWidth={breakpoints.computerLb}
+          style={{ display: "flex" }}
+        >
           <Navigation />
           <Container>{this.props.children}</Container>
+        </Responsive>
+        <Responsive
+          minWidth={breakpoints.tabletLb}
+          maxWidth={breakpoints.tabletUb}
+          style={{ display: "flex" }}
+        >
+          <Navigation />
+          <TabletContainer>{this.props.children}</TabletContainer>
         </Responsive>
         <Responsive maxWidth={breakpoints.moblieUb} style={{ padding: 0 }}>
           <MoblieNavigation />
@@ -34,16 +37,24 @@ export default class Content extends React.Component {
 
 const Container = styled.div`
   padding-top: ${rhythm(4)}
-  padding-left: ${rhythm(2)}
-  padding-right: ${rhythm(2)}
+  margin-left: 10%
+  margin-right: 10%
   padding-bottom: ${rhythm(2)}
-  width: 100%
+  flex-grow: 1
+`
+
+const TabletContainer = styled.div`
+  padding-top: ${rhythm(4)}
+  padding-left: 1%
+  padding-right: 1%
+  padding-bottom: ${rhythm(2)}
+  flex-shrink: 1
 `
 
 const MobileContainer = styled.div`
   padding-top: ${rhythm(2)}
-  padding-left: ${rhythm(1/2)}
-  padding-right: ${rhythm(1/2)}
+  padding-left: ${rhythm(1 / 2)}
+  padding-right: ${rhythm(1 / 2)}
   padding-bottom: ${rhythm(1)}
   width: 100%
 `
