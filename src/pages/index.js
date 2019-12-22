@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react"
 
-import Layout from '../components/organisms/homeLayout'
+import Content from "../components/organisms/Content"
+import App from "../components/organisms/App"
+import Home from "../components/molecules/Home"
+
 
 export default () => (
-  <Layout>
+  <App>
+    <Content>
+      <Home>
 
-  </Layout>
+      </Home>
+    </Content>
+  </App>
 )

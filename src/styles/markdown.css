@@ -1,12 +1,11 @@
-
 .gatsby-code-title {
   margin-bottom: -0.6rem;
   padding: 0.5em 1em;
   margin-left: 0.5rem;
   margin-right: 70%;
-  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
-    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
     monospace;
 
   background-color: #272822;
@@ -19,13 +18,14 @@
   font-size: 0.8rem;
 }
 
-code[class*="language-"], pre[class*="language-"] {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    background-color: #454545;
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  background-color: #454545;
 }
 
 .line-numbers .line-numbers-rows {
-    margin-left: 1rem;
-    margin-top: 0.9rem;
+  margin-left: 1rem;
+  margin-top: 0.9rem;
 }
