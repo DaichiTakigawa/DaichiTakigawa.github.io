@@ -1,47 +1,56 @@
 import React from "react"
 import styled from "styled-components"
+import NoSSR from "react-no-ssr"
 import { Responsive } from "semantic-ui-react"
 import { rhythm } from "../../utils/typography"
 
 import Navigation from "../molecules/Navigation"
 import MoblieNavigation from "../molecules/MobileNavigation"
-import breakpoints from "../../utils/breakpoint"
 
 export default class Content extends React.Component {
   render() {
     return (
-      <div>
-        <Responsive
-          minWidth={breakpoints.computerLb}
-          style={{ display: "flex" }}
-        >
-          <Navigation />
-          <Container>{this.props.children}</Container>
-        </Responsive>
-        <Responsive
-          minWidth={breakpoints.tabletLb}
-          maxWidth={breakpoints.tabletUb}
-          style={{ display: "flex" }}
-        >
-          <Navigation />
-          <TabletContainer>{this.props.children}</TabletContainer>
-        </Responsive>
-        <Responsive maxWidth={breakpoints.moblieUb} style={{ padding: 0 }}>
-          <MoblieNavigation />
-          <MobileContainer>{this.props.children}</MobileContainer>
-        </Responsive>
-      </div>
+      <NoSSR>
+        <Layout>
+          <Responsive
+            minWidth={Responsive.onlyComputer.minWidth}
+            style={{ display: "flex" }}
+          >
+            <Navigation />
+            <Container>{this.props.children}</Container>
+          </Responsive>
+          <Responsive
+            minWidth={Responsive.onlyTablet.minWidth}
+            maxWidth={Responsive.onlyTablet.maxWidth}
+            style={{ display: "flex" }}
+          >
+            <Navigation />
+            <TabletContainer>{this.props.children}</TabletContainer>
+          </Responsive>
+          <Responsive
+            maxWidth={Responsive.onlyMobile.maxWidth}
+            style={{ padding: 0 }}
+          >
+            <MoblieNavigation />
+            <MobileContainer>{this.props.children}</MobileContainer>
+          </Responsive>
+        </Layout>
+      </NoSSR>
     )
   }
 }
 
+const Layout = styled.div`
+  background-color: #eeeeee;
+`
 const Container = styled.div`
-  padding: ${rhythm(4)} 10%
+  margin: ${rhythm(4)} 10%
   flex-grow: 1
 `
 
 const TabletContainer = styled.div`
-  padding: ${rhythm(4)} 1%
+  margin: ${rhythm(2)} auto
+  padding: 0 ${rhythm(1)}
   flex-shrink: 1
 `
 

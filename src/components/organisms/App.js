@@ -3,10 +3,6 @@ import styled from "styled-components"
 
 export default class App extends React.Component {
   render() {
-    return <Container>{this.props.children}</Container>
+    return <div>{this.props.children}</div>
   }
 }
-
-const Container = styled.div`
-  background-color: #eeeeee
-`
