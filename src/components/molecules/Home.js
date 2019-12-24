@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Image, Divider, Container, Flag, Responsive } from "semantic-ui-react"
+import { Image, Divider, Flag, Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import src from "../../../contents/images/profile.jpg"
@@ -22,14 +22,14 @@ export default () => (
         TAKIGAWA MEMO
       </Responsive>
       <StyledDivider />
-      <Image src={src} fluid />
+      <Image src={src} fluid alt="profile_image"/>
       <Responsive as={Text} minWidth={Responsive.onlyTablet.minWidth}>
         <p>
           I'm a software engineer in Tokyo, Japan <Flag name="japan" />
         </p>
         <p>備忘録のためにまとめたブログです。</p>
         <p>
-          主に、Android、AWS、Windowsのことについてまとめていきたいと思っています。
+          主に、Android、AWS、Windowsのことについてまとめていきたいです。
         </p>
         <p>競技プログラミングもやっています。 </p>
         <p>
@@ -45,7 +45,7 @@ export default () => (
         </p>
         <p>備忘録のためにまとめたブログです。</p>
         <p>
-          主に、Android、AWS、Windowsのことについてまとめていきたいと思っています。
+          主に、Android、AWS、Windowsのことについてまとめていきたいです。
         </p>
         <p>競技プログラミングもやっています。 </p>
         <p>

@@ -4,7 +4,6 @@ date: "2019-07-17 16:00:00 +0800"
 slug: "/my-third-post/"
 thumbnail: "linux.jpg"
 description: "とりあえずブログを初めてみました。"
-category: "linux"
 tags:
     - "life"
     - "computer"

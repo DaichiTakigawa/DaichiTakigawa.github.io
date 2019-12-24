@@ -3,7 +3,6 @@ title: "My Second Post"
 date: "2019-07-16 16:00:00 +0800"
 slug: "/my-second-post/"
 thumbnail: "linux.jpg"
-category: "linux"
 tags:
     - "life"
     - "computer"

@@ -3,7 +3,6 @@ title: "My First Post"
 date: "2019-07-14 16:00:00 +0800"
 slug: "/my-first-post/"
 thumbnail: "linux.jpg"
-category: "linux"
 tags:
     - "life"
     - "computer"

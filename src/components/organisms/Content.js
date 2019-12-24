@@ -8,32 +8,53 @@ import Navigation from "../molecules/Navigation"
 import MoblieNavigation from "../molecules/MobileNavigation"
 
 export default class Content extends React.Component {
+  getResponsive() {
+    let active = this.props.active
+    return (
+      <Responsive
+        minWidth={Responsive.onlyComputer.minWidth}
+        style={{ display: "flex" }}
+      >
+        <Navigation active={active} />
+        <Container>{this.props.children}</Container>
+      </Responsive>
+    )
+  }
+
+  getTabletResponsive() {
+    let active = this.props.active
+    return (
+      <Responsive
+        minWidth={Responsive.onlyTablet.minWidth}
+        maxWidth={Responsive.onlyTablet.maxWidth}
+        style={{ display: "flex" }}
+      >
+        <Navigation active={active} />
+        <TabletContainer>{this.props.children}</TabletContainer>
+      </Responsive>
+    )
+  }
+
+  getMobileResponsive() {
+    let active = this.props.active
+    return (
+      <Responsive
+        maxWidth={Responsive.onlyMobile.maxWidth}
+        style={{ padding: 0 }}
+      >
+        <MoblieNavigation active={active} />
+        <MobileContainer>{this.props.children}</MobileContainer>
+      </Responsive>
+    )
+  }
+
   render() {
     return (
       <NoSSR>
         <Layout>
-          <Responsive
-            minWidth={Responsive.onlyComputer.minWidth}
-            style={{ display: "flex" }}
-          >
-            <Navigation />
-            <Container>{this.props.children}</Container>
-          </Responsive>
-          <Responsive
-            minWidth={Responsive.onlyTablet.minWidth}
-            maxWidth={Responsive.onlyTablet.maxWidth}
-            style={{ display: "flex" }}
-          >
-            <Navigation />
-            <TabletContainer>{this.props.children}</TabletContainer>
-          </Responsive>
-          <Responsive
-            maxWidth={Responsive.onlyMobile.maxWidth}
-            style={{ padding: 0 }}
-          >
-            <MoblieNavigation />
-            <MobileContainer>{this.props.children}</MobileContainer>
-          </Responsive>
+          {this.getResponsive()}
+          {this.getTabletResponsive()}
+          {this.getMobileResponsive()}
         </Layout>
       </NoSSR>
     )
@@ -51,7 +72,7 @@ const Container = styled.div`
 const TabletContainer = styled.div`
   margin: ${rhythm(2)} auto
   padding: 0 ${rhythm(1)}
-  flex-shrink: 1
+  width: 100%
 `
 
 const MobileContainer = styled.div`

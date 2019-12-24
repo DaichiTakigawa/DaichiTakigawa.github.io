@@ -2,14 +2,14 @@ import React from "react"
 
 import Content from "../components/organisms/Content"
 import App from "../components/organisms/App"
-import Home from "../components/molecules/Home"
+import BlogList from "../components/molecules/BlogList"
 import Seo from "../components/atoms/Seo"
 
 export default () => (
   <App>
-    <Seo title="たきがわのメモ" description="備忘録" />
-    <Content active="Home">
-      <Home />
+    <Seo title="ブログ" description="ブログ" />
+    <Content active="Blog">
+      <BlogList />
     </Content>
   </App>
 )

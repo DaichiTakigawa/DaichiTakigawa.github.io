@@ -11,7 +11,7 @@ export default class MoblieNavigation extends React.Component {
 
 const Nav = styled.div`
   font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(2)}
+  line-height: ${rhythm(3)}
   text-align: center
   background-color: white
   border: 1px solid rgb(221, 221, 221);
