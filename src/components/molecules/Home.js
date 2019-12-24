@@ -8,7 +8,6 @@ import breakpoints from "../../utils/breakpoint"
 
 export default () => (
   <Segment>
-    <Image src={src} fluid />
     <StyledContainer text>
       <Responsive as={Title} minWidth={breakpoints.tabletLb}>
         TAKIGAWA MEMO
@@ -17,12 +16,13 @@ export default () => (
         TAKIGAWA MEMO
       </Responsive>
       <StyledDivider />
+      <Image src={src} fluid />
       <Styledp>
         I'm a software engineer in Tokyo, Japan <Flag name="japan" />
       </Styledp>
-      <Styledp>都内に住む大学生が備忘録のためにまとめたブログです。</Styledp>
+      <Styledp>備忘録のためにまとめたブログです。</Styledp>
       <Styledp>
-        主に、Android、AWS、Windowsのことについてまとめていきたいと思います。
+        主に、Android、AWS、Windowsのことについてまとめていきたいと思っています。
       </Styledp>
       <Styledp>競技プログラミングもやっています。</Styledp>
       <Styledp>

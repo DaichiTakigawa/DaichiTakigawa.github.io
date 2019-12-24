@@ -5,16 +5,12 @@ import { scale, rhythm } from "../../utils/typography"
 
 export default class MoblieNavigation extends React.Component {
   render() {
-    return (
-      <Nav>
-        TAKIGAWA MEMO
-      </Nav>
-    )
+    return <Nav>TAKIGAWA MEMO</Nav>
   }
 }
 
 const Nav = styled.div`
-  font-size: ${scale(1/2).fontSize}
+  font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(2)}
   text-align: center
   background-color: white

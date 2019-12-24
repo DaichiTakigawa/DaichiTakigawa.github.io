@@ -36,18 +36,12 @@ export default class Content extends React.Component {
 }
 
 const Container = styled.div`
-  padding-top: ${rhythm(4)}
-  margin-left: 10%
-  margin-right: 10%
-  padding-bottom: ${rhythm(2)}
+  padding: ${rhythm(4)} 10%
   flex-grow: 1
 `
 
 const TabletContainer = styled.div`
-  padding-top: ${rhythm(4)}
-  padding-left: 1%
-  padding-right: 1%
-  padding-bottom: ${rhythm(2)}
+  padding: ${rhythm(4)} 1%
   flex-shrink: 1
 `
 

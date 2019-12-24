@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Divider, List, Icon } from "semantic-ui-react"
 
 import Title from "../atoms/Title"
-import { scale, rhythm } from "../../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 export default class Navigation extends React.Component {
   render() {

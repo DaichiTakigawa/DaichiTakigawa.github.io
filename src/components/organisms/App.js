@@ -8,5 +8,5 @@ export default class App extends React.Component {
 }
 
 const Container = styled.div`
-  background-color: #EEEEEE
+  background-color: #eeeeee
 `
