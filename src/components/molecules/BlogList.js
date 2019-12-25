@@ -35,10 +35,8 @@ class BlogList extends React.Component {
 
   getlist() {
     let edges = this.data.allMarkdownRemark.edges
-    console.log(edges)
     return edges.map(obj => {
       let info = obj.node.frontmatter
-      console.log(info.description)
       return <Item info={info} />
     })
   }
@@ -90,7 +88,6 @@ class Item extends React.Component {
     let description = info.description
     let date = info.date
     let tags = info.tags
-    console.log(tags)
     return (
       <div>
         <StyledLink to={slug}>{title}</StyledLink>

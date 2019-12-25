@@ -5,59 +5,59 @@ import { scale, rhythm } from "../../utils/typography"
 
 import src from "../../../contents/images/profile.jpg"
 
-export default () => (
-  <Segment>
-    <StyledContainer>
-      <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
-        TAKIGAWA MEMO
-      </Responsive>
-      <Responsive
-        as={TabletTitle}
-        minWidth={Responsive.onlyTablet.minWidth}
-        maxWidth={Responsive.onlyTablet.maxWidth}
-      >
-        TAKIGAWA MEMO
-      </Responsive>
-      <Responsive as={MobileTitle} maxWidth={Responsive.onlyMobile.maxWidth}>
-        TAKIGAWA MEMO
-      </Responsive>
-      <StyledDivider />
-      <Image src={src} fluid alt="profile_image"/>
-      <Responsive as={Text} minWidth={Responsive.onlyTablet.minWidth}>
-        <p>
-          I'm a software engineer in Tokyo, Japan <Flag name="japan" />
-        </p>
-        <p>備忘録のためにまとめたブログです。</p>
-        <p>
-          主に、Android、AWS、Windowsのことについてまとめていきたいです。
-        </p>
-        <p>競技プログラミングもやっています。 </p>
-        <p>
-          Atcoder: <a href="https://atcoder.jp/users/Bobyama">Bobyama</a>
-          <br />
-          TopCoder:{" "}
-          <a href="https://www.topcoder.com/members/Bobyama">Bobyama</a>
-        </p>
-      </Responsive>
-      <Responsive as={MobileText} maxWidth={Responsive.onlyMobile.maxWidth}>
-        <p>
-          I'm a software engineer in Tokyo, Japan <Flag name="japan" />
-        </p>
-        <p>備忘録のためにまとめたブログです。</p>
-        <p>
-          主に、Android、AWS、Windowsのことについてまとめていきたいです。
-        </p>
-        <p>競技プログラミングもやっています。 </p>
-        <p>
-          Atcoder: <a href="https://atcoder.jp/users/Bobyama">Bobyama</a>
-          <br />
-          TopCoder:{" "}
-          <a href="https://www.topcoder.com/members/Bobyama">Bobyama</a>
-        </p>
-      </Responsive>
-    </StyledContainer>
-  </Segment>
-)
+export default class Home extends React.Component {
+
+  getText() {
+    return (
+    <div>
+      <p>
+        I'm a software engineer in Tokyo, Japan <Flag name="japan" />
+      </p>
+      <p>備忘録のためにまとめたブログです。</p>
+      <p>主に、Android、AWS、Windowsのことについてまとめていきたいです。</p>
+      <p>競技プログラミングもやっています。 </p>
+      <p>
+        Atcoder: <a href="https://atcoder.jp/users/Bobyama">Bobyama</a> <span style={{fontSize: scale(0).fontSize}}>(1762)</span>
+        <br />
+        TopCoder: <a href="https://www.topcoder.com/members/Bobyama">Bobyama</a> <span style={{fontSize: scale(0).fontSize}}>(1335)</span>
+      </p>
+    </div>
+    )
+  }
+
+  render() {
+    return (
+      <Segment>
+        <Image src={src} fluid alt="profile_image" />
+        <StyledContainer>
+          <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
+            TAKIGAWA MEMO
+          </Responsive>
+          <Responsive
+            as={TabletTitle}
+            minWidth={Responsive.onlyTablet.minWidth}
+            maxWidth={Responsive.onlyTablet.maxWidth}
+          >
+            TAKIGAWA MEMO
+          </Responsive>
+          <Responsive
+            as={MobileTitle}
+            maxWidth={Responsive.onlyMobile.maxWidth}
+          >
+            TAKIGAWA MEMO
+          </Responsive>
+          <StyledDivider />
+          <Responsive as={Text} minWidth={Responsive.onlyTablet.minWidth}>
+            {this.getText()}
+          </Responsive>
+          <Responsive as={MobileText} maxWidth={Responsive.onlyMobile.maxWidth}>
+            {this.getText()}
+          </Responsive>
+        </StyledContainer>
+      </Segment>
+    )
+  }
+}
 
 const Segment = styled.div`
   background-color: white
@@ -79,21 +79,18 @@ const StyledDivider = styled(Divider)`
 const Title = styled.h1`
   font-size: ${scale(2).fontSize}
   line-height: ${rhythm(4)}
-  text-align: center
   color: #333333
   padding-top: ${rhythm(2)}
 `
 const TabletTitle = styled.h1`
   font-size: ${scale(3 / 2).fontSize}
   line-height: ${rhythm(3)}
-  text-align: center
   color: #333333
   padding-top: ${rhythm(2)}
 `
 const MobileTitle = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
-  text-align: center
   color: #333333
   padding-top: ${rhythm(1)}
 `
@@ -101,12 +98,9 @@ const MobileTitle = styled.h1`
 const Text = styled.p`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(2)}
-  text-align: center
 `
 
 const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
   line-height: ${rhythm(1)}
-  text-align: center
-  padding-top: ${rhythm(1)}
 `

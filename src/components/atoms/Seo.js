@@ -15,6 +15,7 @@ export default class Seo extends React.Component {
           {
             name: "description",
             content: { description },
+            charSet: "utf-8",
           },
         ]}
       />

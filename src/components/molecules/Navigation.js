@@ -4,73 +4,30 @@ import styled from "styled-components"
 import { Divider, List, Icon } from "semantic-ui-react"
 
 import Title from "../atoms/Title"
-import { rhythm } from "../../utils/typography"
+import { scale, rhythm } from "../../utils/typography"
 
 export default class Navigation extends React.Component {
   getLinkList() {
     let active = this.props.active
-    let res
-    if (active === "Home") {
-      res = (
-        <List link style={{ padding: `0 ${rhythm(2)}` }}>
-          <List.Item active>Home</List.Item>
-          <List.Item as={StyledLink} to="/blog">
-            Blog
-          </List.Item>
-          <List.Item as={StyledLink} to="/about">
-            About
-          </List.Item>
-          <List.Item as={StyledLink} to="/contact">
-            Contact
-          </List.Item>
-        </List>
-      )
-    } else if (active === "Blog") {
-      res = (
-        <List link style={{ padding: `0 ${rhythm(2)}` }}>
-          <List.Item as={StyledLink} to="/">
-            Home
-          </List.Item>
-          <List.Item active>Blog</List.Item>
-          <List.Item as={StyledLink} to="/about">
-            About
-          </List.Item>
-          <List.Item as={StyledLink} to="/contact">
-            Contact
-          </List.Item>
-        </List>
-      )
-    } else if (active === "About") {
-      res = (
-        <List link style={{ padding: `0 ${rhythm(2)}` }}>
-          <List.Item as={StyledLink} to="/">
-            Home
-          </List.Item>
-          <List.Item as={StyledLink} to="/blog">
-            Blog
-          </List.Item>
-          <List.Item active>About</List.Item>
-          <List.Item as={StyledLink} to="/contact">
-            Contact
-          </List.Item>
-        </List>
-      )
-    } else if (active === "Contact") {
-      res = (
-        <List link style={{ padding: `0 ${rhythm(2)}` }}>
-          <List.Item as={StyledLink} to="/">
-            Home
-          </List.Item>
-          <List.Item as={StyledLink} to="/blog">
-            Blog
-          </List.Item>
-          <List.Item as={StyledLink} to="/about">
-            About
-          </List.Item>
-          <List.Item active>Contact</List.Item>
-        </List>
-      )
-    }
+    let res = (
+      <List
+        link
+        style={{ padding: `0 ${rhythm(2)}`, fontSize: scale(1 / 2).fontSize }}
+      >
+        <List.Item active={active === "Home"} as={StyledLink} to="/">
+          Home
+        </List.Item>
+        <List.Item active={active === "Blog"} as={StyledLink} to="/blog">
+          Blog
+        </List.Item>
+        <List.Item active={active === "About"} as={StyledLink} to="/about">
+          About
+        </List.Item>
+        <List.Item active={active === "Contact"} as={StyledLink} to="/contact">
+          Contact
+        </List.Item>
+      </List>
+    )
     return res
   }
 
@@ -95,9 +52,11 @@ export default class Navigation extends React.Component {
     return (
       <Nav>
         <Title />
-        <Divider style={{ margin: `${rhythm(2)} ${rhythm(1)}` }} />
-        {this.getLinkList()}
-        {this.getSNSLink()}
+        <StyledSticky>
+          <Divider style={{ margin: `${rhythm(2)} ${rhythm(1)}` }} />
+          {this.getLinkList()}
+          {this.getSNSLink()}
+        </StyledSticky>
       </Nav>
     )
   }
@@ -110,7 +69,6 @@ const Nav = styled.div`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
   flex-grow: 0
   flex-shrink: 0
-  height: 1200px
 `
 
 const StyledLink = styled(Link)`
@@ -118,4 +76,9 @@ const StyledLink = styled(Link)`
 `
 const Styleda = styled.a`
   background-image: none;
+`
+
+const StyledSticky = styled.div`
+  position: sticky;
+  top 0;
 `
