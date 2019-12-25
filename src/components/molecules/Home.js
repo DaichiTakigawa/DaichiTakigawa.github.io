@@ -6,22 +6,22 @@ import { scale, rhythm } from "../../utils/typography"
 import src from "../../../contents/images/profile.jpg"
 
 export default class Home extends React.Component {
-
   getText() {
     return (
-    <div>
-      <p>
-        I'm a software engineer in Tokyo, Japan <Flag name="japan" />
-      </p>
-      <p>備忘録のためにまとめたブログです。</p>
-      <p>主に、Android、AWS、Windowsのことについてまとめていきたいです。</p>
-      <p>競技プログラミングもやっています。 </p>
-      <p>
-        Atcoder: <a href="https://atcoder.jp/users/Bobyama">Bobyama</a> <span style={{fontSize: scale(0).fontSize}}>(1762)</span>
-        <br />
-        TopCoder: <a href="https://www.topcoder.com/members/Bobyama">Bobyama</a> <span style={{fontSize: scale(0).fontSize}}>(1335)</span>
-      </p>
-    </div>
+      <div>
+        <p>
+          I'm a software engineer in Tokyo, Japan <Flag name="japan" />
+        </p>
+        <p>備忘録のためにまとめたブログです。</p>
+        <p>主に、Android、AWS、Windowsのことについてまとめていきたいです。</p>
+        <p>競技プログラミングもやっています。 </p>
+        <p>
+          Atcoder: <a href="https://atcoder.jp/users/Bobyama">Bobyama</a> (1762)
+          <br />
+          TopCoder:{" "}
+          <a href="https://www.topcoder.com/members/Bobyama">Bobyama</a> (1335)
+        </p>
+      </div>
     )
   }
 
@@ -97,7 +97,7 @@ const MobileTitle = styled.h1`
 
 const Text = styled.p`
   font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(2)}
+  line-height: ${rhythm(4)}
 `
 
 const MobileText = styled.p`

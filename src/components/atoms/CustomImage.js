@@ -35,7 +35,6 @@ export default ({fileName, alt}) => (
       const imageSizes = image.node.childImageSharp.sizes
       return (
         <Img
-          ref={image}
           sizes={imageSizes}
           alt={alt}
         />

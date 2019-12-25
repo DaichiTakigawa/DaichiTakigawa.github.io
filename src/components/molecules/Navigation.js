@@ -12,7 +12,7 @@ export default class Navigation extends React.Component {
     let res = (
       <List
         link
-        style={{ padding: `0 ${rhythm(2)}`, fontSize: scale(1 / 2).fontSize }}
+        style={{ padding: `0 ${rhythm(2)}`, fontSize: scale(0).fontSize }}
       >
         <List.Item active={active === "Home"} as={StyledLink} to="/">
           Home
@@ -63,7 +63,7 @@ export default class Navigation extends React.Component {
 }
 
 const Nav = styled.div`
-  padding: ${rhythm(1)}
+  padding-top: ${rhythm(2)}
   background-color: white
   border: 1px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;

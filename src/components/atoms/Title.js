@@ -19,7 +19,8 @@ const Title = styled.h3`
   text-align: center
   color: #474747
   border: 2px solid #787878
-  margin: ${rhythm(1)} auto
+  margin-left: ${rhythm(1)}
+  margin-right: ${rhythm(1)}
   padding: ${rhythm(3)} ${rhythm(1)}
   &:hover {
     background-color: #4f4f4f

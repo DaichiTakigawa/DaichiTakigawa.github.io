@@ -1,8 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
-import { Responsive, Divider, Icon, Label } from "semantic-ui-react"
+import { Responsive, Divider, Label } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
+
+import CutomImage from "../atoms/CustomImage"
 
 export default () => (
   <StaticQuery
@@ -17,6 +19,9 @@ export default () => (
                 slug
                 date(formatString: "YYYY.MM.DD")
                 tags
+                thumbnail {
+                  name
+                }
               }
             }
           }
@@ -35,10 +40,19 @@ class BlogList extends React.Component {
 
   getlist() {
     let edges = this.data.allMarkdownRemark.edges
-    return edges.map(obj => {
-      let info = obj.node.frontmatter
-      return <Item info={info} />
-    })
+    return edges
+      .sort((obj1, obj2) => {
+        let date1 = obj1.node.frontmatter.date
+        let date2 = obj2.node.frontmatter.date
+        console.log(obj1)
+        console.log("date1:" + date1)
+        console.log("date2:" + date2)
+        return date1 < date2
+      })
+      .map(obj => {
+        let info = obj.node.frontmatter
+        return <Item info={info} />
+      })
   }
 
   render() {
@@ -88,16 +102,40 @@ class Item extends React.Component {
     let description = info.description
     let date = info.date
     let tags = info.tags
+    let name = info.thumbnail.name
     return (
       <div>
-        <StyledLink to={slug}>{title}</StyledLink>
-        <Info>
-          <Date>
-            {date}
-            {this.getTags(tags)}
-          </Date>
-        </Info>
-        <Description>{description}</Description>
+        <Responsive
+          as={FlexContainer}
+          minWidth={Responsive.onlyTablet.minWidth}
+        >
+          <div style={{ width: rhythm(8), marginRight: rhythm(2) }}>
+            <CutomImage fileName={name} alt="thumbnail" />
+          </div>
+          <div style={{ flexGrow: "1" }}>
+            <StyledLink to={slug}>{title}</StyledLink>
+            <Info>
+              <Date>
+                {date}
+                {this.getTags(tags)}
+              </Date>
+            </Info>
+            <Description>{description}</Description>
+          </div>
+        </Responsive>
+        <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
+          <CutomImage fileName={name} alt="thumbnail" />
+          <div>
+            <StyledLink to={slug}>{title}</StyledLink>
+            <Info>
+              <Date>
+                {date}
+                {this.getTags(tags)}
+              </Date>
+            </Info>
+            <Description>{description}</Description>
+          </div>
+        </Responsive>
         <Divider />
       </div>
     )
@@ -153,4 +191,8 @@ const Date = styled.h2`
   font-size: ${scale(0).fontSize}
   line-height: ${rhythm(1)}
   color:  #4b5454
+`
+
+const FlexContainer = styled.div`
+  display: flex;
 `

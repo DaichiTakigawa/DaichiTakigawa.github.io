@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `TAKIGWA'S MEMO`,
-    description: `日頃の備忘録をまとめたものです。\n主に、Android、AWS、競プロ、Windowsのことについて書いていきます。`,
+    title: `たきがわのメモ`,
+    description: `日頃の備忘録をまとめたものです。
+    主に、Android、AWS、競プロ、Windowsのことについて書いていきます。
+    競技プログラミングもやっています。
+    `,
     author: `Daichi Takigawa`,
   },
   plugins: [
@@ -25,8 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `TAKIGAWA'S MEMO`,
-        short_name: `TAKIGAWA'S MEMO`,
+        name: `たきがわのメモ`,
+        short_name: `たきがわ`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
