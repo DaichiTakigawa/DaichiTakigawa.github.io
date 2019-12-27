@@ -21,6 +21,7 @@ export default class MoblieNavigation extends React.Component {
         <AngleIcon
           name="angle up"
           color="grey"
+          size="large"
           onClick={e => {
             this.setState({ expanded: false })
           }}
@@ -31,6 +32,7 @@ export default class MoblieNavigation extends React.Component {
         <AngleIcon
           name="angle down"
           color="grey"
+          size="large"
           onClick={e => {
             this.setState({ expanded: true })
           }}
@@ -45,27 +47,42 @@ export default class MoblieNavigation extends React.Component {
     let res
     if (this.state.expanded) {
       res = (
-        <List
-          link
-          style={{ padding: `0 ${rhythm(2)}`, fontSize: scale(0).fontSize }}
-        >
-          <List.Item active={active === "Home"} as={StyledLink} to="/">
-            Home
-          </List.Item>
-          <List.Item active={active === "Blog"} as={StyledLink} to="/blog">
-            Blog
-          </List.Item>
-          <List.Item active={active === "About"} as={StyledLink} to="/about">
-            About
-          </List.Item>
-          <List.Item
-            active={active === "Contact"}
-            as={StyledLink}
-            to="/contact"
-          >
-            Contact
-          </List.Item>
-        </List>
+        <WhiteBackground>
+          <StyledList link>
+            <List.Item
+              active={active === "Home"}
+              as={StyledLink}
+              to="/"
+              style={{ textAlign: "center" }}
+            >
+              Home
+            </List.Item>
+            <List.Item
+              active={active === "Blog"}
+              as={StyledLink}
+              to="/blog"
+              style={{ textAlign: "center" }}
+            >
+              Blog
+            </List.Item>
+            <List.Item
+              active={active === "About"}
+              as={StyledLink}
+              to="/about"
+              style={{ textAlign: "center" }}
+            >
+              About
+            </List.Item>
+            <List.Item
+              active={active === "Contact"}
+              as={StyledLink}
+              to="/contact"
+              style={{ textAlign: "center" }}
+            >
+              Contact
+            </List.Item>
+          </StyledList>
+        </WhiteBackground>
       )
     } else {
       res = null
@@ -78,11 +95,11 @@ export default class MoblieNavigation extends React.Component {
     let menu = this.getMenu()
     return (
       <div>
-        {menu}
         <Nav>
           TAKIGAWA MEMO
           {icon}
         </Nav>
+        {menu}
       </div>
     )
   }
@@ -101,10 +118,25 @@ const Nav = styled.div`
 const AngleIcon = styled(Icon)`
   float: right
   position: absolute
-  top: 0
+  top: ${rhythm(3/4)}
   right: ${rhythm(1 / 4)}
+  &:hover {
+    cursor: pointer
+  }
 `
 
 const StyledLink = styled(Link)`
   background-image: none;
+`
+
+const StyledList = styled(List)`
+  font-size: ${scale(0).fontSize};
+`
+
+const WhiteBackground = styled.div`
+  background-color: white
+  padding: ${rhythm(1)} 0
+  position: absolute
+  width: 100%
+  z-index: 1
 `

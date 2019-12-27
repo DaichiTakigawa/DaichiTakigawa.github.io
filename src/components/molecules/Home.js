@@ -12,7 +12,7 @@ export default class Home extends React.Component {
         <p>
           I'm a software engineer in Tokyo, Japan <Flag name="japan" />
         </p>
-        <p>備忘録のためにまとめたブログです。</p>
+        <p>プログラミング初心者が備忘録としてまとめたブログです。</p>
         <p>主に、Android、AWS、Windowsのことについてまとめていきたいです。</p>
         <p>競技プログラミングもやっています。 </p>
         <p>

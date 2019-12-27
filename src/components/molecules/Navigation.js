@@ -36,7 +36,7 @@ export default class Navigation extends React.Component {
       <List
         link
         horizontal
-        style={{ paddingLeft: rhythm(1), paddingTop: rhythm(2) }}
+        style={{ paddingLeft: rhythm(2), paddingTop: rhythm(2) }}
       >
         <List.Item as={Styleda} href="https://github.com/DaichiTakigawa">
           <Icon name="github" size="large" />
