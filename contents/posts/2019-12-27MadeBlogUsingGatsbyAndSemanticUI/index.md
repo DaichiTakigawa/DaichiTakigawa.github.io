@@ -1,11 +1,12 @@
 ---
-title: "My First Post"
-date: "2019-07-14 16:00:00 +0800"
-slug: "/my-first-post/"
+title: "Hello World"
+date: "2019-12-27 23:00:00 +0800"
+slug: "/Hello-World/"
 thumbnail: "linux.jpg"
+description: "GatsbyとSemanticUIを用いたブログを作成しました。"
 tags:
-    - "life"
-    - "computer"
+    - "SemanticUI"
+    - "Gatsby"
 ---
 
 # my fist post

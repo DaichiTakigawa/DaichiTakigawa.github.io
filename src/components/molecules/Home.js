@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { Image, Divider, Flag, Responsive } from "semantic-ui-react"
+import { Divider, Flag, Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
-import src from "../../../contents/images/profile.jpg"
+import CustomImage from "../atoms/CustomImage"
 
 export default class Home extends React.Component {
   getText() {
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Segment>
-        <Image src={src} fluid alt="profile_image" />
+        <CustomImage fileName="profile" alt="profile"/>
         <StyledContainer>
           <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
             TAKIGAWA MEMO
@@ -72,7 +72,6 @@ const StyledContainer = styled.div`
 `
 
 const StyledDivider = styled(Divider)`
-  padding: ${rhythm(1)} 
   padding-left: ${rhythm(1)}
   margin-left: ${rhythm(1)}
 `
@@ -98,9 +97,11 @@ const MobileTitle = styled.h1`
 const Text = styled.p`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(4)}
+  margin-top: ${rhythm(2)}
 `
 
 const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
   line-height: ${rhythm(1)}
+  margin-top: ${rhythm(1)}
 `

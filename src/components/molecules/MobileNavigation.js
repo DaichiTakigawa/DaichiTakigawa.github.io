@@ -120,9 +120,6 @@ const AngleIcon = styled(Icon)`
   position: absolute
   top: ${rhythm(3/4)}
   right: ${rhythm(1 / 4)}
-  &:hover {
-    cursor: pointer
-  }
 `
 
 const StyledLink = styled(Link)`
@@ -137,6 +134,8 @@ const WhiteBackground = styled.div`
   background-color: white
   padding: ${rhythm(1)} 0
   position: absolute
+  border-bottom: 1px solid rgb(230, 230, 230);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
   width: 100%
   z-index: 1
 `

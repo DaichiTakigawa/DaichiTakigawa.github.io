@@ -55,17 +55,12 @@ const Segment = styled.div`
   border: 1px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
 `
-
 const StyledContainer = styled.div`
   padding-top: ${rhythm(4)}
   padding-bottom: ${rhythm(4)}
   margin: auto
   width: 80%
 `
-const Styleda = styled.a`
-  background-image: none;
-`
-
 const StyledHtml = styled.div`
   padding-top: ${rhythm(2)};
   .anchor {

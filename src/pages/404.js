@@ -5,7 +5,7 @@ import { scale, rhythm } from "../utils/typography"
 
 import SEO from "../components/atoms/Seo"
 
-const Index = () => (
+export default () => (
   <Container textAlign="center" style={{ paddingTop: rhythm(4) }}>
     <SEO title="404" description="無効なURLです。" />
     <Title>404</Title>
@@ -29,5 +29,3 @@ const Text = styled.p`
   line-height: ${rhythm(2)}
   margin: ${rhythm(3)}
 `
-
-export default Index
