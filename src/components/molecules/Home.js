@@ -9,18 +9,40 @@ export default class Home extends React.Component {
   getText() {
     return (
       <div>
-        <p>
+        <P>
           I'm a software engineer in Tokyo, Japan <Flag name="japan" />
-        </p>
-        <p>プログラミング初心者が備忘録としてまとめたブログです。</p>
-        <p>主に、Android、AWS、Windowsのことについてまとめていきたいです。</p>
-        <p>競技プログラミングもやっています。 </p>
-        <p>
-          Atcoder: <a href="https://atcoder.jp/users/Bobyama">Bobyama</a> (1762)
-          <br />
-          TopCoder:{" "}
-          <a href="https://www.topcoder.com/members/Bobyama">Bobyama</a> (1335)
-        </p>
+        </P>
+        <Header>運営者について</Header>
+        <P>都内に住むプログラミング素人の大学生です。</P>
+        <ul>
+          <Li>
+            GitHub:{" "}
+            <a href="https://github.com/DaichiTakigawa">
+              https://github.com/DaichiTakigawa
+            </a>
+          </Li>
+        </ul>
+        <Header>スキル</Header>
+        <ul>
+          <Li>Androidアプリ開発 : アルバイトで半年ほど</Li>
+          <Li>AWSでのサーバレス開発 : まだ始めたばっかりです... (´· ·`) </Li>
+        </ul>
+        <P>フロントエンドはド素人です。機械学習とかもちゃんと勉強したい。</P>
+        <P>競技プログラミングもやっています。 </P>
+        <TightText>
+          Atcoder :{" "}
+          <a href="https://atcoder.jp/users/Bobyama">
+            https://atcoder.jp/users/Bobyama
+          </a>{" "}
+          (Rating : 1762)
+        </TightText>
+        <TightText>
+          TopCoder :{" "}
+          <a href="https://www.topcoder.com/members/Bobyama">
+            https://www.topcoder.com/members/Bobyama
+          </a>{" "}
+          (Raging : 1335)
+        </TightText>
       </div>
     )
   }
@@ -28,7 +50,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Segment>
-        <CustomImage fileName="profile" alt="profile"/>
+        <CustomImage fileName="profile" alt="profile" />
         <StyledContainer>
           <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
             TAKIGAWA MEMO
@@ -95,13 +117,31 @@ const MobileTitle = styled.h1`
 `
 
 const Text = styled.p`
-  font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(4)}
+  font-size: ${scale(1 / 4).fontSize}
   margin-top: ${rhythm(2)}
 `
 
 const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
-  line-height: ${rhythm(1)}
   margin-top: ${rhythm(1)}
+`
+
+const Header = styled.h1`
+  font-size: ${scale(1).fontSize}
+  line-height: ${rhythm(4)}
+  color: rgb(70, 70, 70);
+`
+const P = styled.p`
+  padding: ${rhythm(1)} 0
+  line-height: ${rhythm(2)};
+  color: rgb(80, 80, 80);
+`
+const Li = styled.li`
+  color: rgb(80, 80, 80);
+  line-height: ${rhythm(1)};
+`
+const TightText = styled.p`
+  color: rgb(80, 80, 80);
+  margin: ${rhythm(1)} 0
+  line-height: ${rhythm(1)};
 `
