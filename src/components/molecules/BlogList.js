@@ -44,9 +44,6 @@ class BlogList extends React.Component {
       .sort((obj1, obj2) => {
         let date1 = obj1.node.frontmatter.date
         let date2 = obj2.node.frontmatter.date
-        console.log(obj1)
-        console.log("date1:" + date1)
-        console.log("date2:" + date2)
         return date1 < date2
       })
       .map(obj => {

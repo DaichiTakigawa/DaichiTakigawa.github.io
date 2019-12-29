@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { Icon, List } from "semantic-ui-react"
+import { CSSTransition } from "react-transition-group"
 
 import { scale, rhythm } from "../../utils/typography"
 
@@ -12,82 +13,63 @@ export default class MoblieNavigation extends React.Component {
     this.state = {
       expanded: false,
     }
+    this.onMount = true
   }
 
   getIcon() {
-    let res
-    if (this.state.expanded) {
-      res = (
-        <AngleIcon
-          name="angle up"
-          color="grey"
-          size="large"
-          onClick={e => {
-            this.setState({ expanded: false })
-          }}
-        />
-      )
-    } else {
-      res = (
-        <AngleIcon
-          name="angle down"
-          color="grey"
-          size="large"
-          onClick={e => {
-            this.setState({ expanded: true })
-          }}
-        />
-      )
-    }
-    return res
+    return (
+      <AngleIcon
+        name="angle down"
+        color="grey"
+        size="large"
+        className="angileIcon"
+        onClick={e => {
+          this.setState({ expanded: !this.state.expanded })
+        }}
+      />
+    )
   }
 
   getMenu() {
     let active = this.props.active
-    let res
-    if (this.state.expanded) {
-      res = (
-        <WhiteBackground>
-          <StyledList link>
-            <List.Item
-              active={active === "Home"}
-              as={StyledLink}
-              to="/"
-              style={{ textAlign: "center" }}
-            >
-              Home
-            </List.Item>
-            <List.Item
-              active={active === "Blog"}
-              as={StyledLink}
-              to="/blog"
-              style={{ textAlign: "center" }}
-            >
-              Blog
-            </List.Item>
-            <List.Item
-              active={active === "About"}
-              as={StyledLink}
-              to="/about"
-              style={{ textAlign: "center" }}
-            >
-              About
-            </List.Item>
-            <List.Item
-              active={active === "Contact"}
-              as={StyledLink}
-              to="/contact"
-              style={{ textAlign: "center" }}
-            >
-              Contact
-            </List.Item>
-          </StyledList>
-        </WhiteBackground>
-      )
-    } else {
-      res = null
-    }
-    return res
+    return (
+      <WhiteBackground visible={this.state.expanded} className="menu">
+        <StyledList link>
+          <List.Item
+            active={active === "Home"}
+            as={StyledLink}
+            to="/"
+            style={{ textAlign: "center" }}
+          >
+            Home
+          </List.Item>
+          <List.Item
+            active={active === "Blog"}
+            as={StyledLink}
+            to="/blog"
+            style={{ textAlign: "center" }}
+          >
+            Blog
+          </List.Item>
+          <List.Item
+            active={active === "About"}
+            as={StyledLink}
+            to="/about"
+            style={{ textAlign: "center" }}
+          >
+            About
+          </List.Item>
+          <List.Item
+            active={active === "Contact"}
+            as={StyledLink}
+            to="/contact"
+            style={{ textAlign: "center" }}
+          >
+            Contact
+          </List.Item>
+        </StyledList>
+      </WhiteBackground>
+    )
   }
 
   render() {
@@ -95,11 +77,19 @@ export default class MoblieNavigation extends React.Component {
     let menu = this.getMenu()
     return (
       <div>
-        <Nav>
+        <Nav bottomShadow={!this.state.expanded}>
           TAKIGAWA MEMO
-          {icon}
+          <CSSTransition
+            in={this.state.expanded}
+            timeout={200}
+            classNames="angleIcon"
+          >
+            {icon}
+          </CSSTransition>
         </Nav>
-        {menu}
+        <CSSTransition in={this.state.expanded} timeout={200} classNames="menu">
+          {menu}
+        </CSSTransition>
       </div>
     )
   }
@@ -111,14 +101,16 @@ const Nav = styled.div`
   text-align: center
   background-color: white
   border: 1px solid rgb(221, 221, 221);
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+  box-shadow: ${props =>
+    props.bottomShadow ? "rgba(0, 0, 0, 0.2) 0px 1px 2px;" : "0"}
   position: relative
+  z-index: 2
 `
 
 const AngleIcon = styled(Icon)`
   float: right
   position: absolute
-  top: ${rhythm(3/4)}
+  top: ${rhythm(3 / 4)}
   right: ${rhythm(1 / 4)}
 `
 
@@ -138,4 +130,5 @@ const WhiteBackground = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
   width: 100%
   z-index: 1
+  visibility: ${props => props.visible ? "visible" : "hidden"}
 `

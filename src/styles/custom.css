@@ -2,3 +2,59 @@
 body {
   overflow-x: unset; 
 }
+
+/* angleアイコンアニメーション */
+
+.angileIcon-enter {
+  transform: rotate(0deg);
+}
+
+.angleIcon-enter-active {
+  transform: rotate(180deg);
+  transition: transform 100ms;
+}
+
+.angleIcon-enter-done {
+  transform: rotate(180deg);
+}
+
+.angleIcon-exit {
+  transform: rotate(-180deg);
+}
+
+.angleIcon-exit-active {
+  transform: rotate(0deg);
+  transition: transform 100ms;
+}
+
+.angleIcon-exit-done {
+  transform: rotate(0deg);
+}
+
+/* menuアニメーション */
+
+.menu-enter {
+  transform: translateY(-100vh) translateY(0px);
+}
+.menu-enter-active {
+  transform: translate(0px, 0px); 
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.menu-enter-done {
+  transform: translate(0px, 0px); 
+}
+
+.menu-exit {
+  transform: translate(0px, 0px); 
+
+}
+
+.menu-exit-active {
+  transform: translateY(-100vh) translateY(0px);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.menu-exit-done {
+  transform: translateY(-100vh) translateY(0px);
+}

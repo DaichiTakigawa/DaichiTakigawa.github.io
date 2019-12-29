@@ -24,7 +24,6 @@ export default class BlogPage extends React.Component {
 
   render() {
     let meta = this.props.metadata
-    console.log(meta)
     return (
       <Segment>
         <StyledContainer>
