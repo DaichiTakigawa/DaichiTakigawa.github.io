@@ -4,8 +4,8 @@ import Helmet from "react-helmet"
 export default class Seo extends React.Component {
   render() {
     let title = this.props.title
-      ? this.props.title + " - TAKIGAWA'S MEMO"
-      : "TAKIGAWA'S MEMO"
+      ? this.props.title + " - TAKIGAWA MEMO"
+      : "TAKIGAWA MEMO"
     let description = this.props.description
 
     return (

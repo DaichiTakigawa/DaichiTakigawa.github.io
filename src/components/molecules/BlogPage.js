@@ -58,20 +58,29 @@ const StyledContainer = styled.div`
   padding-top: ${rhythm(4)}
   padding-bottom: ${rhythm(4)}
   margin: auto
-  width: 80%
+  width: 84%
 `
 const StyledHtml = styled.div`
   padding-top: ${rhythm(2)};
   .anchor {
     background-image: none;
   }
+  & > p {
+    font-size: ${scale(1 / 2).fontSize}
+    line-height: ${rhythm(2)}
+    margin: ${rhythm(1)} 0
+  }
+  & > h2 {
+    font-size: ${scale(1).fontSize}
+    line-height: ${rhythm(2)}
+  }
 `
 const Title = styled.h1`
-  font-size: ${scale(2).fontSize}
+  font-size: ${scale(3 / 2).fontSize}
   line-height: ${rhythm(3)}
 `
 const MobileTitle = styled.h1`
-  font-size: ${scale(3/2).fontSize}
+  font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
 `
 const Date = styled.h2`
