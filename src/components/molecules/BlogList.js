@@ -109,7 +109,7 @@ class Item extends React.Component {
           <div style={{ width: rhythm(8), marginRight: rhythm(2) }}>
             <CutomImage fileName={name} alt="thumbnail" />
           </div>
-          <div style={{ flexGrow: "1" }}>
+          <div style={{margin: "auto", width: "100%"}}>
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>

@@ -58,3 +58,8 @@ body {
 .menu-exit-done {
   transform: translateY(-100vh) translateY(0px);
 }
+
+/* 引用のスタイルを設定 */
+blockquote {
+  border-left: 0.54375rem solid #8fa0ba;
+}

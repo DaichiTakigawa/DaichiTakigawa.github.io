@@ -66,12 +66,12 @@ const StyledHtml = styled.div`
     background-image: none;
   }
   & > p {
-    font-size: ${scale(1 / 2).fontSize}
+    font-size: ${scale(1 / 6).fontSize}
     line-height: ${rhythm(2)}
     margin: ${rhythm(1)} 0
   }
   & > h2 {
-    font-size: ${scale(1).fontSize}
+    font-size: ${scale(1 / 2).fontSize}
     line-height: ${rhythm(2)}
   }
 `

@@ -6,6 +6,7 @@ module.exports = {
     競技プログラミングもやっています。
     `,
     author: `Daichi Takigawa`,
+    siteUrl: `https://takigawamemo.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -73,5 +74,21 @@ module.exports = {
         trackingId: "UA-155152113-1",
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://takigawamemo.netlify.com`,
+        sitemap: `https://takigawamemo.netlify.com/sitemap.xml`,
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }
