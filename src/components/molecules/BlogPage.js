@@ -42,7 +42,16 @@ export default class BlogPage extends React.Component {
           <Description>{meta.description}</Description>
           <Divider />
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
-          <StyledHtml dangerouslySetInnerHTML={{ __html: this.props.html }} />
+          <Responsive
+            as={StyledHtml}
+            minWidth={Responsive.onlyTablet.minWidth}
+            dangerouslySetInnerHTML={{ __html: this.props.html }}
+          />
+          <Responsive
+            as={MobileStyledHtml}
+            maxWidth={Responsive.onlyMobile.maxWidth}
+            dangerouslySetInnerHTML={{ __html: this.props.html }}
+          />
         </StyledContainer>
       </Segment>
     )
@@ -55,7 +64,6 @@ const Segment = styled.div`
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
 `
 const StyledContainer = styled.div`
-  padding-top: ${rhythm(4)}
   padding-bottom: ${rhythm(4)}
   margin: auto
   width: 84%
@@ -66,7 +74,23 @@ const StyledHtml = styled.div`
     background-image: none;
   }
   & > p {
-    font-size: ${scale(1 / 6).fontSize}
+    font-size: ${scale(1 / 8).fontSize}
+    line-height: ${rhythm(2)}
+    margin: ${rhythm(1)} 0
+  }
+  & > h2 {
+    font-size: ${scale(1 / 2).fontSize}
+    line-height: ${rhythm(2)}
+  }
+`
+
+const MobileStyledHtml = styled.div`
+  padding-top: ${rhythm(2)};
+  .anchor {
+    background-image: none;
+  }
+  & > p {
+    font-size: ${scale(0).fontSize}
     line-height: ${rhythm(2)}
     margin: ${rhythm(1)} 0
   }
@@ -76,10 +100,12 @@ const StyledHtml = styled.div`
   }
 `
 const Title = styled.h1`
+  padding-top: ${rhythm(4)}
   font-size: ${scale(3 / 2).fontSize}
   line-height: ${rhythm(3)}
 `
 const MobileTitle = styled.h1`
+  padding-top: ${rhythm(2)}
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
 `
@@ -91,6 +117,6 @@ const Date = styled.h2`
 
 const Description = styled.div`
   font-size: ${scale(0).fontSize}
-  line-height: ${rhythm(1)}
+  line-height: ${scale(0).lineHeight}
   margin-top: ${rhythm(1 / 2)}
 `
