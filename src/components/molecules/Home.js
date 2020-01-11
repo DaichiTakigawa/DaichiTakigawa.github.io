@@ -1,64 +1,86 @@
 import React from "react"
 import styled from "styled-components"
-import { Divider, Flag, Responsive } from "semantic-ui-react"
+import { Divider, Flag, Responsive, Table } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import CustomImage from "../atoms/CustomImage"
 
 export default class Home extends React.Component {
+  getSkillTable() {
+    return (
+      <Table
+        celled
+        striped
+        basic="very"
+        style={{
+          marginTop: rhythm(1),
+          marginBottom: rhythm(3),
+          color: "rgb(80, 80, 80)",
+        }}
+      >
+        <Table.Body>
+          <Table.Row >
+            <Table.Cell>Androidアプリ開発</Table.Cell>
+            <Table.Cell>アルバイトで開発に従事</Table.Cell>
+            <Table.Cell>since 2019.9</Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>AWSでのサーバレス開発</Table.Cell>
+            <Table.Cell>アルバイトで開発に従事</Table.Cell>
+            <Table.Cell>since 2019.12</Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>Webフロントエンド</Table.Cell>
+            <Table.Cell>GatsbyJSを用いて個人で当ブログを運営</Table.Cell>
+            <Table.Cell>since 2019.12</Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>機械学習</Table.Cell>
+            <Table.Cell>始めたい ... </Table.Cell>
+            <Table.Cell>not yet</Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>競プロ</Table.Cell>
+            <Table.Cell>
+              リクルート開催 CodeThanksFestival2018本戦出場(43位)
+              <br />
+              第二回アスプローバプログラミングコンテスト5位入賞
+            </Table.Cell>
+            <Table.Cell>since 2018.06</Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    )
+  }
+
   getText() {
     return (
       <div>
-        <P>
+        <LargeP>
           I'm a software engineer in Tokyo, Japan <Flag name="japan" />
-        </P>
+        </LargeP>
         <Header>運営者について</Header>
-        <P>都内に住むプログラミング初心者の学生です。</P>
         <P>
+          都内に住むプログラミング初心者の学生です。
+          <br />
+          <br />
           <ul>
             <Li>
-              GitHub:{" "}
+              GitHub :{" "}
               <a href="https://github.com/DaichiTakigawa">
                 https://github.com/DaichiTakigawa
+              </a>
+            </Li>
+            <Li>
+              Twitter :{" "}
+              <a href="https://twitter.com/damenin27844103">
+                https://twitter.com/damenin27844103
               </a>
             </Li>
           </ul>
         </P>
         <Header>スキル</Header>
-        <P>
-          <Divider style={{margin: "0"}}/>
-          <table>
-            <tr>
-              <th>Androidアプリ開発</th>
-              <th>アルバイトで開発に従事</th>
-              <th>since 2019.9</th>
-            </tr>
-            <tr>
-              <th>AWSでのサーバレス開発</th>
-              <th>アルバイトで開発に従事</th>
-              <th>since 2019.12</th>
-            </tr>
-            <tr>
-              <th>Webフロントエンド</th>
-              <th>GatsbyJSを用いて個人で当ブログを運営</th>
-              <th>since 2019.12</th>
-            </tr>
-            <tr>
-              <th>機械学習</th>
-              <th>始めたい ... </th>
-              <th>not yet</th>
-            </tr>
-            <tr>
-              <th>競プロ</th>
-              <th>
-                リクルート開催 CodeThanksFestival2018本戦出場(43位)
-                <br />
-                第二回アスプローバプログラミングコンテスト5位入賞
-              </th>
-              <th>since 2018.06</th>
-            </tr>
-          </table>
-        </P>
+        {this.getSkillTable()}
         <P>競技プログラミングやっています。 </P>
         <P>
           <ul>
@@ -135,12 +157,14 @@ const StyledDivider = styled(Divider)`
 const Title = styled.h1`
   font-size: ${scale(2).fontSize}
   line-height: ${rhythm(4)}
+  text-align: center
   color: #333333
   padding-top: ${rhythm(2)}
 `
 const TabletTitle = styled.h1`
   font-size: ${scale(3 / 2).fontSize}
   line-height: ${rhythm(3)}
+  text-align: center
   color: #333333
   padding-top: ${rhythm(2)}
 `
@@ -152,23 +176,34 @@ const MobileTitle = styled.h1`
 `
 
 const Text = styled.p`
-  font-size: ${scale(1 / 4).fontSize}
+  font-size: ${scale(1 / 8).fontSize}
+  line-height: ${scale(1 / 8).lineHeight}
   margin-top: ${rhythm(2)}
+  color: rgb(80, 80, 80);
 `
 
 const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
+  line-height: ${scale(0).lineHeight}
   margin-top: ${rhythm(1)}
+  color: rgb(80, 80, 80);
 `
 
 const Header = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
+  padding-top: ${rhythm(1)}
   color: rgb(70, 70, 70);
 `
 const P = styled.p`
-  margin: ${rhythm(2)} 0
-  line-height: ${rhythm(2)};
+  margin: ${rhythm(2)} 0;
+`
+const LargeP = styled.p`
+  text-align: center
+  padding-top: ${rhythm(1)}
+  padding-bottom: ${rhythm(3)}
+  font-size: ${scale(1 / 2).fontSize}
+  line-height: ${scale(1 / 2).lineHeight};
   color: rgb(80, 80, 80);
 `
 const Li = styled.li`
