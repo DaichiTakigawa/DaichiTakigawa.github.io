@@ -13798,6 +13798,13 @@ typography-theme-Wikipedia@^0.15.10:
   resolved "https://registry.yarnpkg.com/typography-theme-Wikipedia/-/typography-theme-Wikipedia-0.15.10.tgz#eec476928c265b0d1ce58cff959e54764780263d"
   integrity sha1-7sR2kowmWw0c5Yz/lZ5UdkeAJj0=
 
+typography-theme-bootstrap@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-theme-bootstrap/-/typography-theme-bootstrap-0.16.19.tgz#17b999dc2c322b3eaacc829dba52ed54e2141fbe"
+  integrity sha512-Ls7aAqSUkQj7GY5FzMZcyjUtJbHH721JYEFN0kY8e+onDe0HFNuJ8jmg3fCX2ujFxEUmf1RJ4in9X0RkTv+suw==
+  dependencies:
+    gray-percentage "^2.0.0"
+
 typography-theme-de-young@^0.16.19:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/typography-theme-de-young/-/typography-theme-de-young-0.16.19.tgz#8d5c5bbf8947a2df4b20b2b70d67fc42334272bd"
@@ -13814,6 +13821,13 @@ typography-theme-fairy-gates@^0.16.19:
   dependencies:
     gray-percentage "^2.0.0"
     typography-breakpoint-constants "^0.16.19"
+
+typography-theme-japanese-tofu@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/typography-theme-japanese-tofu/-/typography-theme-japanese-tofu-0.0.1.tgz#b61ddae960ae3096fdaf46fbbfce67c485431bec"
+  integrity sha512-voFGejqwAo3ijQQ06A0PkFhVMHAlHwoQLyAKe4TEwqQ264eM9Xbj0YjZQX/nNyOH/A+VTSxw4J0KeR2mF4RBdg==
+  dependencies:
+    gray-percentage "^2.0.0"
 
 typography@^0.16.19:
   version "0.16.19"

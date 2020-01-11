@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { Divider, Label, Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 import CustomImage from "../atoms/CustomImage"
+import Copyright from "../atoms/Copyright"
 
 export default class BlogPage extends React.Component {
   getTags(tags) {
@@ -53,6 +54,7 @@ export default class BlogPage extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.html }}
           />
         </StyledContainer>
+        <Copyright />
       </Segment>
     )
   }

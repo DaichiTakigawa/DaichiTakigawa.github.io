@@ -13,7 +13,7 @@ export default ({ title }) => (
   </Link>
 )
 
-const Title = styled.h3`
+const Title = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
   text-align: center

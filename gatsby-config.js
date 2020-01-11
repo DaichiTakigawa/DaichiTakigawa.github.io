@@ -96,11 +96,11 @@ module.exports = {
         host: `https://takigawamemo.netlify.com`,
         sitemap: `https://takigawamemo.netlify.com/sitemap.xml`,
         env: {
-          development: {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
-          },
           production: {
-            policy: [{ userAgent: "*", allow: "/" }],
+            policy: [
+              { userAgent: "*", allow: "/" },
+              { userAgent: "*", disallow: "/contact" },
+            ],
           },
         },
       },

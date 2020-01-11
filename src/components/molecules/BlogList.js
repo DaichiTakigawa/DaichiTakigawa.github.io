@@ -40,16 +40,18 @@ class BlogList extends React.Component {
 
   getlist() {
     let edges = this.data.allMarkdownRemark.edges
-    return edges
-      // .sort((obj1, obj2) => {
-      //   let date1 = obj1.node.frontmatter.date
-      //   let date2 = obj2.node.frontmatter.date
-      //   return date1 < date2
-      // })
-      .map(obj => {
-        let info = obj.node.frontmatter
-        return <Item info={info} />
-      })
+    return (
+      edges
+        // .sort((obj1, obj2) => {
+        //   let date1 = obj1.node.frontmatter.date
+        //   let date2 = obj2.node.frontmatter.date
+        //   return date1 < date2
+        // })
+        .map(obj => {
+          let info = obj.node.frontmatter
+          return <Item info={info} />
+        })
+    )
   }
 
   render() {
@@ -110,7 +112,7 @@ class Item extends React.Component {
             <CutomImage fileName={name} alt="thumbnail" />
           </div>
           <div style={{ margin: "auto", width: "100%" }}>
-            <StyledLink to={slug}>{title}</StyledLink>
+            <StyledLink to={`/blog${slug}`}>{title}</StyledLink>
             <Info>
               <Date>
                 {date}

@@ -4,6 +4,7 @@ import { Divider, Flag, Responsive, Table } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import CustomImage from "../atoms/CustomImage"
+import Copyright from "../atoms/Copyright"
 
 export default class Home extends React.Component {
   getSkillTable() {
@@ -19,7 +20,8 @@ export default class Home extends React.Component {
         }}
       >
         <Table.Body>
-          <Table.Row >
+          <Table.Row />
+          <Table.Row>
             <Table.Cell>Androidアプリ開発</Table.Cell>
             <Table.Cell>アルバイトで開発に従事</Table.Cell>
             <Table.Cell>since 2019.9</Table.Cell>
@@ -65,18 +67,18 @@ export default class Home extends React.Component {
           <br />
           <br />
           <ul>
-            <Li>
+            <li>
               GitHub :{" "}
               <a href="https://github.com/DaichiTakigawa">
                 https://github.com/DaichiTakigawa
               </a>
-            </Li>
-            <Li>
+            </li>
+            <li>
               Twitter :{" "}
               <a href="https://twitter.com/damenin27844103">
                 https://twitter.com/damenin27844103
               </a>
-            </Li>
+            </li>
           </ul>
         </P>
         <Header>スキル</Header>
@@ -84,20 +86,20 @@ export default class Home extends React.Component {
         <P>競技プログラミングやっています。 </P>
         <P>
           <ul>
-            <Li>
+            <li>
               Atcoder :{" "}
               <a href="https://atcoder.jp/users/Bobyama">
                 https://atcoder.jp/users/Bobyama
               </a>{" "}
               (Rating : 1762)
-            </Li>
-            <Li>
+            </li>
+            <li>
               TopCoder :{" "}
               <a href="https://www.topcoder.com/members/Bobyama">
                 https://www.topcoder.com/members/Bobyama
               </a>{" "}
               (Raging : 1335)
-            </Li>
+            </li>
           </ul>
         </P>
       </div>
@@ -133,6 +135,7 @@ export default class Home extends React.Component {
             {this.getText()}
           </Responsive>
         </StyledContainer>
+        <Copyright />
       </Segment>
     )
   }
@@ -197,7 +200,8 @@ const Header = styled.h1`
   color: rgb(70, 70, 70);
 `
 const P = styled.p`
-  margin: ${rhythm(2)} 0;
+  margin-bottom: ${rhythm(2)}
+  margin-top: ${rhythm(1)}
 `
 const LargeP = styled.p`
   text-align: center
@@ -206,8 +210,4 @@ const LargeP = styled.p`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${scale(1 / 2).lineHeight};
   color: rgb(80, 80, 80);
-`
-const Li = styled.li`
-  color: rgb(80, 80, 80);
-  line-height: ${rhythm(1)};
 `
