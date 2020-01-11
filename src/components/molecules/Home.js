@@ -171,6 +171,7 @@ const TabletTitle = styled.h1`
 const MobileTitle = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
+  text-align: center
   color: #333333
   padding-top: ${rhythm(1)}
 `
@@ -201,7 +202,7 @@ const P = styled.p`
 const LargeP = styled.p`
   text-align: center
   padding-top: ${rhythm(1)}
-  padding-bottom: ${rhythm(3)}
+  padding-bottom: ${rhythm(2)}
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${scale(1 / 2).lineHeight};
   color: rgb(80, 80, 80);
