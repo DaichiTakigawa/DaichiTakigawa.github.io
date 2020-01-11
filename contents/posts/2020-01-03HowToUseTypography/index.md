@@ -135,7 +135,9 @@ Typography.jsで主に利用するのがrhythmとscaleという関数なので�
 
 実際にソースコードや公式サイトで確認したわけではないので間違っていた場合はご容赦ください。
 
-まず[Typography.js](https://kyleamathews.github.io/typography.js/)の公式サイトを見ていただくと、左上にテーマを切り替えるビューがあります。
+まず[Typography.js](https://kyleamathews.github.io/typography.js/)の公式サイトを見ていただくと、右上にテーマを切り替えるビューがあります。
+
+![Typography.js公式サイト](./Screenshot_2020-01-10&#32;Typography&#32;js.png)
 
 このビューの中にはいくつか項目があります。  
 各項目の意味は以下の通りです。
@@ -167,4 +169,4 @@ lineHightにはfontSizeに対応して、いい感じにvertical rhythmされた
 
 私自身としては、vertical rhythmはなんとなく直感的に正当性を理解できるのですが、moduler scaleに関してはなぜ文字の大きさをこんな感じで決めると美しいレイアウトになるのか腑に落ちないといった感想を持ちました。...
 
-また気が向いた時に、moduler scaleの原理みたいなものもまとめて記事にしたいと思います。
+また気が向いた時に、「moduler scaleがなぜ美しいか」みたいなものもまとめて記事にしたいと思います。

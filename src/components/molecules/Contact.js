@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Image, Divider, Flag, Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 export default class Home extends React.Component {

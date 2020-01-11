@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Image, Divider, Flag, Responsive } from "semantic-ui-react"
+import { Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 export default class Home extends React.Component {
@@ -81,12 +81,4 @@ const P = styled.p`
   padding: ${rhythm(1)} 0
   line-height: ${rhythm(2)};
   color: rgb(80, 80, 80);
-`
-const Li = styled.li`
-  color: rgb(80, 80, 80);
-  line-height: ${rhythm(1)};
-`
-const TightText = styled.p`
-  color: rgb(80, 80, 80);
-  line-height: ${rhythm(3 / 2)};
 `

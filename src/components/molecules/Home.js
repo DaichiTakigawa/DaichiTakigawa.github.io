@@ -26,27 +26,58 @@ export default class Home extends React.Component {
         </P>
         <Header>スキル</Header>
         <P>
+          <Divider style={{margin: "0"}}/>
+          <table>
+            <tr>
+              <th>Androidアプリ開発</th>
+              <th>アルバイトで開発に従事</th>
+              <th>since 2019.9</th>
+            </tr>
+            <tr>
+              <th>AWSでのサーバレス開発</th>
+              <th>アルバイトで開発に従事</th>
+              <th>since 2019.12</th>
+            </tr>
+            <tr>
+              <th>Webフロントエンド</th>
+              <th>GatsbyJSを用いて個人で当ブログを運営</th>
+              <th>since 2019.12</th>
+            </tr>
+            <tr>
+              <th>機械学習</th>
+              <th>始めたい ... </th>
+              <th>not yet</th>
+            </tr>
+            <tr>
+              <th>競プロ</th>
+              <th>
+                リクルート開催 CodeThanksFestival2018本戦出場(43位)
+                <br />
+                第二回アスプローバプログラミングコンテスト5位入賞
+              </th>
+              <th>since 2018.06</th>
+            </tr>
+          </table>
+        </P>
+        <P>競技プログラミングやっています。 </P>
+        <P>
           <ul>
-            <Li>Androidアプリ開発 : アルバイトで半年ほど</Li>
-            <Li>AWSでのサーバレス開発 : まだ始めたばっかりです... (´· ·`) </Li>
+            <Li>
+              Atcoder :{" "}
+              <a href="https://atcoder.jp/users/Bobyama">
+                https://atcoder.jp/users/Bobyama
+              </a>{" "}
+              (Rating : 1762)
+            </Li>
+            <Li>
+              TopCoder :{" "}
+              <a href="https://www.topcoder.com/members/Bobyama">
+                https://www.topcoder.com/members/Bobyama
+              </a>{" "}
+              (Raging : 1335)
+            </Li>
           </ul>
         </P>
-        <P>フロントエンドはド素人です。機械学習とかもちゃんと勉強したい。</P>
-        <P>競技プログラミングもやっています。 </P>
-        <TightText>
-          Atcoder :{" "}
-          <a href="https://atcoder.jp/users/Bobyama">
-            https://atcoder.jp/users/Bobyama
-          </a>{" "}
-          (Rating : 1762)
-        </TightText>
-        <TightText>
-          TopCoder :{" "}
-          <a href="https://www.topcoder.com/members/Bobyama">
-            https://www.topcoder.com/members/Bobyama
-          </a>{" "}
-          (Raging : 1335)
-        </TightText>
       </div>
     )
   }
@@ -133,7 +164,6 @@ const MobileText = styled.p`
 const Header = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
-  padding: ${rhythm(1)} 0
   color: rgb(70, 70, 70);
 `
 const P = styled.p`
@@ -143,10 +173,5 @@ const P = styled.p`
 `
 const Li = styled.li`
   color: rgb(80, 80, 80);
-  line-height: ${rhythm(1)};
-`
-const TightText = styled.p`
-  color: rgb(80, 80, 80);
-  margin: ${rhythm(1)} 0
   line-height: ${rhythm(1)};
 `
