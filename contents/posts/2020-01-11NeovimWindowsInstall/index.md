@@ -92,7 +92,7 @@ nvimを開いて:checkhealthコマンドを実行してみてください。
 PS> cd ~
 PS> mkdir .cache
 PS> cd .cache
-PS> git clone dein.vim
+PS> git clone git@github.com:Shougo/dein.vim.git 
 ```
 
 ~/AppData/Local/nvimフォルダ内にinit.vimファイルを作成し、以下を書き込む。
@@ -367,11 +367,10 @@ neovimのステータスバーやNERDTreeの見た目をリッチにしてくれ
 インストールするのに少し躓いたのでまとめておきます。  
 なお、今回の方法ではcmdやpowershell全体のフォントが変更されてしまうので、あらかじめご了承ください。
 
-
-まずgithubからnerdfontをcloneします。
+まずgithubからnerd-fontをcloneします。
 
 ```shell
-PS> git clone nerdfonts
+PS> git clone --depth 1 git@github.com:ryanoasis/nerd-fonts.git
 ```
 
 結構時間がかかるので気長に待ちます。
@@ -386,16 +385,32 @@ PS> choco install fontforge
 好きなfontにパッチを当てます。  
 今回はRictyDiminishedというフォントにパッチを当てることにしました。
 
+RichtyDiminishedは[ここから](https://github.com/mzyy94/RictyDiminished-for-Powerline)ダウンロード出来ます。  
+ダウンロードした.ttfファイルをnerd-fontsのルートディレクトリに移動、以下のコマンドを実行します。
 
 
 ```shell
-PS>
+PS> cd nerd-fonts
+PS> fontforge ./font-patcher RictyDiminished-Regular.ttf --windows --complete
+PS> fontforge ./font-patcher RictyDiminished-Bold.ttf --windows --complete
+PS> fontforge ./font-patcher RictyDiminished-Oblique.ttf --windows --complete
+PS> fontforge ./font-patcher RictyDiminished-BoldOblique.ttf --windows --complete
 ```
 
-パッチを当てたフォントをシステムに登録します。
-登録方法は、作成した.ttfファイル全てを、設定->ホーム->フォントでドラッグアンドドロップするだけです。
+無事に処理が完了すれば、以下のフォントが新しく作成されているはずです。
 
-最後にpoweshellを起動し、左上アイコンからプロパティを開き、新しく登録したfontを選択します。
+|file name|
+|---|
+|Ricty Diminished Regular Nerd Font Complete Windows Compatible.ttf|
+|Ricty Diminished Bold Nerd Font Complete Windows Compatible.ttf|
+|Ricty Diminished Oblique Nerd Font Complete Windows Compatible.ttf|
+|Ricty Diminished Bold Oblique Nerd Font Complete Windows Compatible.ttf|
+
+パッチを当てたフォントをシステムに登録します。
+登録方法は、作成した.ttfファイル全てを、設定->ホーム->フォントにドラッグアンドドロップするだけです。
+
+最後にpoweshellを起動し、左上アイコンからプロパティを開き、新しく登録したfontを選択します。  
+RitchyDiminished NFと表示されているかと思います。
 
 これでneovimにvim-deviconsを導入できます。
 
@@ -405,8 +420,13 @@ PS>
 
 ## まとめ
 
-長い道のりでしたが以上で、windowsへneovimをインストールすることができました。
+以上、長い道のりでしたが、windowsへneovimをインストールすることができました。
 
 今後もlinuxユーザーがwindowsに乗り換えた際に躓きそうな点などを記事にしていきたいと思います。
 
 最後まで読んでいただきありがとうございました。
+
+
+## 参考リンク
+
+- [Ricty DiminishedとNerd Fontsを合成する方法(Mac) - Qiita](https://qiita.com/uhooi/items/dc9a9657f1706283753b)
