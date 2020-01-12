@@ -1,6 +1,6 @@
 ---
 title: "Cognitoを用いたS3へのアクセス制御まとめ"
-date: "2020-01-20 16:00:00 +0800"
+date: "2020-01-14 16:00:00 +0800"
 slug: "/cognito-s3-access-management"
 thumbnail: "android-aws-thumbnail.png"
 description: "AndroidアプリからCognitoを用いたアカウントの認証、認可の流れや、IAMロールとS3バケットポリシーを利用したアクセス制御について分かりにくい点がいくつかありましたのでまとめてみました。"

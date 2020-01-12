@@ -22,12 +22,12 @@ export default class Home extends React.Component {
         <Table.Body>
           <Table.Row />
           <Table.Row>
-            <Table.Cell>Androidアプリ開発</Table.Cell>
+            <Table.Cell>Android</Table.Cell>
             <Table.Cell>アルバイトで開発に従事</Table.Cell>
             <Table.Cell>since 2019.9</Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>AWSでのサーバレス開発</Table.Cell>
+            <Table.Cell>AWS</Table.Cell>
             <Table.Cell>アルバイトで開発に従事</Table.Cell>
             <Table.Cell>since 2019.12</Table.Cell>
           </Table.Row>
@@ -63,7 +63,7 @@ export default class Home extends React.Component {
         </LargeP>
         <Header>運営者について</Header>
         <P>
-          都内に住むプログラミング初心者の学生です。
+          都内に住む学生。
           <br />
           <br />
           <ul>
@@ -81,7 +81,7 @@ export default class Home extends React.Component {
             </li>
           </ul>
         </P>
-        <Header>スキル</Header>
+        <Header>ポートフォリオ</Header>
         {this.getSkillTable()}
         <P>競技プログラミングやっています。 </P>
         <P>

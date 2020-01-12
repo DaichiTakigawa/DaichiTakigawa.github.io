@@ -1,5 +1,5 @@
 ---
-title: "WindowsにNeovimをインストールする方法"
+title: "WindowsにNeovimをインストールする"
 date: "2020-01-11 16:00:00 +0800"
 slug: "/windows-neovim-install"
 thumbnail: "windows-neovim-thumbnail.png"
@@ -60,7 +60,7 @@ nvimとコマンドを実行してパスが通っているかどうか確認し�
 
 neovimからpython、ruby、nodejsのプラグインを呼び出せるようにそれぞれneovimモジュールをインストールします。
 
-python、ruby、nodejs自体のインストールがまだの場合は、あらかじめchocolatelyなり何なりからインストールしておいてください。
+python、ruby、nodejs自体のインストールがまだの場合は、あらかじめインストールしておいてください。
 
 ```shell
 // phython2のneovimモジュールをインストール

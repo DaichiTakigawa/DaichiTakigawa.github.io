@@ -65,14 +65,17 @@ const Layout = styled.div`
   background-color: #eeeeee;
 `
 const Container = styled.div`
-  margin: ${rhythm(4)} 10%
+  margin: ${rhythm(4)} auto
+  padding: 0 10%
+  width: 0%
   flex-grow: 1
 `
 
 const TabletContainer = styled.div`
   margin: ${rhythm(2)} auto
   padding: 0 ${rhythm(1)}
-  width: 100%
+  width: 0%
+  flex-grow: 1
 `
 
 const MobileContainer = styled.div`

@@ -11,7 +11,7 @@ export default class Home extends React.Component {
         <Header>このサイトについて</Header>
         <P>
           <a href="/">TAKIGAWA MEMO</a>
-          はプログラミング初心者が備忘録としてまとめたブログです。
+          はプログラミング初心者の当ブログ運営者が備忘録としてまとめたブログです。
           <br />
           GatsbyとSemantic UIを用いて作成しました。
         </P>
@@ -28,7 +28,7 @@ export default class Home extends React.Component {
         <P>
           できる限り正確な情報を掲載していくことを心掛けていきますが、情報が古くなっていることもありますので、正確性は保証できません。
           <br />
-          これらの掲載情報を利用したことによるトラブル、損失、損害等の発生に対しては一切の責任を負いかねます。
+          当ブログの掲載情報を利用したことによるトラブル、損失、損害等の発生に対しては一切の責任を負いかねます。
         </P>
       </div>
     )
@@ -71,7 +71,7 @@ const Header = styled.h1`
 `
 
 const Text = styled.p`
-  font-size: ${scale(1 / 4).fontSize}
+  font-size: ${scale(1 / 8).fontSize}
   margin-top: ${rhythm(2)}
 `
 const MobileText = styled.p`

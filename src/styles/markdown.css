@@ -14,14 +14,14 @@
 
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
-  line-height: 0.8rem;
-  font-size: 0.8rem;
+  line-height: 1rem;
+  font-size: 0.7rem;
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: 0.9rem;
-  line-height: 1.4;
+  line-height: 1.2rem;
   background-color: #454545;
 }
 
