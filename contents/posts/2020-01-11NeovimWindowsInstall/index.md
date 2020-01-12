@@ -76,11 +76,7 @@ PS> gem install neovim
 PS> npm install -g neovim
 ```
 
-それぞれ正しくインストール出来ているかチェックしてみます。
-
-nvimを開いて:checkhealthコマンドを実行してみてください。  
-正しくインストール出来ていれば下画像のようになります。
-
+それぞれ正しくインストール出来ているかチェックするために、nvimを開いて:checkhealthコマンドを実行してみてください。  
 
 ## dein.vimを導入
 
