@@ -1,10 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `たきがわのメモ`,
-    description: `日頃の備忘録をまとめたものです。
-    主に、Android、AWS、競プロ、Windowsのことについて書いていきます。
-    競技プログラミングもやっています。
-    `,
+    description: `日頃の備忘録をまとめたものです。主に、Android、AWS、競プロ、Windowsのことについて書いていきます。競技プログラミングもやっています。 `,
     author: `Daichi Takigawa`,
     siteUrl: `https://takigawamemo.netlify.com`,
   },
@@ -83,11 +80,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-less`,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // The property ID; the tracking code won't be generated without it
+    //     trackingId: "UA-155152113-1",
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-155152113-1",
+        id: "GTM-M7PKKQ6",
       },
     },
     {
