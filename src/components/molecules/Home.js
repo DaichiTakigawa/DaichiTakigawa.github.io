@@ -52,9 +52,7 @@ export default class Home extends React.Component {
           </Table.Row>
           <Table.Row>
             <Table.Cell>TOEIC</Table.Cell>
-            <Table.Cell>
-              スコア 910
-            </Table.Cell>
+            <Table.Cell>スコア 910</Table.Cell>
             <Table.Cell>2016.04</Table.Cell>
           </Table.Row>
         </Table.Body>
@@ -69,10 +67,15 @@ export default class Home extends React.Component {
           I'm a software engineer in Tokyo, Japan <Flag name="japan" />
         </LargeP>
         <Header>運営者について</Header>
+        <FlexContainer>
+          <div style={{ width: rhythm(8), marginRight: rhythm(1) }}>
+            <CustomImage fileName="profile" alt="profile.png" />
+          </div>
+          <div style={{position: "relative", width: rhythm(10)}}>
+            <P style={{position: "absolute", bottom: "0", paddingBottom: rhythm(1)}}>都内に住む学生。</P>
+          </div>
+        </FlexContainer>
         <P>
-          都内に住む学生。
-          <br />
-          <br />
           <ul>
             <li>
               GitHub :{" "}
@@ -116,7 +119,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Segment>
-        <CustomImage fileName="profile" alt="profile" />
+        <CustomImage fileName="home-image" alt="home-image.jpg" />
         <StyledContainer>
           <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
             TAKIGAWA MEMO
@@ -217,4 +220,8 @@ const LargeP = styled.p`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${scale(1 / 2).lineHeight};
   color: rgb(80, 80, 80);
+`
+
+const FlexContainer = styled.div`
+  display: flex;
 `
