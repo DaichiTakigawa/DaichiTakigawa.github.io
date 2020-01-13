@@ -9,11 +9,12 @@ import BlogPage from "../molecules/BlogPage"
 export default ({ data }) => {
   let frontmatter = data.markdownRemark.frontmatter
   let html = data.markdownRemark.html
+  let toc = data.markdownRemark.tableOfContents
   return (
     <App>
       <Seo title={frontmatter.title} description={frontmatter.description} />
-      <Content active="Blog">
-        <BlogPage metadata={frontmatter} html={html} />
+      <Content>
+        <BlogPage metadata={frontmatter} html={html} toc={toc} />
       </Content>
     </App>
   )
@@ -32,6 +33,7 @@ export const query = graphql`
         }
       }
       html
+      tableOfContents(pathToSlugField: "frontmatter.slug")
     }
   }
 `

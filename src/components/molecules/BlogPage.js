@@ -4,6 +4,7 @@ import { Divider, Label, Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 import CustomImage from "../atoms/CustomImage"
 import Copyright from "../atoms/Copyright"
+import Toc from "../atoms/Toc"
 
 export default class BlogPage extends React.Component {
   getTags(tags) {
@@ -25,6 +26,7 @@ export default class BlogPage extends React.Component {
 
   render() {
     let meta = this.props.metadata
+    let toc = this.props.toc
     return (
       <Segment>
         <StyledContainer>
@@ -43,6 +45,7 @@ export default class BlogPage extends React.Component {
           <Description>{meta.description}</Description>
           <Divider />
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
+          <Toc data={toc} />
           <Responsive
             as={StyledHtml}
             minWidth={Responsive.onlyTablet.minWidth}

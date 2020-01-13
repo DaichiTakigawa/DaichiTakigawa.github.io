@@ -1,7 +1,7 @@
 ---
 title: "Typography.jsでデザインを整える"
 date: "2020-01-03 16:00:00 +0800"
-slug: "/typographyjs-rhythm-scale"
+slug: "/blog/typographyjs-rhythm-scale"
 thumbnail: "gatsby-thumbnail.png"
 description: "Gatsbyを用いて作成されたWebサイトでよく見かけるTypograhpy.jsのrhythmとscaleの使い方をまとめました。"
 tags:

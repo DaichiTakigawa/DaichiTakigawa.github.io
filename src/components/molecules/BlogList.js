@@ -104,7 +104,7 @@ class Item extends React.Component {
             <CutomImage fileName={name} alt="thumbnail" />
           </div>
           <div style={{ margin: "auto", width: "100%" }}>
-            <StyledLink to={`/blog${slug}`}>{title}</StyledLink>
+            <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>
                 {date}
@@ -117,7 +117,7 @@ class Item extends React.Component {
         <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
           <CutomImage fileName={name} alt="thumbnail" />
           <div>
-            <StyledLink to={`/blog${slug}`}>{title}</StyledLink>
+            <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>
                 {date}
