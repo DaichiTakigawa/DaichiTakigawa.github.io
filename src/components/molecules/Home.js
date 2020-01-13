@@ -50,6 +50,13 @@ export default class Home extends React.Component {
             </Table.Cell>
             <Table.Cell>since 2018.06</Table.Cell>
           </Table.Row>
+          <Table.Row>
+            <Table.Cell>TOEIC</Table.Cell>
+            <Table.Cell>
+              スコア 910
+            </Table.Cell>
+            <Table.Cell>2016.04</Table.Cell>
+          </Table.Row>
         </Table.Body>
       </Table>
     )

@@ -161,4 +161,7 @@ export default class Content extends React.Component {
 このサイトのGatsbyプロジェクトのソースコードはgithubに公開しています。  
 拙いコードですが、ご自由に使っていただいて結構です。
 
+## 参考リンク
 
+- [jaxx2104.info](https://jaxx2104.info/)
+- [Gatsby Starter Qiita Gatsbyプラグイン45選](https://takumon.github.io/gatsby-starter-qiita/f18d04ac-9b1a-5ac8-8d43-8aa3d8f746a7/)

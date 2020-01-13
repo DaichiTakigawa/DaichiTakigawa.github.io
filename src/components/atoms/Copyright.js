@@ -10,7 +10,7 @@ export default () => (
         size="tiny"
         color="grey"
         icon="copyright outline"
-        content="TAKIGAWA MEMO"
+        content="2019- TAKIGAWA MEMO"
       />
     </Divider>
   </div>

@@ -170,3 +170,7 @@ lineHightにはfontSizeに対応して、いい感じにvertical rhythmされた
 私自身としては、vertical rhythmはなんとなく直感的に正当性を理解できるのですが、moduler scaleに関してはなぜ文字の大きさをこんな感じで決めると美しいレイアウトになるのか腑に落ちないといった感想を持ちました。...
 
 また気が向いた時に、「moduler scaleがなぜ美しいか」みたいなものもまとめて記事にしたいと思います。
+
+## 参考リンク
+
+- [[Sass] Vertical Rhythm と Modular Scale を使ってタイポグラフィを考え直した ](https://b.0218.jp/20170326001009.html)
