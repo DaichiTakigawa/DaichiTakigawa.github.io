@@ -69,7 +69,7 @@ export default class Home extends React.Component {
         <Header>運営者について</Header>
         <FlexContainer>
           <div style={{ width: rhythm(8), marginRight: rhythm(1) }}>
-            <CustomImage fileName="profile" alt="profile.png" />
+            <CustomImage fileName="profile" alt="プロファイル画像" />
           </div>
           <div style={{position: "relative", width: rhythm(10)}}>
             <P style={{position: "absolute", bottom: "0", paddingBottom: rhythm(1)}}>都内に住む学生。</P>
@@ -119,7 +119,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Segment>
-        <CustomImage fileName="home-image" alt="home-image.jpg" />
+        <CustomImage fileName="home-image" alt="実家の犬ども" />
         <StyledContainer>
           <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
             TAKIGAWA MEMO
