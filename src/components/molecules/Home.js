@@ -71,7 +71,7 @@ export default class Home extends React.Component {
           <div style={{ width: rhythm(8), marginRight: rhythm(1) }}>
             <CustomImage fileName="profile" alt="プロファイル画像" />
           </div>
-          <div style={{position: "relative", width: rhythm(10)}}>
+          <div style={{position: "relative", width: rhythm(7)}}>
             <P style={{position: "absolute", bottom: "0", paddingBottom: rhythm(1)}}>都内に住む学生。</P>
           </div>
         </FlexContainer>
