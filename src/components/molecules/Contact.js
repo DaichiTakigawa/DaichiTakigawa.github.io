@@ -16,8 +16,7 @@ export default class Home extends React.Component {
 
 const Segment = styled.div`
   background-color: white
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
   min-height: 1000px
 `
 

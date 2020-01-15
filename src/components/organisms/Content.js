@@ -62,7 +62,7 @@ export default class Content extends React.Component {
 }
 
 const Layout = styled.div`
-  background-color: #eeeeee;
+  background-color: #302922;
 `
 const Container = styled.div`
   margin: ${rhythm(4)} auto
