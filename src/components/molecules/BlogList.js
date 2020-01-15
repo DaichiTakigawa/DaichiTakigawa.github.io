@@ -75,9 +75,7 @@ class Item extends React.Component {
           tag
           size="mini"
           style={{
-            verticalAlign: "text-bottom",
-            marginRight: rhythm(1 / 2),
-            float: "right",
+            marginLeft: rhythm(1),
           }}
         >
           {tag}
@@ -106,10 +104,8 @@ class Item extends React.Component {
           <div style={{ margin: "auto", width: "100%" }}>
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
-              <Date>
-                {date}
-                {this.getTags(tags)}
-              </Date>
+              <Date>{date}</Date>
+              <div>{this.getTags(tags)}</div>
             </Info>
             <Description>{description}</Description>
           </div>
@@ -119,10 +115,8 @@ class Item extends React.Component {
           <div>
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
-              <Date>
-                {date}
-                {this.getTags(tags)}
-              </Date>
+              <Date>{date}</Date>
+              <div>{this.getTags(tags)}</div>
             </Info>
             <Description>{description}</Description>
           </div>
@@ -169,18 +163,22 @@ const StyledLink = styled(Link)`
   line-height: ${rhythm(2)}
 `
 const Info = styled.div`
-  margin-top: ${rhythm(1 / 2)};
+  display: flex
+  justify-content: space-between
+  margin-top: ${rhythm(1 / 4)}
 `
 
-const Description = styled.div`
+const Description = styled.p`
   font-size: ${scale(0).fontSize}
   line-height: ${rhythm(1)}
-  margin-top: ${rhythm(1 / 2)}
+  margin-top: ${rhythm(1 / 4)}
 `
 
-const Date = styled.h2`
+const Date = styled.h4`
   font-size: ${scale(0).fontSize}
   line-height: ${rhythm(1)}
+  padding-top: ${rhythm(1 / 7)}
+  margin-bottom: 0
   color:  #4b5454
 `
 

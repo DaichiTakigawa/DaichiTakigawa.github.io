@@ -38,10 +38,10 @@ export default class BlogPage extends React.Component {
           >
             {meta.title}
           </Responsive>
-          <div style={{ display: "flex" }}>
+          <Info>
             <Date>{meta.date}</Date>
-            {this.getTags(meta.tags)}
-          </div>
+            <Tag>{this.getTags(meta.tags)}</Tag>
+          </Info>
           <Description>{meta.description}</Description>
           <Divider />
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
@@ -117,12 +117,19 @@ const MobileTitle = styled.h1`
 const Date = styled.h4`
   font-size: ${scale(0).fontSize}
   line-height: ${scale(0).lineHeight}
+  padding-top: ${rhythm(1 / 8)}
   margin-bottom: 0
   color:  #4b5454
 `
 
-const Description = styled.div`
+const Description = styled.p`
   font-size: ${scale(0).fontSize}
   line-height: ${scale(0).lineHeight}
-  margin-top: ${rhythm(1 / 2)}
+  margin-top: ${rhythm(1)}
+`
+
+const Tag = styled.div``
+
+const Info = styled.div`
+  display: flex;
 `
