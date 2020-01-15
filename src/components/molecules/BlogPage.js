@@ -14,7 +14,6 @@ export default class BlogPage extends React.Component {
           tag
           size="mini"
           style={{
-            verticalAlign: "text-bottom",
             marginLeft: rhythm(1),
           }}
         >
@@ -39,9 +38,10 @@ export default class BlogPage extends React.Component {
           >
             {meta.title}
           </Responsive>
-          <Date>
-            {meta.date} {this.getTags(meta.tags)}
-          </Date>
+          <div style={{ display: "flex" }}>
+            <Date>{meta.date}</Date>
+            {this.getTags(meta.tags)}
+          </div>
           <Description>{meta.description}</Description>
           <Divider />
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
@@ -114,9 +114,10 @@ const MobileTitle = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
 `
-const Date = styled.h2`
+const Date = styled.h4`
   font-size: ${scale(0).fontSize}
-  line-height: ${rhythm(1)}
+  line-height: ${scale(0).lineHeight}
+  margin-bottom: 0
   color:  #4b5454
 `
 

@@ -1,5 +1,5 @@
 ---
-title: "Typography.jsでデザインを整える"
+title: "Typographyjsのrhythmとscaleの使い方"
 date: "2020-01-03 16:00:00 +0800"
 slug: "/blog/typographyjs-rhythm-scale/"
 thumbnail: "gatsby-thumbnail.png"

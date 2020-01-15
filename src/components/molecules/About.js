@@ -11,7 +11,7 @@ export default class Home extends React.Component {
         <Header>このサイトについて</Header>
         <P>
           <a href="/">TAKIGAWA MEMO</a>
-          はプログラミング初心者の当ブログ運営者が備忘録としてまとめたブログです。
+          はプログラミング初心者の当ブログ運営者が備忘録としてまとめたものです。
           <br />
           GatsbyとSemantic UIを用いて作成しました。
         </P>
