@@ -79,7 +79,7 @@ export default class Home extends React.Component {
                 paddingBottom: rhythm(1),
               }}
             >
-              都内に生息する学生。
+              都内に住む学生。
             </P>
           </div>
         </FlexContainer>

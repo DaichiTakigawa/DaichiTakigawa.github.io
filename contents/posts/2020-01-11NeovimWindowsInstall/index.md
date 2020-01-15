@@ -1,7 +1,7 @@
 ---
 title: "WindowsにNeovimをインストールする"
 date: "2020-01-11 16:00:00 +0800"
-slug: "/blog/windows-neovim-install"
+slug: "/blog/windows-neovim-install/"
 thumbnail: "windows-neovim-thumbnail.png"
 description: "最近linuxからwindowsに乗り換えたのですが、windowsにneovimをインストールする際に少し躓いたのでまとめました。vim-deviconsを導入する方法もまとめてあります。"
 tags:

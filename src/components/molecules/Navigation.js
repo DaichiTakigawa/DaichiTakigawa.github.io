@@ -17,13 +17,13 @@ export default class Navigation extends React.Component {
         <List.Item active={active === "Home"} as={StyledLink} to="/">
           Home
         </List.Item>
-        <List.Item active={active === "Blog"} as={StyledLink} to="/blog">
+        <List.Item active={active === "Blog"} as={StyledLink} to="/blog/">
           Blog
         </List.Item>
-        <List.Item active={active === "About"} as={StyledLink} to="/about">
+        <List.Item active={active === "About"} as={StyledLink} to="/about/">
           About
         </List.Item>
-        <List.Item active={active === "Contact"} as={StyledLink} to="/contact">
+        <List.Item active={active === "Contact"} as={StyledLink} to="/contact/">
           Contact
         </List.Item>
       </List>

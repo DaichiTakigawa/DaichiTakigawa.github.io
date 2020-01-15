@@ -1,7 +1,7 @@
 ---
 title: "AndroidのImageViewを同じUriで更新する"
 date: "2020-01-12 16:00:00 +0800"
-slug: "blog/android-img-update-uri"
+slug: "blog/android-img-update-uri/"
 thumbnail: "android-thumbnail.png"
 description: "AndroidのImageViewを同じUriで更新する方法を調べたので備忘録。"
 tags:

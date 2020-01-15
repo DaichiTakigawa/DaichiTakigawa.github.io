@@ -46,7 +46,7 @@ export default class MoblieNavigation extends React.Component {
           <List.Item
             active={active === "Blog"}
             as={StyledLink}
-            to="/blog"
+            to="/blog/"
             style={{ textAlign: "center" }}
           >
             Blog
@@ -54,7 +54,7 @@ export default class MoblieNavigation extends React.Component {
           <List.Item
             active={active === "About"}
             as={StyledLink}
-            to="/about"
+            to="/about/"
             style={{ textAlign: "center" }}
           >
             About
@@ -62,7 +62,7 @@ export default class MoblieNavigation extends React.Component {
           <List.Item
             active={active === "Contact"}
             as={StyledLink}
-            to="/contact"
+            to="/contact/"
             style={{ textAlign: "center" }}
           >
             Contact
