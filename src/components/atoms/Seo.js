@@ -20,6 +20,10 @@ export default class Seo extends React.Component {
             name: "author",
             content: "Daichi Takigawa",
           },
+          {
+            name: "google-site-verification",
+            content: "vfbwFKtYuk37EJ4o0ox6WUBXBuG_ZRqS-tAp1bgPpbU",
+          },
         ]}
       />
     )
