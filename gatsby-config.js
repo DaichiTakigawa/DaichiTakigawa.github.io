@@ -98,5 +98,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-lodash`,
+    {
+      resolve: `gatsby-plugin-webpack-bundle-analyzer`,
+      options: {
+        openAnalyzer: false
+      }
+    },
   ],
 }
