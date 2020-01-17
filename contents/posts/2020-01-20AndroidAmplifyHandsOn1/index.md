@@ -1,7 +1,7 @@
 ---
-title: "AmplifyとAndroidでログイン管理とファイル保存とPush通知の第一弾"
+title: "AmplifyとAndroidでログイン管理とファイル保存とPush通知(1)"
 date: "2020-01-20 16:00:00 +0800"
-slug: "/blog/amplify-android-handson-1/"
+slug: "/amplify-android-congito/"
 thumbnail: "android-aws-thumbnail.png"
 description: "AndroidとAmplifyを連携するための情報をまとめました。Amplifyでバックエンドを作成、Cognitoでユーザー管理、S3でファイル保存、PinpointとLambdaでPush通知という流れです。"
 tags:

@@ -127,7 +127,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Segment>
-        <CustomImage fileName="home-image" alt="実家の犬ども" />
+        {/* <CustomImage fileName="home-image" alt="実家の犬ども" /> */}
         <StyledContainer>
           <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
             TAKIGAWA MEMO
