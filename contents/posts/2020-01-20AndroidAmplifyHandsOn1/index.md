@@ -5,9 +5,8 @@ slug: "/amplify-android-congito/"
 thumbnail: "android-aws-thumbnail.png"
 description: "AndroidとAmplifyを連携するための情報をまとめました。Amplifyでバックエンドを作成、Cognitoでユーザー管理、S3でファイル保存、PinpointとLambdaでPush通知という流れです。"
 tags:
-    - "Amplify"
-    - "Android"
     - "AWS"
+    - "Android"
 ---
 
 ## これは何
