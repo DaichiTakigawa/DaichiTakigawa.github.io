@@ -3,7 +3,7 @@ title: "WindowsにNeovimをインストールする"
 date: "2020-01-11 16:00:00 +0800"
 slug: "/blog/windows-neovim-install/"
 thumbnail: "windows-neovim-thumbnail.png"
-description: "最近linuxからwindowsに乗り換えたのですが、windowsにneovimをインストールする際に少し躓いたのでまとめました。vim-deviconsを導入する方法もまとめてあります。"
+description: "windowsにneovimをインストールする際に少し躓いたのでまとめました。dein.vimの設定やnerd-fontsのvim-deviconsを導入する方法もまとめてあります。"
 tags:
     - "Windows"
     - "Neovim"
@@ -91,7 +91,7 @@ PS> cd .cache
 PS> git clone git@github.com:Shougo/dein.vim.git 
 ```
 
-~/AppData/Local/nvimフォルダ内にinit.vimファイルを作成し、以下を書き込む。
+init.vimファイルを~/AppData/Local/nvimフォルダ内に作成し、以下を書き込む。
 
 ```vim:title=init.vim
 "dein Scripts-----------------------------
@@ -416,10 +416,8 @@ RitchyDiminished NFと表示されているかと思います。
 
 ## まとめ
 
-以上、長い道のりでしたが、windowsへneovimをインストールすることができました。
-
-今後もlinuxユーザーがwindowsに乗り換えた際に躓きそうな点などを記事にしていきたいと思います。
-
+以上、長い道のりでしたが、windowsへneovimをインストールすることができました。  
+今後もlinuxユーザーがwindowsに乗り換えた際に躓きそうな点などを記事にしていきたいと思います。  
 最後まで読んでいただきありがとうございました。
 
 

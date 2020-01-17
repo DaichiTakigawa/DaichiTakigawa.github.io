@@ -210,7 +210,7 @@ const MobileText = styled.p`
   color: rgb(80, 80, 80);
 `
 
-const Header = styled.h1`
+const Header = styled.h2`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
   padding-top: ${rhythm(1)}

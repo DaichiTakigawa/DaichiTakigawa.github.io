@@ -3,7 +3,7 @@ title: "GatsbyとSemanticUIでブログを作成"
 date: "2019-12-27 23:00:00 +0800"
 slug: "/blog/gatsby-semantic-ui/"
 thumbnail: "gatsby-semantic-ui.png"
-description: "Hello World"
+description: "Hello World. GatsbyとSemanticUIでブログを作成しました。"
 tags:
     - "SemanticUI"
     - "Gatsby"

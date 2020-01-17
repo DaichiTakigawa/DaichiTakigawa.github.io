@@ -133,6 +133,7 @@ const Segment = styled.div`
 `
 
 const StyledContainer = styled.div`
+  padding-top: ${rhythm(2)}
   padding-bottom: ${rhythm(4)}
   margin: auto
   width: 80%
@@ -141,7 +142,7 @@ const StyledContainer = styled.div`
 const Title = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(3)}
-  color: #333333
+  color: rgb(70, 70, 70);
   padding-top: ${rhythm(2)}
   margin-bottom: 0
 `
@@ -149,7 +150,7 @@ const Title = styled.h1`
 const MobileTitle = styled.h1`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(2)}
-  color: #333333
+  color: rgb(70, 70, 70);
   padding-top: ${rhythm(1)}
 `
 

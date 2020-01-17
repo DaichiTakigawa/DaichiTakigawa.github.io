@@ -38,6 +38,15 @@ export default class Home extends React.Component {
     return (
       <Segment>
         <StyledContainer>
+          <Responsive as={Title} minWidth={Responsive.onlyTablet.minWidth}>
+            About
+          </Responsive>
+          <Responsive
+            as={MobileTitle}
+            maxWidth={Responsive.onlyMobile.maxWidth}
+          >
+            About
+          </Responsive>
           <Responsive as={Text} minWidth={Responsive.onlyTablet.minWidth}>
             {this.getText()}
           </Responsive>
@@ -57,15 +66,30 @@ const Segment = styled.div`
 `
 
 const StyledContainer = styled.div`
-  padding-top: ${rhythm(4)}
   padding-bottom: ${rhythm(4)}
+  padding-top: ${rhythm(2)}
   margin: auto
   width: 80%
 `
 
-const Header = styled.h1`
+const Title = styled.h1`
   font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(4)}
+  line-height: ${rhythm(3)}
+  color: rgb(70, 70, 70);
+  padding-top: ${rhythm(2)}
+  margin-bottom: 0
+`
+
+const MobileTitle = styled.h1`
+  font-size: ${scale(1 / 2).fontSize}
+  line-height: ${rhythm(2)}
+  color: rgb(70, 70, 70);
+  padding-top: ${rhythm(1)}
+`
+
+const Header = styled.h2`
+  font-size: ${scale(1 / 2).fontSize}
+  line-height: ${rhythm(2)}
   color: rgb(70, 70, 70);
 `
 
