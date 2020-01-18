@@ -100,7 +100,10 @@ const Nav = styled.div`
   line-height: ${rhythm(3)}
   text-align: center
   background-color: white
-  border: 1px solid rgb(221, 221, 221);
+  border-bottom: ${props =>
+    props.bottomShadow
+      ? "1px solid rgb(225, 225, 225);"
+      : "1px solid rgb(221, 221, 221);"}
   box-shadow: ${props =>
     props.bottomShadow ? "rgba(0, 0, 0, 0.5) 0px 2px 4px;" : "0"}
   position: relative
@@ -130,5 +133,5 @@ const WhiteBackground = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
   width: 100%
   z-index: 1
-  visibility: ${props => props.visible ? "visible" : "hidden"}
+  visibility: ${props => (props.visible ? "visible" : "hidden")}
 `
