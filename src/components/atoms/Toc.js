@@ -128,7 +128,6 @@ const TocContainer = styled.div`
       a {
         text-decoration: none
         text-shadow: none
-        background-image: none
         color: rgb(82, 82, 82);
       }
     }

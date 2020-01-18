@@ -1,7 +1,23 @@
 import Typography from "typography"
-import Theme from "typography-theme-fairy-gates"
 
-const typography = new Typography(Theme)
+const typography = new Typography({
+  baseFontSize: "20px",
+  baseLineHeight: 1.45,
+  scaleRatio: 2.00,
+  headerFontFamily: ["Noto Sans JP", "sans-serif"],
+  bodyFontFamily: ["Noto Sans JP", "sans-serif"],
+  headerWeight: 700,
+  googleFonts: [
+    {
+      name: "Noto Sans JP",
+      styles: ["700"],
+    },
+    {
+      name: "Noto Sans JP",
+      styles: ["400"],
+    },
+  ],
+})
 
 export default typography
 
