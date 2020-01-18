@@ -102,10 +102,10 @@ const Nav = styled.div`
   background-color: white
   border-bottom: ${props =>
     props.bottomShadow
-      ? "1px solid rgb(225, 225, 225);"
+      ? "1px solid white"
       : "1px solid rgb(221, 221, 221);"}
   box-shadow: ${props =>
-    props.bottomShadow ? "rgba(0, 0, 0, 0.5) 0px 2px 4px;" : "0"}
+    props.bottomShadow ? "rgba(0, 0, 0, 0.5) 0px 3px 5px;" : "0"}
   position: relative
   z-index: 2
 `

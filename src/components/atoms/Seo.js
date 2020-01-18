@@ -25,7 +25,9 @@ export default class Seo extends React.Component {
             content: "vfbwFKtYuk37EJ4o0ox6WUBXBuG_ZRqS-tAp1bgPpbU",
           },
         ]}
-      />
+      >
+        <html lang="ja" />
+      </Helmet>
     )
   }
 }
