@@ -22,7 +22,7 @@ export default class Seo extends React.Component {
           },
           {
             name: "google-site-verification",
-            content: "vfbwFKtYuk37EJ4o0ox6WUBXBuG_ZRqS-tAp1bgPpbU",
+            content: "b_z5TAwrxYIo9jF886d31cgslCs-bgVKEzzpfYzDEsU",
           },
         ]}
       >
