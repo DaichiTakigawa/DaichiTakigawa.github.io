@@ -10,7 +10,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "Noto Sans JP",
-      styles: ["700", "400&dispaly=swap"],
+      styles: ["400", "700&display=swap&subset=japanese"],
     },
   ],
 })
