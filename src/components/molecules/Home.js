@@ -33,7 +33,7 @@ export default class Home extends React.Component {
           </Table.Row>
           <Table.Row>
             <Table.Cell>Webフロントエンド</Table.Cell>
-            <Table.Cell>GatsbyJSを用いて個人で当ブログを運営</Table.Cell>
+            <Table.Cell>Gatsbyを用いて個人で当ブログを運営</Table.Cell>
             <Table.Cell>since 2019.12</Table.Cell>
           </Table.Row>
           <Table.Row>
