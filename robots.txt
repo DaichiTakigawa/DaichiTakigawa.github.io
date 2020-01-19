@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /contact
+Sitemap: https://www.takigawa-memo.com/sitemap.xml
+Host: https://www.takigawa-memo.com
