@@ -4,6 +4,7 @@ import { Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import Copyright from "../atoms/Copyright"
+
 export default class Home extends React.Component {
   getText() {
     return (

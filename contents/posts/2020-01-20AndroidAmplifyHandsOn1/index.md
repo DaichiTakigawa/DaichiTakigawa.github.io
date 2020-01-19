@@ -11,8 +11,6 @@ tags:
 
 ## これは何
 
-
-
 ## AndroidProjectにAmplifyを導入
 
 ## AmplifyにAuthを追加

@@ -4,20 +4,23 @@ import { Container, Divider } from "semantic-ui-react"
 import { scale, rhythm } from "../utils/typography"
 
 import SEO from "../components/atoms/Seo"
+import App from "../components/organisms/App"
 
 export default () => (
-  <Container textAlign="center" style={{ paddingTop: rhythm(4) }}>
+  <App>
     <SEO title="404" description="無効なURLです。" />
-    <Title>404</Title>
-    <Divider />
-    <Text>
-      There isn't a web site you are looking for.
-      <span role="img" aria-label="sad">
-        {" "}
-        😢{" "}
-      </span>
-    </Text>
-  </Container>
+    <Container textAlign="center" style={{ paddingTop: rhythm(4) }}>
+      <Title>404</Title>
+      <Divider />
+      <Text>
+        There isn't a web site you are looking for.
+        <span role="img" aria-label="sad">
+          {" "}
+          😢{" "}
+        </span>
+      </Text>
+    </Container>
+  </App>
 )
 
 const Title = styled.h1`

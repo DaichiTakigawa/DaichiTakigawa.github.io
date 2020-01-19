@@ -43,7 +43,6 @@ export default class Toc extends React.Component {
   }
 
   render() {
-    let expanded = this.state.expanded
     let icon = this.getIcon()
     return (
       <div>
