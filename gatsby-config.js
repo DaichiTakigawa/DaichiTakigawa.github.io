@@ -3,7 +3,7 @@ module.exports = {
     title: `たきがわのメモ`,
     description: `日頃の備忘録をまとめたものです。主に、Android、AWS、競プロ、Windowsのことについて書いていきます。競技プログラミングもやっています。 `,
     author: `Daichi Takigawa`,
-    siteUrl: `https://takigawamemo.netlify.com`,
+    siteUrl: `https://www.takigawa-memo.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -85,8 +85,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://takigawamemo.netlify.com`,
-        sitemap: `https://takigawamemo.netlify.com/sitemap.xml`,
+        host: `https://www.takigawa-memo.com`,
+        sitemap: `https://www.takigawa-memo.com/sitemap.xml`,
         env: {
           production: {
             policy: [
