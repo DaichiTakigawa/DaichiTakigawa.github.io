@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "takigawa-memo",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dachi Takigawa",
   "dependencies": {
     "css-loader": "^3.4.2",
     "gatsby": "^2.18.8",
@@ -70,9 +70,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/DaichiTakigawa/DaichiTakigawa.github.io"
   }
 }
