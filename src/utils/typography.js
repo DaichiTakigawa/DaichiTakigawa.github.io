@@ -9,11 +9,11 @@ const typography = new Typography({
   headerWeight: 700,
   googleFonts: [
     {
-      name: "Noto Sans JP",
+      name: "Noto Sans JP&display=swap",
       styles: ["700"],
     },
     {
-      name: "Noto Sans JP",
+      name: "Noto Sans JP&display=swap",
       styles: ["400"],
     },
   ],
