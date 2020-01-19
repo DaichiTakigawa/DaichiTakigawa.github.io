@@ -102,8 +102,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-webpack-bundle-analyzer`,
       options: {
-        openAnalyzer: false
-      }
+        openAnalyzer: false,
+      },
     },
   ],
 }
