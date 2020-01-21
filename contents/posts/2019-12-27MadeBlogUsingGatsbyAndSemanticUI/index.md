@@ -5,8 +5,8 @@ slug: "/gatsby-semantic-ui/"
 thumbnail: "gatsby-semantic-ui.png"
 description: "Hello World. GatsbyとSemanticUIでブログを作成しました。"
 tags:
-    - "SemanticUI"
     - "Gatsby"
+    - "SemanticUI"
 ---
 
 ## これは何

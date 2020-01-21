@@ -8,3 +8,5 @@
 @pageFont          : @fontName, sans-serif;
 
 @pageOverflowX     : unset;
+
+@importGoogleFonts : false;

@@ -82,6 +82,10 @@ const StyledHtml = styled.div`
     line-height: ${rhythm(2)}
     margin: ${rhythm(1)} 0
   }
+  & > ol > li {
+    font-size: ${scale(1 / 8).fontSize}
+    line-height: ${rhythm(2)}
+  }
   & > h2 {
     font-size: ${scale(1 / 2).fontSize}
     line-height: ${rhythm(2)}
@@ -97,6 +101,10 @@ const MobileStyledHtml = styled.div`
     font-size: ${scale(0).fontSize}
     line-height: ${rhythm(2)}
     margin: ${rhythm(1)} 0
+  }
+  & > ol > li {
+    font-size: ${scale(0).fontSize}
+    line-height: ${rhythm(2)}
   }
   & > h2 {
     font-size: ${scale(1 / 2).fontSize}

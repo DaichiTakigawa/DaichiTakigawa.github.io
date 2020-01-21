@@ -5,8 +5,8 @@ slug: "/typographyjs-rhythm-scale/"
 thumbnail: "gatsby-thumbnail.png"
 description: "Gatsbyを用いて作成されたWebサイトでよく見かけるTypograhpyjsのrhythmとscaleの使い方をまとめました。"
 tags:
-    - "Gastby"
-    - "Typography.js"
+    - "Gatsby"
+    - "Typographyjs"
 ---
 
 ## これは何
