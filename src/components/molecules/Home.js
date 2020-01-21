@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Divider, Flag, Responsive, Table } from "semantic-ui-react"
+import { Divider, Flag, Responsive, Table, Icon } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import CustomImage from "../atoms/CustomImage"
@@ -63,9 +63,6 @@ export default class Home extends React.Component {
   getText() {
     return (
       <div>
-        <LargeP>
-          I'm a software engineer in Tokyo, Japan <Flag name="japan" />
-        </LargeP>
         <Header>運営者について</Header>
         <FlexContainer>
           <div style={{ width: rhythm(8), marginRight: rhythm(1) }}>
@@ -87,14 +84,24 @@ export default class Home extends React.Component {
           <ul>
             <li>
               GitHub :{" "}
-              <a href="https://github.com/DaichiTakigawa">
-                https://github.com/DaichiTakigawa
+              <a
+                href="https://github.com/DaichiTakigawa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://github.com/DaichiTakigawa{" "}
+                <Icon name="external alternate" />
               </a>
             </li>
             <li>
               Twitter :{" "}
-              <a href="https://twitter.com/damenin27844103">
-                https://twitter.com/damenin27844103
+              <a
+                href="https://twitter.com/damenin27844103"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://twitter.com/damenin27844103{" "}
+                <Icon name="external alternate" />
               </a>
             </li>
           </ul>
@@ -106,15 +113,25 @@ export default class Home extends React.Component {
           <ul>
             <li>
               Atcoder :{" "}
-              <a href="https://atcoder.jp/users/Bobyama">
-                https://atcoder.jp/users/Bobyama
+              <a
+                href="https://atcoder.jp/users/Bobyama"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://atcoder.jp/users/Bobyama{" "}
+                <Icon name="external alternate" />
               </a>{" "}
               (Rating : 1762)
             </li>
             <li>
               TopCoder :{" "}
-              <a href="https://www.topcoder.com/members/Bobyama">
-                https://www.topcoder.com/members/Bobyama
+              <a
+                href="https://www.topcoder.com/members/Bobyama"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://www.topcoder.com/members/Bobyama{" "}
+                <Icon name="external alternate" />
               </a>{" "}
               (Raging : 1335)
             </li>
@@ -219,14 +236,6 @@ const Header = styled.h2`
 const P = styled.p`
   margin-bottom: ${rhythm(2)}
   margin-top: ${rhythm(1)}
-`
-const LargeP = styled.p`
-  text-align: center
-  padding-top: ${rhythm(1)}
-  padding-bottom: ${rhythm(2)}
-  font-size: ${scale(1 / 2).fontSize}
-  line-height: ${scale(1 / 2).lineHeight};
-  color: rgb(80, 80, 80);
 `
 
 const FlexContainer = styled.div`

@@ -12,7 +12,8 @@ tags:
 ## これは何
 
 AWAのAmplifyは、ウェブアプリケーションやモバイルアプリケーションのサーバレスなバックエンドをcliやwebコンソールから簡単に作成できるツールとして最近注目を集めています。  
-しかし、Amplifyは元々ウェブアプリケーションのためのツールであり、モバイルアプリケーション向けのライブラリを公開したのはつい最近の様です。[Introducing Amplify for iOS and Android](https://aws.amazon.com/jp/about-aws/whats-new/2019/12/introducing-amplify-for-ios-and-android/?nc1=h_ls)
+しかし、Amplifyは元々ウェブアプリケーションのためのツールであり、モバイルアプリケーション向けのライブラリを公開したのは割と最近のことみたいです。  
+[Introducing Amplify for iOS and Android](https://aws.amazon.com/jp/about-aws/whats-new/2019/12/introducing-amplify-for-ios-and-android/?nc1=h_ls)
 
 そのため、AndroidとAmplifyの連携方法についての情報が乏しく、githubでサンプルコードを検索してもほとんど見当たらないというのが現状でした。  
 

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Responsive } from "semantic-ui-react"
+import { Responsive, Icon } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import Copyright from "../atoms/Copyright"
@@ -30,6 +30,35 @@ export default class Home extends React.Component {
           できる限り正確な情報を掲載していくことを心掛けていきますが、情報が古くなっていることもありますので、正確性は保証できません。
           <br />
           当ブログの掲載情報を利用したことによるトラブル、損失、損害等の発生に対しては一切の責任を負いかねます。
+        </P>
+        <Header>プライバシーポリシー</Header>
+        <P>
+          当ブログでは、サイトの利用状況を収集するためにCookieを利用させていただいています。
+          <br />
+          アクセスログは匿名で収集されており、個人を特定するものではありません。
+          また、収集したログを解析するためにGoogle Analyticsを使用しています。
+          Google
+          Analyticsでデータが収集、処理される仕組みやプライバシーポリシーについては以下のサイトをご覧ください。
+        </P>
+        <P>
+          <a
+            href="https://developers.google.com/analytics/?hl=ja"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google アナリティクス <Icon name="external alternate" />
+          </a>
+          <br />
+          <a
+            href="https://policies.google.com/privacy?hl=ja"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google プライバシーポリシー <Icon name="external alternate" />
+          </a>
+        </P>
+        <P>
+          なお、Cookieを無効にすることでアクセスログの収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
         </P>
       </div>
     )
@@ -104,7 +133,7 @@ const MobileText = styled.p`
 `
 
 const P = styled.p`
-  padding: ${rhythm(1)} 0
+  margin: ${rhythm(1)} 0
   line-height: ${rhythm(2)};
   color: rgb(80, 80, 80);
 `
