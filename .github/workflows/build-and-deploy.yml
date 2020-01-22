@@ -1,0 +1,39 @@
+name: build and deploy github pages
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build-gatsby-site-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
+
+      - run: npm install
+
+      - run: npm run build
+
+      - uses: peaceiris/actions-gh-pages@v2.4.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./public
+
+      - name: Add CNAME file
+        run: |
+          git config user.email $EMAIL
+          git config user.name "DaichiTakigawa"
+          git remote set-url origin https://DaichiTakigawa:${GITHUB_TOKEN}@github.com/DaichiTakigawa/DaichiTakigawa.github.io.git
+          git checkout master
+          git pull
+          echo www.takigawa-memo.com > CNAME
+          git add CNAME
+          git commit -m 'add CNAME file'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          EMAIL: ${{ secrets.EMAIL }}
