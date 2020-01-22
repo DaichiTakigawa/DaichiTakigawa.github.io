@@ -58,7 +58,7 @@ export default class Home extends React.Component {
           </a>
         </P>
         <P>
-          なお、Cookieを無効にすることでアクセスログの収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。
+          なお、Cookieを無効にすることでアクセスログの収集の拒否が可能ですので、お使いのブラウザの設定をご確認ください。
         </P>
       </div>
     )
