@@ -1,5 +1,5 @@
 ---
-title: "AmplifyとAndroidでログインとファイル保存とPush通知(1)"
+title: "AmplifyとAndroidでログイン"
 date: "2020-01-20 16:00:00 +0800"
 slug: "/amplify-android-congito/"
 thumbnail: "android-amplify-thumbnail.png"
@@ -706,7 +706,7 @@ AndroidManifest.xmlにパーミッションを追加することも忘れずに
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-## 実際にアカウント作成とログインをする
+## デモ
 
 これでCognitoにアカウント作成できるようになりました。  
 実際にアプリをビルドしてアカウントを作成してみましょう。

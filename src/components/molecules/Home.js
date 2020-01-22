@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Divider, Flag, Responsive, Table, Icon } from "semantic-ui-react"
+import { Divider, Responsive, Table, Icon } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import CustomImage from "../atoms/CustomImage"

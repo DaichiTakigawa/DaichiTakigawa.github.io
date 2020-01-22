@@ -23,7 +23,6 @@ export default class Home extends React.Component {
         </P>
         <P>
           読んでいただいた方にとって、少しでもお役に立つ情報が提供できれば幸いです。
-          ٩(ˊᗜˋ*)و
         </P>
         <Header>免責事項</Header>
         <P>
