@@ -1,6 +1,6 @@
 ---
 title: "AmplifyとAndroidでPush通知"
-date: "2020-01-23 16:00:00 +0800"
+date: "2020-01-25 16:00:00 +0800"
 slug: "/amplify-android-pinpoint/"
 thumbnail: "android-amplify-thumbnail.png"
 description: "awsのamplifyとandroidの連携方法をまとめたtutorial。Cognitoでユーザー管理、S3でファイル保存、PinpointとLambdaでPush通知という流れ。この投稿はその第三弾です。"
