@@ -50,13 +50,13 @@ export default class Content extends React.Component {
 
   render() {
     return (
-      // <NoSSR>
+      <NoSSR>
         <Layout>
           {this.getResponsive()}
           {this.getTabletResponsive()}
           {this.getMobileResponsive()}
         </Layout>
-      // </NoSSR>
+      </NoSSR>
     )
   }
 }

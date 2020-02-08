@@ -73,14 +73,11 @@ const Segment = styled.div`
 `
 const StyledContainer = styled.div`
   padding-bottom: ${rhythm(4)}
+  width: 90%
   margin: auto
-  width: 84%
 `
 const StyledHtml = styled.div`
   padding-top: ${rhythm(2)};
-  .anchor {
-    background-image: none;
-  }
   & > p {
     font-size: ${scale(1 / 8).fontSize}
     line-height: ${rhythm(2)}
@@ -102,12 +99,9 @@ const StyledHtml = styled.div`
 
 const MobileStyledHtml = styled.div`
   padding-top: ${rhythm(2)};
-  .anchor {
-    background-image: none;
-  }
   & > p {
     font-size: ${scale(0).fontSize}
-    line-height: ${rhythm(2)}
+    line-height: ${rhythm(3 / 2)}
     margin: ${rhythm(1)} 0
   }
   & > ol > li {

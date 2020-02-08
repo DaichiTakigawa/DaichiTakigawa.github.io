@@ -9,28 +9,28 @@ export default ({ url, title }) => {
       <A
         href={`https://www.facebook.com/share.php?u=${url}`}
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
       >
         <Button color="facebook" icon="facebook" as={StyledButton} />
       </A>
       <A
         href={`https://twiter.com/share?url=${url}`}
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
       >
         <Button color="twitter" icon="twitter" as={StyledButton} />
       </A>
       <A
         href={`https://b.hatena.ne.jp/add?mode=confirm&url=${url}&title=${title}`}
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
       >
         <Button color="linkedin" content="B!" as={StyledButton} />
       </A>
       <A
         href={`https://getpocket.com/edit?url=${url}&title=${title}`}
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
       >
         <Button color="youtube" icon="get pocket" as={StyledButton} />
       </A>
@@ -41,7 +41,6 @@ export default ({ url, title }) => {
 const Container = styled.div`
   margin: ${rhythm(1)} 0;
   display: flex
-  justify-content: space-around
 `
 
 const A = styled.a`
