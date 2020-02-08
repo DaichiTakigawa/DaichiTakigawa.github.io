@@ -37,7 +37,7 @@ export default class MoblieNavigation extends React.Component {
         <StyledList link>
           <List.Item
             active={active === "Home"}
-            as={StyledLink}
+            as={Link}
             to="/"
             style={{ textAlign: "center" }}
           >
@@ -45,7 +45,7 @@ export default class MoblieNavigation extends React.Component {
           </List.Item>
           <List.Item
             active={active === "Blog"}
-            as={StyledLink}
+            as={Link}
             to="/blog/"
             style={{ textAlign: "center" }}
           >
@@ -53,7 +53,7 @@ export default class MoblieNavigation extends React.Component {
           </List.Item>
           <List.Item
             active={active === "About"}
-            as={StyledLink}
+            as={Link}
             to="/about/"
             style={{ textAlign: "center" }}
           >
@@ -61,7 +61,7 @@ export default class MoblieNavigation extends React.Component {
           </List.Item>
           <List.Item
             active={active === "Contact"}
-            as={StyledLink}
+            as={Link}
             to="/contact/"
             style={{ textAlign: "center" }}
           >
@@ -78,7 +78,7 @@ export default class MoblieNavigation extends React.Component {
     return (
       <div>
         <Nav bottomShadow={!this.state.expanded}>
-          TAKIGAWA MEMO
+          <Title>TAKIGAWA MEMO</Title>
           <CSSTransition
             in={this.state.expanded}
             timeout={200}
@@ -94,6 +94,13 @@ export default class MoblieNavigation extends React.Component {
     )
   }
 }
+
+
+const Title = styled.span`
+  font-size: ${scale(1)}
+  font-weight: bold
+  color: #333333
+`
 
 const Nav = styled.div`
   font-size: ${scale(1 / 2).fontSize}
@@ -117,9 +124,6 @@ const AngleIcon = styled(Icon)`
   right: ${rhythm(1 / 4)}
 `
 
-const StyledLink = styled(Link)`
-  background-image: none;
-`
 
 const StyledList = styled(List)`
   font-size: ${scale(0).fontSize};

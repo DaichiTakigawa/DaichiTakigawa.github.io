@@ -7,7 +7,10 @@ import Seo from "../components/atoms/Seo"
 
 export default () => (
   <App>
-    <Seo title="ブログ" description="ブログ" />
+    <Seo
+      title="ブログ"
+      description="たきがわのブログ。Android、AWS、Windows、Javascript、競プロ周りのことについて書いていきます。"
+    />
     <Content active="Blog">
       <BlogList />
     </Content>

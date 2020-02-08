@@ -10,9 +10,17 @@ export default ({ data }) => {
   let frontmatter = data.markdownRemark.frontmatter
   let html = data.markdownRemark.html
   let toc = data.markdownRemark.tableOfContents
+  let url = `https://www.takigawa-memo.com${data.markdownRemark.frontmatter.slug}`
+  let imageUrl = `https://www.takigawa-memo.com${data.markdownRemark.frontmatter.thumbnail.publicURL}`
   return (
     <App>
-      <Seo title={frontmatter.title} description={frontmatter.description} />
+      <Seo
+        isPostPage
+        title={frontmatter.title}
+        description={frontmatter.description}
+        url={url}
+        imageUrl={imageUrl}
+      />
       <Content>
         <BlogPage metadata={frontmatter} html={html} toc={toc} />
       </Content>
@@ -30,6 +38,7 @@ export const query = graphql`
         description
         thumbnail {
           name
+          publicURL
         }
       }
       html

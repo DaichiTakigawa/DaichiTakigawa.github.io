@@ -5,6 +5,7 @@ import { scale, rhythm } from "../../utils/typography"
 import CustomImage from "../atoms/CustomImage"
 import Copyright from "../atoms/Copyright"
 import Toc from "../atoms/Toc"
+import ShareButtons from "../atoms/SheraButtons"
 
 export default class BlogPage extends React.Component {
   getTags(tags) {
@@ -26,6 +27,8 @@ export default class BlogPage extends React.Component {
   render() {
     let meta = this.props.metadata
     let toc = this.props.toc
+    let url = `https://www.takigawa-memo.com${meta.slug}`
+    let title = `${meta.title} - TAKIGAWA MEMO`
     return (
       <Segment>
         <StyledContainer>
@@ -45,6 +48,7 @@ export default class BlogPage extends React.Component {
           <Description>{meta.description}</Description>
           <Divider />
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
+          <ShareButtons url={url} title={title} />
           <Toc data={toc} />
           <Responsive
             as={StyledHtml}
@@ -90,6 +94,10 @@ const StyledHtml = styled.div`
     font-size: ${scale(1 / 2).fontSize}
     line-height: ${rhythm(2)}
   }
+  & > ul > li {
+    font-size: ${scale(1 / 8).fontSize}
+    line-height: ${rhythm(2)}
+  }
 `
 
 const MobileStyledHtml = styled.div`
@@ -104,11 +112,15 @@ const MobileStyledHtml = styled.div`
   }
   & > ol > li {
     font-size: ${scale(0).fontSize}
-    line-height: ${rhythm(2)}
+    line-height: ${rhythm(1)}
   }
   & > h2 {
     font-size: ${scale(1 / 2).fontSize}
     line-height: ${rhythm(2)}
+  }
+  & > ul > li {
+    font-size: ${scale(0).fontSize}
+    line-height: ${rhythm(1)}
   }
 `
 const Title = styled.h1`

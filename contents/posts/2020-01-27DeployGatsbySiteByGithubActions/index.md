@@ -58,6 +58,10 @@ yamlファイルで設定する項目をテーブル形式でまとめました�
 
 [peaceiris/actions-gh-pages: GitHub Actions for GitHub Pages 🚀 Deploy static files and publish your site easily. Static-Site-Generators-friendly.](https://github.com/peaceiris/actions-gh-pages)
 
+またyamlの記法については、以前Jsonとの比較をまとめた記事を作成したのでそちらもご参照ください。
+
+[YamlとJsonの比較 - TAKIGAWA MEMO](https://www.takigawa-memo.com/compare-yaml-json/)
+
 \<user-name\>.github.ioというレポジトリのdeployブランチでpushイベントが発生した際に、Gatsbyサイトをビルドし、masterブランチへデプロイしています。
 
 ```yml:title=build-and-deploy.yml
