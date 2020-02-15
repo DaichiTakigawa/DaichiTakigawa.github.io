@@ -50,15 +50,7 @@ class BlogList extends React.Component {
     return (
       <Segment>
         <StyledContainer>
-          <Responsive as={Title} minWidth={Responsive.onlyTablet.minWidth}>
-            Blog
-          </Responsive>
-          <Responsive
-            as={MobileTitle}
-            maxWidth={Responsive.onlyMobile.maxWidth}
-          >
-            Blog
-          </Responsive>
+          <Title>Blog</Title>
           <StyledDivider />
           {this.getlist()}
         </StyledContainer>
@@ -93,36 +85,22 @@ class Item extends React.Component {
     let tags = info.tags
     let name = info.thumbnail.name
     return (
-      <div>
-        <Responsive
-          as={FlexContainer}
-          minWidth={Responsive.onlyTablet.minWidth}
-        >
-          <div style={{ width: rhythm(8), marginRight: rhythm(2) }}>
+      <>
+        <Container>
+          <ImgContainer>
             <CutomImage fileName={name} alt="thumbnail" />
-          </div>
-          <div style={{ margin: "auto", width: "100%" }}>
+          </ImgContainer>
+          <PageData>
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>{date}</Date>
               <div>{this.getTags(tags)}</div>
             </Info>
             <Description>{description}</Description>
-          </div>
-        </Responsive>
-        <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
-          <CutomImage fileName={name} alt="thumbnail" />
-          <div>
-            <StyledLink to={slug}>{title}</StyledLink>
-            <Info>
-              <Date>{date}</Date>
-              <div>{this.getTags(tags)}</div>
-            </Info>
-            <Description>{description}</Description>
-          </div>
-        </Responsive>
+          </PageData>
+        </Container>
         <Divider />
-      </div>
+      </>
     )
   }
 }
@@ -139,19 +117,38 @@ const StyledContainer = styled.div`
   width: 80%
 `
 
-const Title = styled.h1`
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(3)}
-  color: rgb(70, 70, 70);
-  padding-top: ${rhythm(2)}
-  margin-bottom: 0
+const Container = styled.div`
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    display: flex;
+  }
 `
 
-const MobileTitle = styled.h1`
+const ImgContainer = styled.div`
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    width: ${rhythm(8)}
+    margin-right: ${rhythm(2)}
+  }
+`
+
+const PageData = styled.div`
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    margin: auto
+    width: 100%
+  }
+`
+
+const Title = styled.h1`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(2)}
   color: rgb(70, 70, 70);
   padding-top: ${rhythm(1)}
+
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    font-size: ${scale(1).fontSize}
+    line-height: ${rhythm(3)}
+    padding-top: ${rhythm(2)}
+    margin-bottom: 0
+  }
 `
 
 const StyledDivider = styled(Divider)`
@@ -180,8 +177,4 @@ const Date = styled.h4`
   padding-top: ${rhythm(1 / 7)}
   margin-bottom: 0
   color:  #4b5454
-`
-
-const FlexContainer = styled.div`
-  display: flex;
 `

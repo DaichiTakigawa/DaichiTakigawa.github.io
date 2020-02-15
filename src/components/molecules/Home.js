@@ -62,7 +62,7 @@ export default class Home extends React.Component {
 
   getText() {
     return (
-      <div>
+      <>
         <Header>運営者について</Header>
         <FlexContainer>
           <div style={{ width: rhythm(8), marginRight: rhythm(1) }}>
@@ -137,7 +137,7 @@ export default class Home extends React.Component {
             </li>
           </ul>
         </P>
-      </div>
+      </>
     )
   }
 
@@ -146,29 +146,9 @@ export default class Home extends React.Component {
       <Segment>
         <CustomImage fileName="home-image" alt="実家の犬ども" />
         <StyledContainer>
-          <Responsive as={Title} minWidth={Responsive.onlyComputer.minWidth}>
-            TAKIGAWA MEMO
-          </Responsive>
-          <Responsive
-            as={TabletTitle}
-            minWidth={Responsive.onlyTablet.minWidth}
-            maxWidth={Responsive.onlyTablet.maxWidth}
-          >
-            TAKIGAWA MEMO
-          </Responsive>
-          <Responsive
-            as={MobileTitle}
-            maxWidth={Responsive.onlyMobile.maxWidth}
-          >
-            TAKIGAWA MEMO
-          </Responsive>
+          <Title>TAKIGAWA MEMO</Title>
           <StyledDivider />
-          <Responsive as={Text} minWidth={Responsive.onlyTablet.minWidth}>
-            {this.getText()}
-          </Responsive>
-          <Responsive as={MobileText} maxWidth={Responsive.onlyMobile.maxWidth}>
-            {this.getText()}
-          </Responsive>
+          <Text>{this.getText()}</Text>
         </StyledContainer>
         <Copyright />
       </Segment>
@@ -192,39 +172,41 @@ const StyledDivider = styled(Divider)`
   margin-left: ${rhythm(1)}
 `
 const Title = styled.h1`
-  font-size: ${scale(2).fontSize}
-  line-height: ${rhythm(4)}
-  text-align: center
-  color: #333333
-  padding-top: ${rhythm(2)}
-`
-const TabletTitle = styled.h1`
-  font-size: ${scale(3 / 2).fontSize}
-  line-height: ${rhythm(3)}
-  text-align: center
-  color: #333333
-  padding-top: ${rhythm(2)}
-`
-const MobileTitle = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
   text-align: center
   color: #333333
   padding-top: ${rhythm(1)}
+
+  @media (max-width: ${Responsive.onlyTablet.maxWidth}px) 
+    and (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    font-size: ${scale(3 / 2).fontSize}
+    line-height: ${rhythm(3)}
+    text-align: center
+    color: #333333
+    padding-top: ${rhythm(2)}
+  }
+
+  @media (min-width: ${Responsive.onlyComputer.minWidth}px) {
+    font-size: ${scale(2).fontSize}
+    line-height: ${rhythm(4)}
+    text-align: center
+    color: #333333
+    padding-top: ${rhythm(2)}
+  }
 `
 
 const Text = styled.p`
-  font-size: ${scale(1 / 8).fontSize}
-  line-height: ${scale(1 / 8).lineHeight}
-  margin-top: ${rhythm(2)}
-  color: rgb(80, 80, 80);
-`
-
-const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
   line-height: ${scale(0).lineHeight}
   margin-top: ${rhythm(1)}
   color: rgb(80, 80, 80);
+
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    font-size: ${scale(1 / 8).fontSize}
+    line-height: ${scale(1 / 8).lineHeight}
+    margin-top: ${rhythm(2)}
+  }
 `
 
 const Header = styled.h2`

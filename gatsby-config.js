@@ -91,7 +91,6 @@ module.exports = {
           production: {
             policy: [
               { userAgent: "*", allow: "/" },
-              { userAgent: "*", disallow: "/contact" },
             ],
           },
         },

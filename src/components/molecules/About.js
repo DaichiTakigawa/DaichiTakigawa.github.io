@@ -67,21 +67,8 @@ export default class Home extends React.Component {
     return (
       <Segment>
         <StyledContainer>
-          <Responsive as={Title} minWidth={Responsive.onlyTablet.minWidth}>
-            About
-          </Responsive>
-          <Responsive
-            as={MobileTitle}
-            maxWidth={Responsive.onlyMobile.maxWidth}
-          >
-            About
-          </Responsive>
-          <Responsive as={Text} minWidth={Responsive.onlyTablet.minWidth}>
-            {this.getText()}
-          </Responsive>
-          <Responsive as={MobileText} maxWidth={Responsive.onlyMobile.maxWidth}>
-            {this.getText()}
-          </Responsive>
+          <MobileTitle>About</MobileTitle>
+          <MobileText>{this.getText()}</MobileText>
         </StyledContainer>
         <Copyright />
       </Segment>
@@ -101,19 +88,18 @@ const StyledContainer = styled.div`
   width: 80%
 `
 
-const Title = styled.h1`
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(3)}
-  color: rgb(70, 70, 70);
-  padding-top: ${rhythm(2)}
-  margin-bottom: 0
-`
-
 const MobileTitle = styled.h1`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(2)}
   color: rgb(70, 70, 70);
   padding-top: ${rhythm(1)}
+
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    font-size: ${scale(1).fontSize}
+    line-height: ${rhythm(3)}
+    padding-top: ${rhythm(2)}
+    margin-bottom: 0
+  }
 `
 
 const Header = styled.h2`
@@ -121,16 +107,16 @@ const Header = styled.h2`
   line-height: ${rhythm(2)}
   color: rgb(70, 70, 70);
 `
-
-const Text = styled.p`
-  font-size: ${scale(1 / 8).fontSize}
-  margin-top: ${rhythm(2)}
-`
 const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
   margin-top: ${rhythm(1)}
-`
 
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    font-size: ${scale(1 / 8).fontSize}
+    margin-top: ${rhythm(2)}
+  }
+
+`
 const P = styled.p`
   margin: ${rhythm(1)} 0
   line-height: ${rhythm(2)};

@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import NoSSR from "react-no-ssr"
 import { Responsive } from "semantic-ui-react"
 import { rhythm } from "../../utils/typography"
 
@@ -8,80 +7,60 @@ import Navigation from "../molecules/Navigation"
 import MoblieNavigation from "../molecules/MobileNavigation"
 
 export default class Content extends React.Component {
-  getResponsive() {
-    let active = this.props.active
-    return (
-      <Responsive
-        minWidth={Responsive.onlyComputer.minWidth}
-        style={{ display: "flex" }}
-      >
-        <Navigation active={active} />
-        <Container>{this.props.children}</Container>
-      </Responsive>
-    )
-  }
-
-  getTabletResponsive() {
-    let active = this.props.active
-    return (
-      <Responsive
-        minWidth={Responsive.onlyTablet.minWidth}
-        maxWidth={Responsive.onlyTablet.maxWidth}
-        style={{ display: "flex" }}
-      >
-        <Navigation active={active} />
-        <TabletContainer>{this.props.children}</TabletContainer>
-      </Responsive>
-    )
-  }
-
-  getMobileResponsive() {
-    let active = this.props.active
-    return (
-      <Responsive
-        maxWidth={Responsive.onlyMobile.maxWidth}
-        style={{ padding: 0 }}
-      >
-        <MoblieNavigation active={active} />
-        <MobileContainer>{this.props.children}</MobileContainer>
-      </Responsive>
-    )
-  }
-
   render() {
+    let active = this.props.active
     return (
-      <NoSSR>
-        <Layout>
-          {this.getResponsive()}
-          {this.getTabletResponsive()}
-          {this.getMobileResponsive()}
-        </Layout>
-      </NoSSR>
+      <Layout>
+        <MobileNavigationContainer>
+          <MoblieNavigation active={active} />
+        </MobileNavigationContainer>
+        <NavigationContainer>
+          <Navigation active={active} />
+        </NavigationContainer>
+        <Container>{this.props.children}</Container>
+      </Layout>
     )
   }
 }
 
 const Layout = styled.div`
   background-color: #ececec;
+  padding: 0;
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    display: flex;
+    flex-direction: row;
+  }
 `
+
 const Container = styled.div`
-  margin: ${rhythm(4)} auto
-  padding: 0 10%
-  width: 0%
-  flex-grow: 1
+  padding-top: ${rhythm(2)};
+  padding-left: ${rhythm(1 / 2)};
+  padding-right: ${rhythm(1 / 2)};
+  padding-bottom: ${rhythm(1)};
+  width: 100%;
+
+  @media (max-width: ${Responsive.onlyTablet.maxWidth}px) 
+    and (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    margin: ${rhythm(2)} auto;
+    padding: 0 ${rhythm(1)};
+    min-width: 0;
+  }
+
+  @media (min-width: ${Responsive.onlyComputer.minWidth}px) {
+    margin: ${rhythm(4)} auto;
+    padding: 0 10%;
+    min-width: 0;
+  }
 `
 
-const TabletContainer = styled.div`
-  margin: ${rhythm(2)} auto
-  padding: 0 ${rhythm(1)}
-  width: 0%
-  flex-grow: 1
+const MobileNavigationContainer = styled.div`
+  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+    display: none;
+  }
 `
 
-const MobileContainer = styled.div`
-  padding-top: ${rhythm(2)}
-  padding-left: ${rhythm(1 / 2)}
-  padding-right: ${rhythm(1 / 2)}
-  padding-bottom: ${rhythm(1)}
-  width: 100%
+const NavigationContainer = styled.div`
+  @media (max-width: ${Responsive.onlyMobile.maxWidth}px) {
+    display: none;
+  }
 `

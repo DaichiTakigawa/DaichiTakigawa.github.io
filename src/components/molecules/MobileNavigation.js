@@ -76,7 +76,7 @@ export default class MoblieNavigation extends React.Component {
     let icon = this.getIcon()
     let menu = this.getMenu()
     return (
-      <div>
+      <>
         <Nav bottomShadow={!this.state.expanded}>
           <Title>TAKIGAWA MEMO</Title>
           <CSSTransition
@@ -90,7 +90,7 @@ export default class MoblieNavigation extends React.Component {
         <CSSTransition in={this.state.expanded} timeout={200} classNames="menu">
           {menu}
         </CSSTransition>
-      </div>
+      </>
     )
   }
 }

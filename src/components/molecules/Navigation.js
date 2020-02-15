@@ -66,8 +66,7 @@ const Nav = styled.div`
   padding-top: ${rhythm(2)}
   background-color: white
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
-  flex-grow: 0
-  flex-shrink: 0
+  height: 100%
 `
 
 const StyledLink = styled(Link)`
