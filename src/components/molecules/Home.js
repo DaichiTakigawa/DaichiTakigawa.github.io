@@ -1,61 +1,53 @@
 import React from "react"
 import styled from "styled-components"
-import { Divider, Responsive, Table, Icon } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import CustomImage from "../atoms/CustomImage"
 import Copyright from "../atoms/Copyright"
+import Divider from "../atoms/Divider"
+import { responsive } from "../../../config"
 
 export default class Home extends React.Component {
   getSkillTable() {
     return (
-      <Table
-        celled
-        striped
-        basic="very"
-        style={{
-          marginTop: rhythm(1),
-          marginBottom: rhythm(3),
-          color: "rgb(80, 80, 80)",
-        }}
-      >
-        <Table.Body>
-          <Table.Row />
-          <Table.Row>
-            <Table.Cell>Android</Table.Cell>
-            <Table.Cell>アルバイトで開発に従事</Table.Cell>
-            <Table.Cell>since 2019.9</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>AWS</Table.Cell>
-            <Table.Cell>アルバイトで開発に従事</Table.Cell>
-            <Table.Cell>since 2019.12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>Webフロントエンド</Table.Cell>
-            <Table.Cell>Gatsbyを用いて個人で当ブログを運営</Table.Cell>
-            <Table.Cell>since 2019.12</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>機械学習</Table.Cell>
-            <Table.Cell>始めたい ... </Table.Cell>
-            <Table.Cell>not yet</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>競プロ</Table.Cell>
-            <Table.Cell>
+      <Table className="table is-striped is-bordered">
+        <tbody>
+          <tr />
+          <tr>
+            <td>Android</td>
+            <td>アルバイトで開発に従事</td>
+            <td>since 2019.9</td>
+          </tr>
+          <tr>
+            <td>AWS</td>
+            <td>アルバイトで開発に従事</td>
+            <td>since 2019.12</td>
+          </tr>
+          <tr>
+            <td>Webフロントエンド</td>
+            <td>Gatsbyを用いて個人で当ブログを運営</td>
+            <td>since 2019.12</td>
+          </tr>
+          <tr>
+            <td>機械学習</td>
+            <td>始めたい ... </td>
+            <td>not yet</td>
+          </tr>
+          <tr>
+            <td>競プロ</td>
+            <td>
               リクルート開催 CodeThanksFestival2018本戦出場(43位)
               <br />
               第二回アスプローバプログラミングコンテスト5位入賞
-            </Table.Cell>
-            <Table.Cell>since 2018.06</Table.Cell>
-          </Table.Row>
-          <Table.Row>
-            <Table.Cell>TOEIC</Table.Cell>
-            <Table.Cell>スコア 910</Table.Cell>
-            <Table.Cell>2016.04</Table.Cell>
-          </Table.Row>
-        </Table.Body>
+            </td>
+            <td>since 2018.06</td>
+          </tr>
+          <tr>
+            <td>TOEIC</td>
+            <td>スコア 910</td>
+            <td>2016.4</td>
+          </tr>
+        </tbody>
       </Table>
     )
   }
@@ -64,22 +56,16 @@ export default class Home extends React.Component {
     return (
       <>
         <Header>運営者について</Header>
-        <FlexContainer>
-          <div style={{ width: rhythm(8), marginRight: rhythm(1) }}>
-            <CustomImage fileName="profile" alt="プロファイル画像" />
-          </div>
-          <div style={{ position: "relative", width: rhythm(8) }}>
-            <P
-              style={{
-                position: "absolute",
-                bottom: "0",
-                paddingBottom: rhythm(1),
-              }}
-            >
-              都内に住む学生。
-            </P>
-          </div>
-        </FlexContainer>
+        <article className="media">
+          <figure className="media-left">
+            <Profile class="image">
+              <CustomImage fileName="profile" alt="プロファイル画像" />
+            </Profile>
+          </figure>
+          <Introduce class="media-content">
+            <p>都内に住む学生。</p>
+          </Introduce>
+        </article>
         <P>
           <ul>
             <li>
@@ -90,7 +76,7 @@ export default class Home extends React.Component {
                 rel="noopener noreferrer"
               >
                 https://github.com/DaichiTakigawa{" "}
-                <Icon name="external alternate" />
+                <i class="fas fa-external-link-alt"></i>
               </a>
             </li>
             <li>
@@ -101,7 +87,7 @@ export default class Home extends React.Component {
                 rel="noopener noreferrer"
               >
                 https://twitter.com/damenin27844103{" "}
-                <Icon name="external alternate" />
+                <i class="fas fa-external-link-alt"></i>
               </a>
             </li>
           </ul>
@@ -119,7 +105,7 @@ export default class Home extends React.Component {
                 rel="noopener noreferrer"
               >
                 https://atcoder.jp/users/Bobyama{" "}
-                <Icon name="external alternate" />
+                <i class="fas fa-external-link-alt"></i>
               </a>{" "}
               (Rating : 1762)
             </li>
@@ -131,7 +117,7 @@ export default class Home extends React.Component {
                 rel="noopener noreferrer"
               >
                 https://www.topcoder.com/members/Bobyama{" "}
-                <Icon name="external alternate" />
+                <i class="fas fa-external-link-alt"></i>
               </a>{" "}
               (Raging : 1335)
             </li>
@@ -156,7 +142,7 @@ export default class Home extends React.Component {
   }
 }
 
-const Segment = styled.div`
+const Segment = styled.main`
   background-color: white
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
 `
@@ -178,8 +164,8 @@ const Title = styled.h1`
   color: #333333
   padding-top: ${rhythm(1)}
 
-  @media (max-width: ${Responsive.onlyTablet.maxWidth}px) 
-    and (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (max-width: ${responsive.tablet.maxWidth}px) 
+    and (min-width: ${responsive.tablet.minWidth}) {
     font-size: ${scale(3 / 2).fontSize}
     line-height: ${rhythm(3)}
     text-align: center
@@ -187,7 +173,7 @@ const Title = styled.h1`
     padding-top: ${rhythm(2)}
   }
 
-  @media (min-width: ${Responsive.onlyComputer.minWidth}px) {
+  @media (min-width: ${responsive.computer.minWidth}) {
     font-size: ${scale(2).fontSize}
     line-height: ${rhythm(4)}
     text-align: center
@@ -202,7 +188,7 @@ const Text = styled.p`
   margin-top: ${rhythm(1)}
   color: rgb(80, 80, 80);
 
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     font-size: ${scale(1 / 8).fontSize}
     line-height: ${scale(1 / 8).lineHeight}
     margin-top: ${rhythm(2)}
@@ -220,6 +206,20 @@ const P = styled.p`
   margin-top: ${rhythm(1)}
 `
 
-const FlexContainer = styled.div`
-  display: flex;
+const Table = styled.table`
+  margin-top: ${rhythm(1)}
+  margin-bottom: ${rhythm(3)}
+  color: rgb(80, 80, 80);
+`
+
+const Profile = styled.p`
+  width: ${rhythm(8)} 
+  margin-right: ${rhythm(1)}
+`
+
+const Introduce = styled.div`
+  margin-top: auto
+  & > p {
+    margin-bottom: ${rhythm(2)}
+  }
 `

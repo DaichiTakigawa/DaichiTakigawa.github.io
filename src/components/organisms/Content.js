@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import NoSSR from "react-no-ssr"
-import { Responsive } from "semantic-ui-react"
 import { rhythm } from "../../utils/typography"
 
 import Navigation from "../molecules/Navigation"
 import MoblieNavigation from "../molecules/MobileNavigation"
+import { responsive as resp } from "../../../config"
 
 export default class Content extends React.Component {
   render() {
@@ -29,7 +29,7 @@ export default class Content extends React.Component {
 const Layout = styled.div`
   background-color: #ececec;
   padding: 0;
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${resp.tablet.minWidth}) {
     display: flex;
     flex-direction: row;
   }
@@ -42,28 +42,31 @@ const Container = styled.div`
   padding-bottom: ${rhythm(1)};
   width: 100%;
 
-  @media (max-width: ${Responsive.onlyTablet
-      .maxWidth}px) and (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${resp.tablet.minWidth}) {
     margin: ${rhythm(2)} auto;
     padding: 0 ${rhythm(1)};
     min-width: 0;
   }
 
-  @media (min-width: ${Responsive.onlyComputer.minWidth}px) {
+  @media (min-width: ${resp.computer.minWidth}) {
     margin: ${rhythm(4)} auto;
     padding: 0 10%;
     min-width: 0;
   }
 `
 
-const MobileNavigationContainer = styled.div`
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+const MobileNavigationContainer = styled.header`
+  @media (min-width: ${resp.tablet.minWidth}) {
     display: none;
   }
 `
 
-const NavigationContainer = styled.div`
-  @media (max-width: ${Responsive.onlyMobile.maxWidth}px) {
+const NavigationContainer = styled.header`
+  padding-top: ${rhythm(2)}
+  background-color: white
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
+
+  @media (max-width: ${resp.mobile.maxWidth}) {
     display: none;
   }
 `

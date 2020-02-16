@@ -1,26 +1,18 @@
 import React from "react"
 import styled from "styled-components"
-import { Divider, Label, Responsive } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
+
 import CustomImage from "../atoms/CustomImage"
 import Copyright from "../atoms/Copyright"
 import Toc from "../atoms/Toc"
-import ShareButtons from "../atoms/SheraButtons"
+import ShareButtons from "../atoms/ShareButtons"
+import Divider from "../atoms/Divider"
+import { responsive } from "../../../config"
 
 export default class BlogPage extends React.Component {
   getTags(tags) {
     return tags.map(tag => {
-      return (
-        <Label
-          tag
-          size="mini"
-          style={{
-            marginLeft: rhythm(1),
-          }}
-        >
-          {tag}
-        </Label>
-      )
+      return <span className="tag">{tag}</span>
     })
   }
 
@@ -34,8 +26,10 @@ export default class BlogPage extends React.Component {
         <StyledContainer>
           <MobileTitle>{meta.title}</MobileTitle>
           <Info>
-            <Date>{meta.date}</Date>
-            <Tag>{this.getTags(meta.tags)}</Tag>
+            <Date>
+              <h4>{meta.date}</h4>
+            </Date>
+            <Tags className="tags">{this.getTags(meta.tags)}</Tags>
           </Info>
           <Description>{meta.description}</Description>
           <Divider />
@@ -82,7 +76,7 @@ const MobileStyledHtml = styled.div`
     line-height: ${rhythm(1)}
   }
 
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     padding-top: ${rhythm(2)};
     & > p {
       font-size: ${scale(1 / 8).fontSize}
@@ -108,28 +102,32 @@ const MobileTitle = styled.h1`
   font-size: ${scale(1).fontSize}
   line-height: ${rhythm(2)}
 
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     padding-top: ${rhythm(4)}
     font-size: ${scale(3 / 2).fontSize}
     line-height: ${rhythm(3)}
   }
 `
-const Date = styled.h4`
-  font-size: ${scale(0).fontSize}
-  line-height: ${scale(0).lineHeight}
-  padding-top: ${rhythm(1 / 8)}
-  margin-bottom: 0
-  color:  #4b5454
+const Date = styled.div`
+  & > h4 {
+    font-size: ${scale(0).fontSize}
+    line-height: ${rhythm(3)}
+    text-align: center
+    color: #4b5454
+    margin: auto
+  }
 `
 
 const Description = styled.p`
   font-size: ${scale(0).fontSize}
   line-height: ${scale(0).lineHeight}
-  margin-top: ${rhythm(1)}
 `
 
-const Tag = styled.div``
+const Tags = styled.div`
+  margin-left: ${rhythm(1)};
+`
 
 const Info = styled.div`
   display: flex;
+  height: ${rhythm(3)};
 `

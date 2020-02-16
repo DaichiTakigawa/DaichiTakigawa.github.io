@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Container, Divider } from "semantic-ui-react"
 import { scale, rhythm } from "../utils/typography"
 
 import SEO from "../components/atoms/Seo"
@@ -9,9 +8,9 @@ import App from "../components/organisms/App"
 export default () => (
   <App>
     <SEO title="404" description="無効なURLです。" />
-    <Container textAlign="center" style={{ paddingTop: rhythm(4) }}>
+    <Main>
       <Title>404</Title>
-      <Divider />
+      <Hr />
       <Text>
         There isn't a web site you are looking for.
         <span role="img" aria-label="sad">
@@ -19,9 +18,15 @@ export default () => (
           😢{" "}
         </span>
       </Text>
-    </Container>
+    </Main>
   </App>
 )
+
+const Main = styled.main`
+  text-align: center;
+  margin: ${rhythm(4)} auto;
+  width: 80%;
+`
 
 const Title = styled.h1`
   font-size: ${scale(1).fontSize}
@@ -31,4 +36,8 @@ const Text = styled.p`
   font-size: ${scale(1 / 2).fontSize}
   line-height: ${rhythm(2)}
   margin: ${rhythm(3)}
+`
+
+const Hr = styled.hr`
+  background-color: rgba(34, 36, 38, 0.15);
 `

@@ -6,6 +6,7 @@
   "author": "Dachi Takigawa",
   "dependencies": {
     "bulma": "^0.8.0",
+    "bulma-extensions": "^6.2.7",
     "css-loader": "^3.4.2",
     "gatsby": "^2.18.8",
     "gatsby-image": "^2.2.34",

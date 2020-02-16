@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery, graphql, Link } from "gatsby"
-import { Responsive, Divider, Label } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import CutomImage from "../atoms/CustomImage"
+import Divider from "../atoms/Divider"
+import { responsive } from "../../../config"
 
 export default () => (
   <StaticQuery
@@ -62,17 +63,7 @@ class BlogList extends React.Component {
 class Item extends React.Component {
   getTags(tags) {
     return tags.map(tag => {
-      return (
-        <Label
-          tag
-          size="mini"
-          style={{
-            marginLeft: rhythm(1),
-          }}
-        >
-          {tag}
-        </Label>
-      )
+      return <span className="tag">{tag}</span>
     })
   }
 
@@ -94,7 +85,7 @@ class Item extends React.Component {
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>{date}</Date>
-              <div>{this.getTags(tags)}</div>
+              <div className="tags">{this.getTags(tags)}</div>
             </Info>
             <Description>{description}</Description>
           </PageData>
@@ -118,20 +109,20 @@ const StyledContainer = styled.div`
 `
 
 const Container = styled.div`
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     display: flex;
   }
 `
 
 const ImgContainer = styled.div`
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     width: ${rhythm(8)}
     margin-right: ${rhythm(2)}
   }
 `
 
 const PageData = styled.div`
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     margin: auto
     width: 100%
   }
@@ -143,7 +134,7 @@ const Title = styled.h1`
   color: rgb(70, 70, 70);
   padding-top: ${rhythm(1)}
 
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     font-size: ${scale(1).fontSize}
     line-height: ${rhythm(3)}
     padding-top: ${rhythm(2)}

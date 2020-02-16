@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { Responsive, Icon } from "semantic-ui-react"
 import { scale, rhythm } from "../../utils/typography"
 
 import Copyright from "../atoms/Copyright"
+import { responsive } from "../../../config"
 
 export default class Home extends React.Component {
   getText() {
@@ -45,7 +45,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google アナリティクス <Icon name="external alternate" />
+            Google アナリティクス <i class="fas fa-external-link-alt" />
           </a>
           <br />
           <a
@@ -53,7 +53,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Google プライバシーポリシー <Icon name="external alternate" />
+            Google プライバシーポリシー <i class="fas fa-external-link-alt" />
           </a>
         </P>
         <P>
@@ -94,7 +94,7 @@ const MobileTitle = styled.h1`
   color: rgb(70, 70, 70);
   padding-top: ${rhythm(1)}
 
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     font-size: ${scale(1).fontSize}
     line-height: ${rhythm(3)}
     padding-top: ${rhythm(2)}
@@ -111,7 +111,7 @@ const MobileText = styled.p`
   font-size: ${scale(0).fontSize}
   margin-top: ${rhythm(1)}
 
-  @media (min-width: ${Responsive.onlyTablet.minWidth}px) {
+  @media (min-width: ${responsive.tablet.minWidth}) {
     font-size: ${scale(1 / 8).fontSize}
     margin-top: ${rhythm(2)}
   }

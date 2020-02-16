@@ -1,3 +1,7 @@
+body {
+  overflow-x: initial;
+}
+
 blockquote {
   padding-left: 1.45rem;
 }
