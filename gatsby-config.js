@@ -98,5 +98,6 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-lodash`,
+    `gatsby-plugin-sass`,
   ],
 }
