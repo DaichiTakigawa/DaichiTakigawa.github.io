@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import NoSSR from "react-no-ssr"
 import { rhythm } from "../../utils/typography"
 
 import Navigation from "../molecules/Navigation"
@@ -18,9 +17,7 @@ export default class Content extends React.Component {
         <NavigationContainer>
           <Navigation active={active} />
         </NavigationContainer>
-        <NoSSR>
-          <Container>{this.props.children}</Container>
-        </NoSSR>
+        <Container>{this.props.children}</Container>
       </Layout>
     )
   }
@@ -42,7 +39,8 @@ const Container = styled.div`
   padding-bottom: ${rhythm(1)};
   width: 100%;
 
-  @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${resp.tablet.minWidth}) {
+  @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${resp.tablet
+      .minWidth}) {
     margin: ${rhythm(2)} auto;
     padding: 0 ${rhythm(1)};
     min-width: 0;
