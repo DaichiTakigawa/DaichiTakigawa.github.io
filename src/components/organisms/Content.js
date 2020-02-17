@@ -33,22 +33,20 @@ const Layout = styled.div`
 `
 
 const Container = styled.div`
-  padding-top: ${rhythm(2)};
-  padding-left: ${rhythm(1 / 2)};
-  padding-right: ${rhythm(1 / 2)};
-  padding-bottom: ${rhythm(1)};
-  width: 100%;
+  margin: ${rhythm(2)} ${rhythm(1 / 2)} ${rhythm(1)} ${rhythm(1 / 2)}
+  background-color: white
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
 
-  @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${resp.tablet
-      .minWidth}) {
-    margin: ${rhythm(2)} auto;
-    padding: 0 ${rhythm(1)};
+  @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${
+  resp.tablet.minWidth
+}) {
+    margin: ${rhythm(2)} ${rhythm(1)} ${rhythm(2)} ${rhythm(1)}
     min-width: 0;
   }
 
   @media (min-width: ${resp.computer.minWidth}) {
-    margin: ${rhythm(4)} auto;
-    padding: 0 10%;
+    margin: ${rhythm(4)} 10%;
+    width: 100%
     min-width: 0;
   }
 `

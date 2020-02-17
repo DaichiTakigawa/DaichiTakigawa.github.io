@@ -17,7 +17,7 @@ export default ({ url, title }) => {
       </ShareButton>
       <ShareButton color="#55acee" className="column">
         <a
-          href={`https://twiter.com/share?url=${url}`}
+          href={`https://twitter.com/share?url=${url}`}
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -30,7 +30,7 @@ export default ({ url, title }) => {
           target="_blank"
           rel="noreferrer noopener"
         >
-          B!
+          <Hatena>B!</Hatena>
         </a>
       </ShareButton>
       <ShareButton color="#d3505a" className="column">
@@ -62,4 +62,8 @@ const ShareButton = styled.div`
     text-align: center;
     font-size: 1.3em;
   }
+`
+
+const Hatena = styled.span`
+  font-weight: bold
 `

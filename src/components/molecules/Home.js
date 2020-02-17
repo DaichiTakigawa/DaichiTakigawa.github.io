@@ -129,7 +129,7 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <Segment>
+      <>
         <CustomImage fileName="home-image" alt="実家の犬ども" />
         <StyledContainer>
           <Title>TAKIGAWA MEMO</Title>
@@ -137,15 +137,10 @@ export default class Home extends React.Component {
           <Text>{this.getText()}</Text>
         </StyledContainer>
         <Copyright />
-      </Segment>
+      </>
     )
   }
 }
-
-const Segment = styled.main`
-  background-color: white
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
-`
 
 const StyledContainer = styled.div`
   padding-bottom: ${rhythm(4)}

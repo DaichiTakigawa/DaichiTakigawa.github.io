@@ -65,21 +65,16 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <Segment>
+      <>
         <StyledContainer>
           <MobileTitle>About</MobileTitle>
           <MobileText>{this.getText()}</MobileText>
         </StyledContainer>
         <Copyright />
-      </Segment>
+      </>
     )
   }
 }
-
-const Segment = styled.div`
-  background-color: white
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
-`
 
 const StyledContainer = styled.div`
   padding-bottom: ${rhythm(4)}

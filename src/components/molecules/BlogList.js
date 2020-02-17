@@ -49,13 +49,11 @@ class BlogList extends React.Component {
 
   render() {
     return (
-      <Segment>
-        <StyledContainer>
-          <Title>Blog</Title>
-          <StyledDivider />
-          {this.getlist()}
-        </StyledContainer>
-      </Segment>
+      <StyledContainer>
+        <Title>Blog</Title>
+        <StyledDivider />
+        {this.getlist()}
+      </StyledContainer>
     )
   }
 }
@@ -95,11 +93,6 @@ class Item extends React.Component {
     )
   }
 }
-
-const Segment = styled.div`
-  background-color: white
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
-`
 
 const StyledContainer = styled.div`
   padding-top: ${rhythm(2)}

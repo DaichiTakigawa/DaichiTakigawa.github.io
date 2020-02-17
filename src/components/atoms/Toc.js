@@ -20,17 +20,16 @@ export default class Toc extends Component {
 
     return (
       <Background>
-        <div className="level">
-          <div className="level-left">
+        <FlexContainer>
+          <LeftBox>
             <Title>目次</Title>
-          </div>
-          <ClickCircle
-            className="level-right"
-            onClick={() => this.setState({ active: !active })}
-          >
-            <i className="fas fa-plus"/>
-          </ClickCircle>
-        </div>
+          </LeftBox>
+          <RightBox>
+            <ClickCircle onClick={() => this.setState({ active: !active })}>
+              <span>{active ? "-" : "+"}</span>
+            </ClickCircle>
+          </RightBox>
+        </FlexContainer>
         {this.getToc(active)}
       </Background>
     )
@@ -48,6 +47,13 @@ const Title = styled.span`
   font-weight: bold
   color: rgb(87, 87, 87);
 `
+const FlexContainer = styled.div`
+  display: flex;
+`
+
+const LeftBox = styled.div``
+
+const RightBox = styled.div``
 
 const ClickCircle = styled.div`
   cursor: pointer;
@@ -55,8 +61,9 @@ const ClickCircle = styled.div`
   height: ${rhythm(1.2)}
   border-radius: 50%
   background: rgba(156, 156, 156, 0.5);
-  & > svg {
-    margin: auto
+  text-align: center
+  & > span {
+    font-weight: bold
   }
 `
 

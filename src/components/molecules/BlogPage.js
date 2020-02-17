@@ -22,7 +22,7 @@ export default class BlogPage extends React.Component {
     let url = `https://www.takigawa-memo.com${meta.slug}`
     let title = `${meta.title} - TAKIGAWA MEMO`
     return (
-      <Segment>
+      <>
         <StyledContainer>
           <MobileTitle>{meta.title}</MobileTitle>
           <Info>
@@ -41,15 +41,10 @@ export default class BlogPage extends React.Component {
           />
         </StyledContainer>
         <Copyright />
-      </Segment>
+      </>
     )
   }
 }
-
-const Segment = styled.div`
-  background-color: white
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
-`
 const StyledContainer = styled.div`
   padding-bottom: ${rhythm(4)}
   width: 90%
