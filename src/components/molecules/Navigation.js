@@ -8,29 +8,28 @@ import { scale, rhythm } from "../../utils/typography"
 
 export default class Navigation extends React.Component {
   getLinkList() {
-    let activeType = this.props.active
-    let getClassName = active => (active ? "is-active" : "")
+    let active = this.props.active
     let res = (
       <Menu className="manu">
         <ul className="menu-list">
           <li>
-            <Link className={getClassName(activeType === "Home")} to="/">
+            <Link className={`${active === "Home" ? "is-active" : ""}`} to="/">
               Home
             </Link>
           </li>
           <li>
-            <Link className={getClassName(activeType === "Blog")} to="/blog/">
+            <Link className={active === "Blog" ? "is-active" : ""} to="/blog/">
               Blog
             </Link>
           </li>
           <li>
-            <Link className={getClassName(activeType === "About")} to="/about/">
+            <Link className={active === "About" ? "is-active" : ""} to="/about/">
               About
             </Link>
           </li>
           <li>
             <Link
-              className={getClassName(activeType === "Contact")}
+              className={active === "Contact" ? "is-active" : ""}
               to="/contact/"
             >
               Contact

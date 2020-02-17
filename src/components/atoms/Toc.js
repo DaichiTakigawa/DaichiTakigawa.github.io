@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { scale, rhythm } from "../../utils/typography"
 
+import { responsive } from "../../../config"
+
 export default class Toc extends Component {
   state = { active: false }
 
@@ -21,14 +23,12 @@ export default class Toc extends Component {
     return (
       <Background>
         <FlexContainer>
-          <LeftBox>
+          <div>
             <Title>目次</Title>
-          </LeftBox>
-          <RightBox>
-            <ClickCircle onClick={() => this.setState({ active: !active })}>
-              <span>{active ? "-" : "+"}</span>
-            </ClickCircle>
-          </RightBox>
+          </div>
+          <ClickCircle onClick={() => this.setState({ active: !active })}>
+            <span>{active ? "-" : "+"}</span>
+          </ClickCircle>
         </FlexContainer>
         {this.getToc(active)}
       </Background>
@@ -40,6 +40,10 @@ const Background = styled.div`
   margin: ${rhythm(3)} 0 ${rhythm(1)} 0
   padding: ${rhythm(1 / 2)} ${rhythm(1)}
   background-color: rgba(224, 224, 224, 0.5);
+
+  @media (min-width: ${responsive.tablet.minWidth}) {
+    width: 56%
+  }
 `
 
 const Title = styled.span`
@@ -49,11 +53,9 @@ const Title = styled.span`
 `
 const FlexContainer = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `
-
-const LeftBox = styled.div``
-
-const RightBox = styled.div``
 
 const ClickCircle = styled.div`
   cursor: pointer;
@@ -70,8 +72,9 @@ const ClickCircle = styled.div`
 const TocContainer = styled.div`
   width: 80%
   margin: 0 auto
+  padding: ${rhythm(1)} 0
 
-  &> div > ul {
+  & > div > ul {
       width: auto;
       li {
         color: #96acb3;

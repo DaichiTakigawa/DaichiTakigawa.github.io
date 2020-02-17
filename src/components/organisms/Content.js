@@ -10,7 +10,7 @@ export default class Content extends React.Component {
   render() {
     let active = this.props.active
     return (
-      <Layout>
+      <>
         <MobileNavigationContainer>
           <MoblieNavigation active={active} />
         </MobileNavigationContainer>
@@ -18,29 +18,21 @@ export default class Content extends React.Component {
           <Navigation active={active} />
         </NavigationContainer>
         <Container>{this.props.children}</Container>
-      </Layout>
+      </>
     )
   }
 }
 
-const Layout = styled.div`
-  background-color: #ececec;
-  padding: 0;
-  @media (min-width: ${resp.tablet.minWidth}) {
-    display: flex;
-    flex-direction: row;
-  }
-`
-
 const Container = styled.div`
-  margin: ${rhythm(2)} ${rhythm(1 / 2)} ${rhythm(1)} ${rhythm(1 / 2)}
-  background-color: white
+  margin: ${rhythm(4)} ${rhythm(1 / 2)} ${rhythm(1)} ${rhythm(1 / 2)}
+  background: white
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
 
   @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${
   resp.tablet.minWidth
 }) {
     margin: ${rhythm(2)} ${rhythm(1)} ${rhythm(2)} ${rhythm(1)}
+    width: 100%
     min-width: 0;
   }
 

@@ -9,7 +9,9 @@ import { responsive } from "../../../config"
 
 export default class Home extends React.Component {
   getSkillTable() {
+
     return (
+      <TableContaienr className="table-container">
       <Table className="table is-striped is-bordered">
         <tbody>
           <tr />
@@ -49,6 +51,7 @@ export default class Home extends React.Component {
           </tr>
         </tbody>
       </Table>
+      </TableContaienr>
     )
   }
 
@@ -201,6 +204,9 @@ const P = styled.p`
   margin-top: ${rhythm(1)}
 `
 
+const TableContaienr = styled.div`
+  padding-left: 1px
+`
 const Table = styled.table`
   margin-top: ${rhythm(1)}
   margin-bottom: ${rhythm(3)}
