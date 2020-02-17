@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import "../../styles/style.scss"
 import { responsive as resp } from "../../../config"
 
 

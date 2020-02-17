@@ -23,7 +23,10 @@ export default class Navigation extends React.Component {
             </Link>
           </li>
           <li>
-            <Link className={active === "About" ? "is-active" : ""} to="/about/">
+            <Link
+              className={active === "About" ? "is-active" : ""}
+              to="/about/"
+            >
               About
             </Link>
           </li>
@@ -45,14 +48,14 @@ export default class Navigation extends React.Component {
     return (
       <SNS>
         <span class="icon is-medium">
-          <a href="https://github.com/DaichiTakigawa">
+          <A href="https://github.com/DaichiTakigawa">
             <i class="fab fa-lg fa-github"></i>
-          </a>
+          </A>
         </span>
         <span class="icon is-medium">
-          <a href="https://twitter.com/damenin27844103">
+          <A href="https://twitter.com/damenin27844103">
             <i class="fab fa-lg fa-twitter"></i>
-          </a>
+          </A>
         </span>
       </SNS>
     )
@@ -82,9 +85,21 @@ const Menu = styled.nav`
 
 const SNS = styled.div`
   margin: ${rhythm(2)} ${rhythm(1)};
+
+  & > span {
+    margin-right: ${rhythm(1 / 2)};
+  }
 `
 
 const StyledSticky = styled.div`
   position: sticky;
   top 0;
+`
+
+const A = styled.a`
+  color: #363636
+
+  &:hover {
+    color: #3273dc;
+  }
 `

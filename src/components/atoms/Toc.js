@@ -80,6 +80,12 @@ const TocContainer = styled.div`
         color: #96acb3;
         list-style: decimal;
         line-height: ${rhythm(3 / 2)}
+        p {
+          margin-bottom: 0
+        }
+        ul {
+          margin-top: 0
+        }
       }
       a {
         text-decoration: none

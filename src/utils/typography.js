@@ -7,12 +7,6 @@ const typography = new Typography({
   headerFontFamily: ["Noto Sans JP", "sans-serif"],
   bodyFontFamily: ["Noto Sans JP", "sans-serif"],
   headerWeight: 700,
-  googleFonts: [
-    {
-      name: "Noto Sans JP",
-      styles: ["400", "700&display=swap"],
-    },
-  ],
 })
 
 export default typography

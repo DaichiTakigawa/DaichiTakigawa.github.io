@@ -56,7 +56,15 @@ export default class Seo extends React.Component {
         <meta name="author" content="Daichi Takigawa" />
         <meta name="description" content={description} />
         {GOP ? GOP.props.children : null}
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script
+          defer
+          src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+        ></script>
+        <link
+          href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,700?display=swap"
+          rel="stylesheet"
+          type="text/css"
+        ></link>
       </Helmet>
     )
   }

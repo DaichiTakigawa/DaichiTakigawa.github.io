@@ -12,7 +12,7 @@ import { responsive } from "../../../config"
 export default class BlogPage extends React.Component {
   getTags(tags) {
     return tags.map(tag => {
-      return <span className="tag">{tag}</span>
+      return <span className="label">{tag}</span>
     })
   }
 

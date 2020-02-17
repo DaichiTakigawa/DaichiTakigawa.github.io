@@ -83,7 +83,7 @@ class Item extends React.Component {
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>{date}</Date>
-              <div className="tags">{this.getTags(tags)}</div>
+              <Tags className="tags">{this.getTags(tags)}</Tags>
             </Info>
             <Description>{description}</Description>
           </PageData>
@@ -161,4 +161,15 @@ const Date = styled.h4`
   padding-top: ${rhythm(1 / 7)}
   margin-bottom: 0
   color:  #4b5454
+`
+
+const Tags = styled.span`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &:last-child {
+    margin-bottom: -0.5rem;
+  }
 `
