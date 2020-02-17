@@ -89,9 +89,7 @@ module.exports = {
         sitemap: `https://www.takigawa-memo.com/sitemap.xml`,
         env: {
           production: {
-            policy: [
-              { userAgent: "*", allow: "/" },
-            ],
+            policy: [{ userAgent: "*", allow: "/" }],
           },
         },
       },
@@ -99,5 +97,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`,
   ],
 }
