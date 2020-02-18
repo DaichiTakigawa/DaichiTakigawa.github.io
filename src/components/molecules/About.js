@@ -14,7 +14,9 @@ export default class Home extends React.Component {
           <a href="/">TAKIGAWA MEMO</a>
           はプログラミング初心者の当ブログ運営者が備忘録としてまとめたものです。
           <br />
-          GatsbyとSemantic UIを用いて作成しました。
+          <s>GatsbyとSemantic UIを用いて作成しました。</s>
+          <br />
+          2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しています。
         </P>
         <P>
           主に、Android、AWS、Javasricpt、Windowsについて、躓いたことや、気付いた点をまとめていきたいです。
