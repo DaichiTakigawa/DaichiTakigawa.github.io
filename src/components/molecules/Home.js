@@ -146,81 +146,81 @@ export default class Home extends React.Component {
 }
 
 const StyledContainer = styled.div`
-  padding-bottom: ${rhythm(4)}
-  margin: auto
-  width: 80%
+  padding-bottom: ${rhythm(4)};
+  margin: auto;
+  width: 80%;
 `
 
 const StyledDivider = styled(Divider)`
-  padding-left: ${rhythm(1)}
-  margin-left: ${rhythm(1)}
+  padding-left: ${rhythm(1)};
+  margin-left: ${rhythm(1)};
 `
 const Title = styled.h1`
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(2)}
-  text-align: center
-  color: #333333
-  padding-top: ${rhythm(1)}
+  font-size: ${scale(1).fontSize};
+  line-height: ${rhythm(2)};
+  text-align: center;
+  color: #333333;
+  padding-top: ${rhythm(1)};
 
   @media (max-width: ${responsive.tablet.maxWidth}px) 
     and (min-width: ${responsive.tablet.minWidth}) {
-    font-size: ${scale(3 / 2).fontSize}
-    line-height: ${rhythm(3)}
-    text-align: center
-    color: #333333
-    padding-top: ${rhythm(2)}
+    font-size: ${scale(3 / 2).fontSize};
+    line-height: ${rhythm(3)};
+    text-align: center;
+    color: #333333;
+    padding-top: ${rhythm(2)};
   }
 
   @media (min-width: ${responsive.computer.minWidth}) {
-    font-size: ${scale(2).fontSize}
-    line-height: ${rhythm(4)}
-    text-align: center
-    color: #333333
-    padding-top: ${rhythm(2)}
+    font-size: ${scale(2).fontSize};
+    line-height: ${rhythm(4)};
+    text-align: center;
+    color: #333333;
+    padding-top: ${rhythm(2)};
   }
 `
 
 const Text = styled.p`
-  font-size: ${scale(0).fontSize}
-  line-height: ${scale(0).lineHeight}
-  margin-top: ${rhythm(1)}
+  font-size: ${scale(0).fontSize};
+  line-height: ${scale(0).lineHeight};
+  margin-top: ${rhythm(1)};
   color: rgb(80, 80, 80);
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    font-size: ${scale(1 / 8).fontSize}
-    line-height: ${scale(1 / 8).lineHeight}
-    margin-top: ${rhythm(2)}
+    font-size: ${scale(1 / 8).fontSize};
+    line-height: ${scale(1 / 8).lineHeight};
+    margin-top: ${rhythm(2)};
   }
 `
 
 const Header = styled.h2`
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(2)}
-  padding-top: ${rhythm(1)}
+  font-size: ${scale(1).fontSize};
+  line-height: ${rhythm(2)};
+  padding-top: ${rhythm(1)};
   color: rgb(70, 70, 70);
 `
 const P = styled.p`
-  margin-bottom: ${rhythm(2)}
-  margin-top: ${rhythm(1)}
+  margin-bottom: ${rhythm(2)};
+  margin-top: ${rhythm(1)};
 `
 
 const TableContaienr = styled.div`
-  padding-left: 1px
+  padding-left: 1px;
 `
 const Table = styled.table`
-  margin-top: ${rhythm(1)}
-  margin-bottom: ${rhythm(3)}
+  margin-top: ${rhythm(1)};
+  margin-bottom: ${rhythm(3)};
   color: rgb(80, 80, 80);
 `
 
 const Profile = styled.p`
-  width: ${rhythm(8)} 
-  margin-right: ${rhythm(1)}
+  width: ${rhythm(8)};
+  margin-right: ${rhythm(1)};
 `
 
 const Introduce = styled.div`
-  margin-top: auto
+  margin-top: auto;
   & > p {
-    margin-bottom: ${rhythm(2)}
+    margin-bottom: ${rhythm(2)};
   }
 `

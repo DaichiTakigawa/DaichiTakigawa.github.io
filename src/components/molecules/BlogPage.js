@@ -46,76 +46,76 @@ export default class BlogPage extends React.Component {
   }
 }
 const StyledContainer = styled.div`
-  padding-bottom: ${rhythm(4)}
-  width: 90%
-  margin: auto
+  padding-bottom: ${rhythm(4)};
+  width: 90%;
+  margin: auto;
 `
 
 const MobileStyledHtml = styled.div`
   padding-top: ${rhythm(2)};
   & > p {
-    font-size: ${scale(0).fontSize}
-    line-height: ${rhythm(3 / 2)}
-    margin: ${rhythm(1)} 0
+    font-size: ${scale(0).fontSize};
+    line-height: ${rhythm(3 / 2)};
+    margin: ${rhythm(1)} 0;
   }
   & > ol > li {
-    font-size: ${scale(0).fontSize}
-    line-height: ${rhythm(1)}
+    font-size: ${scale(0).fontSize};
+    line-height: ${rhythm(1)};
   }
   & > h2 {
-    font-size: ${scale(1 / 2).fontSize}
-    line-height: ${rhythm(2)}
+    font-size: ${scale(1 / 2).fontSize};
+    line-height: ${rhythm(2)};
   }
   & > ul > li {
-    font-size: ${scale(0).fontSize}
-    line-height: ${rhythm(1)}
+    font-size: ${scale(0).fontSize};
+    line-height: ${rhythm(1)};
   }
 
   @media (min-width: ${responsive.tablet.minWidth}) {
     padding-top: ${rhythm(2)};
     & > p {
-      font-size: ${scale(1 / 8).fontSize}
-      line-height: ${rhythm(2)}
-      margin: ${rhythm(1)} 0
+      font-size: ${scale(1 / 8).fontSize};
+      line-height: ${rhythm(2)};
+      margin: ${rhythm(1)} 0;
     }
     & > ol > li {
-      font-size: ${scale(1 / 8).fontSize}
-      line-height: ${rhythm(2)}
+      font-size: ${scale(1 / 8).fontSize};
+      line-height: ${rhythm(2)};
     }
     & > h2 {
-      font-size: ${scale(1 / 2).fontSize}
-      line-height: ${rhythm(2)}
+      font-size: ${scale(1 / 2).fontSize};
+      line-height: ${rhythm(2)};
     }
     & > ul > li {
-      font-size: ${scale(1 / 8).fontSize}
-      line-height: ${rhythm(2)}
+      font-size: ${scale(1 / 8).fontSize};
+      line-height: ${rhythm(2)};
     }
   }
 `
 const MobileTitle = styled.h1`
-  padding-top: ${rhythm(2)}
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(2)}
+  padding-top: ${rhythm(2)};
+  font-size: ${scale(1).fontSize};
+  line-height: ${rhythm(2)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    padding-top: ${rhythm(4)}
-    font-size: ${scale(3 / 2).fontSize}
-    line-height: ${rhythm(3)}
+    padding-top: ${rhythm(4)};
+    font-size: ${scale(3 / 2).fontSize};
+    line-height: ${rhythm(3)};
   }
 `
 const Date = styled.div`
   & > h4 {
-    font-size: ${scale(0).fontSize}
-    line-height: ${rhythm(3)}
-    text-align: center
-    color: #4b5454
-    margin: auto
+    font-size: ${scale(0).fontSize};
+    line-height: ${rhythm(3)};
+    text-align: center;
+    color: #4b5454;
+    margin: auto;
   }
 `
 
 const Description = styled.p`
-  font-size: ${scale(0).fontSize}
-  line-height: ${scale(0).lineHeight}
+  font-size: ${scale(0).fontSize};
+  line-height: ${scale(0).lineHeight};
 `
 
 const Tags = styled.div`

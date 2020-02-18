@@ -8,7 +8,7 @@ import { responsive } from "../../../config"
 export default class Home extends React.Component {
   getText() {
     return (
-      <div>
+      <>
         <Header>このサイトについて</Header>
         <P>
           <a href="/">TAKIGAWA MEMO</a>
@@ -59,7 +59,7 @@ export default class Home extends React.Component {
         <P>
           なお、Cookieを無効にすることでアクセスログの収集の拒否が可能ですので、お使いのブラウザの設定をご確認ください。
         </P>
-      </div>
+      </>
     )
   }
 
@@ -77,43 +77,43 @@ export default class Home extends React.Component {
 }
 
 const StyledContainer = styled.div`
-  padding-bottom: ${rhythm(4)}
-  padding-top: ${rhythm(2)}
-  margin: auto
-  width: 80%
+  padding-bottom: ${rhythm(4)};
+  padding-top: ${rhythm(2)};
+  margin: auto;
+  width: 80%;
 `
 
 const MobileTitle = styled.h1`
-  font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(2)}
+  font-size: ${scale(1 / 2).fontSize};
+  line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);
-  padding-top: ${rhythm(1)}
+  padding-top: ${rhythm(1)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    font-size: ${scale(1).fontSize}
-    line-height: ${rhythm(3)}
-    padding-top: ${rhythm(2)}
-    margin-bottom: 0
+    font-size: ${scale(1).fontSize};
+    line-height: ${rhythm(3)};
+    padding-top: ${rhythm(2)};
+    margin-bottom: 0;
   }
 `
 
 const Header = styled.h2`
-  font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(2)}
+  font-size: ${scale(1 / 2).fontSize};
+  line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);
 `
-const MobileText = styled.p`
-  font-size: ${scale(0).fontSize}
-  margin-top: ${rhythm(1)}
+const MobileText = styled.div`
+  font-size: ${scale(0).fontSize};
+  margin-top: ${rhythm(1)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    font-size: ${scale(1 / 8).fontSize}
-    margin-top: ${rhythm(2)}
+    font-size: ${scale(1 / 8).fontSize};
+    margin-top: ${rhythm(2)};
   }
 
 `
 const P = styled.p`
-  margin: ${rhythm(1)} 0
+  margin: ${rhythm(1)} 0;
   line-height: ${rhythm(2)};
   color: rgb(80, 80, 80);
 `

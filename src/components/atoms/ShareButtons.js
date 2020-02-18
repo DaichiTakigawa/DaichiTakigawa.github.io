@@ -48,22 +48,22 @@ export default ({ url, title }) => {
 
 const Container = styled.div`
   margin-top: 0;
-  width: 100%
-  margin: auto
+  width: 100%;
+  margin: auto;
 `
 
 const ShareButton = styled.div`
-  background: ${props => props.color}
-  padding: 0
+  background: ${props => props.color};
+  padding: 0;
   & > a {
     display: block;
     color: #fff;
-    padding: ${rhythm(1 / 4)} 0
+    padding: ${rhythm(1 / 4)} 0;
     text-align: center;
     font-size: 1.3em;
   }
 `
 
 const Hatena = styled.span`
-  font-weight: bold
+  font-weight: bold;
 `

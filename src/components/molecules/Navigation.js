@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Title from "../atoms/Title"
 import Divider from "../atoms/Divider"
-import { scale, rhythm } from "../../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 export default class Navigation extends React.Component {
   getLinkList() {
@@ -97,7 +97,7 @@ const StyledSticky = styled.div`
 `
 
 const A = styled.a`
-  color: #363636
+  color: #363636;
 
   &:hover {
     color: #3273dc;

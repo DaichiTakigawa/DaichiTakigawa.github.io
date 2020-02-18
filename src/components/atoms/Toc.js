@@ -37,18 +37,18 @@ export default class Toc extends Component {
 }
 
 const Background = styled.div`
-  margin: ${rhythm(3)} 0 ${rhythm(1)} 0
-  padding: ${rhythm(1 / 2)} ${rhythm(1)}
+  margin: ${rhythm(3)} 0 ${rhythm(1)} 0;
+  padding: ${rhythm(1 / 2)} ${rhythm(1)};
   background-color: rgba(224, 224, 224, 0.5);
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    width: 56%
+    width: 56%;
   }
 `
 
 const Title = styled.span`
-  font-size: ${scale(1 / 6).fontSize}
-  font-weight: bold
+  font-size: ${scale(1 / 6).fontSize};
+  font-weight: bold;
   color: rgb(87, 87, 87);
 `
 const FlexContainer = styled.div`
@@ -59,37 +59,37 @@ const FlexContainer = styled.div`
 
 const ClickCircle = styled.div`
   cursor: pointer;
-  width: ${rhythm(1.2)}
-  height: ${rhythm(1.2)}
-  border-radius: 50%
+  width: ${rhythm(1.2)};
+  height: ${rhythm(1.2)};
+  border-radius: 50%;
   background: rgba(156, 156, 156, 0.5);
-  text-align: center
+  text-align: center;
   & > span {
-    font-weight: bold
+    font-weight: bold;
   }
 `
 
 const TocContainer = styled.div`
-  width: 80%
-  margin: 0 auto
-  padding: ${rhythm(1)} 0
+  width: 80%;
+  margin: 0 auto;
+  padding: ${rhythm(1)} 0;
 
   & > div > ul {
       width: auto;
       li {
         color: #96acb3;
         list-style: decimal;
-        line-height: ${rhythm(3 / 2)}
+        line-height: ${rhythm(3 / 2)};
         p {
-          margin-bottom: 0
+          margin-bottom: 0;
         }
         ul {
-          margin-top: 0
+          margin-top: 0;
         }
       }
       a {
-        text-decoration: none
-        text-shadow: none
+        text-decoration: none;
+        text-shadow: none;
         color: rgb(82, 82, 82);
       }
     }

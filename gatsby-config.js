@@ -75,7 +75,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-less`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
@@ -97,6 +96,12 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+        minify: true,
+      },
+    },
   ],
 }

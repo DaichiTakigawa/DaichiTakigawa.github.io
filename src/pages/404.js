@@ -29,13 +29,13 @@ const Main = styled.main`
 `
 
 const Title = styled.h1`
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(2)}
+  font-size: ${scale(1).fontSize};
+  line-height: ${rhythm(2)};
 `
 const Text = styled.p`
-  font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(2)}
-  margin: ${rhythm(3)}
+  font-size: ${scale(1 / 2).fontSize};
+  line-height: ${rhythm(2)};
+  margin: ${rhythm(3)};
 `
 
 const Hr = styled.hr`

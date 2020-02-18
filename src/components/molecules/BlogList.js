@@ -95,10 +95,10 @@ class Item extends React.Component {
 }
 
 const StyledContainer = styled.div`
-  padding-top: ${rhythm(2)}
-  padding-bottom: ${rhythm(4)}
-  margin: auto
-  width: 80%
+  padding-top: ${rhythm(2)};
+  padding-bottom: ${rhythm(4)};
+  margin: auto;
+  width: 80%;
 `
 
 const Container = styled.div`
@@ -109,29 +109,29 @@ const Container = styled.div`
 
 const ImgContainer = styled.div`
   @media (min-width: ${responsive.tablet.minWidth}) {
-    width: ${rhythm(8)}
-    margin-right: ${rhythm(2)}
+    width: ${rhythm(8)};
+    margin-right: ${rhythm(2)};
   }
 `
 
 const PageData = styled.div`
   @media (min-width: ${responsive.tablet.minWidth}) {
-    margin: auto
-    width: 100%
+    margin: auto;
+    width: 100%;
   }
 `
 
 const Title = styled.h1`
-  font-size: ${scale(1 / 2).fontSize}
-  line-height: ${rhythm(2)}
+  font-size: ${scale(1 / 2).fontSize};
+  line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);
-  padding-top: ${rhythm(1)}
+  padding-top: ${rhythm(1)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    font-size: ${scale(1).fontSize}
-    line-height: ${rhythm(3)}
-    padding-top: ${rhythm(2)}
-    margin-bottom: 0
+    font-size: ${scale(1).fontSize};
+    line-height: ${rhythm(3)};
+    padding-top: ${rhythm(2)};
+    margin-bottom: 0;
   }
 `
 
@@ -140,27 +140,27 @@ const StyledDivider = styled(Divider)`
 `
 
 const StyledLink = styled(Link)`
-  font-size: ${scale(1).fontSize}
-  line-height: ${rhythm(2)}
+  font-size: ${scale(1).fontSize};
+  line-height: ${rhythm(2)};
 `
 const Info = styled.div`
-  display: flex
-  justify-content: space-between
-  margin-top: ${rhythm(1 / 4)}
+  display: flex;
+  justify-content: space-between;
+  margin-top: ${rhythm(1 / 4)};
 `
 
 const Description = styled.p`
-  font-size: ${scale(0).fontSize}
-  line-height: ${rhythm(1)}
-  margin-top: ${rhythm(1 / 4)}
+  font-size: ${scale(0).fontSize};
+  line-height: ${rhythm(1)};
+  margin-top: ${rhythm(1 / 4)};
 `
 
 const Date = styled.h4`
-  font-size: ${scale(0).fontSize}
-  line-height: ${rhythm(1)}
-  padding-top: ${rhythm(1 / 7)}
-  margin-bottom: 0
-  color:  #4b5454
+  font-size: ${scale(0).fontSize};
+  line-height: ${rhythm(1)};
+  padding-top: ${rhythm(1 / 7)};
+  margin-bottom: 0;
+  color:  #4b5454;
 `
 
 const Tags = styled.span`

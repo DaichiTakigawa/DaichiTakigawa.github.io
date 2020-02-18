@@ -19,7 +19,7 @@ const Footer = styled.footer`
 
   & > .is-divider::after {
     font-size: ${scale(1 / 6).fontSize};
-    padding-top: .1rem
+    padding-top: .1rem;
     color: gray;
   }
 `

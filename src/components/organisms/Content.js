@@ -23,22 +23,22 @@ export default class Content extends React.Component {
   }
 }
 
-const Container = styled.div`
-  margin: ${rhythm(4)} ${rhythm(1 / 2)} ${rhythm(1)} ${rhythm(1 / 2)}
-  background: white
+const Container = styled.main`
+  margin: ${rhythm(4)} ${rhythm(1 / 2)} ${rhythm(1)} ${rhythm(1 / 2)};
+  background: white;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
 
   @media (max-width: ${resp.tablet.maxWidth}) and (min-width: ${
   resp.tablet.minWidth
 }) {
-    margin: ${rhythm(2)} ${rhythm(1)} ${rhythm(2)} ${rhythm(1)}
-    width: 100%
+    margin: ${rhythm(2)} ${rhythm(1)} ${rhythm(2)} ${rhythm(1)};
+    width: 100%;
     min-width: 0;
   }
 
   @media (min-width: ${resp.computer.minWidth}) {
     margin: ${rhythm(4)} 10%;
-    width: 100%
+    width: 100%;
     min-width: 0;
   }
 `
@@ -50,8 +50,8 @@ const MobileNavigationContainer = styled.header`
 `
 
 const NavigationContainer = styled.header`
-  padding-top: ${rhythm(2)}
-  background-color: white
+  padding-top: ${rhythm(2)};
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
 
   @media (max-width: ${resp.mobile.maxWidth}) {

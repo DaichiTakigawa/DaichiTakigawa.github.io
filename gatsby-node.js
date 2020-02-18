@@ -27,13 +27,3 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 }
-
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        '../../theme.config$': path.join(__dirname, 'src/semantic/theme.config'),
-      },
-    },
-  });
-};
