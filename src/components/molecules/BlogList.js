@@ -5,6 +5,7 @@ import { scale, rhythm } from "../../utils/typography"
 
 import CutomImage from "../atoms/CustomImage"
 import Divider from "../atoms/Divider"
+import Tag from "../atoms/Tag"
 import { responsive } from "../../../config"
 
 export default () => (
@@ -61,7 +62,7 @@ class BlogList extends React.Component {
 class Item extends React.Component {
   getTags(tags) {
     return tags.map(tag => {
-      return <span className="tag">{tag}</span>
+      return <Tag>{tag}</Tag>
     })
   }
 
@@ -83,7 +84,7 @@ class Item extends React.Component {
             <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>{date}</Date>
-              <Tags className="tags">{this.getTags(tags)}</Tags>
+              <div>{this.getTags(tags)}</div>
             </Info>
             <Description>{description}</Description>
           </PageData>
@@ -160,16 +161,5 @@ const Date = styled.h4`
   line-height: ${rhythm(1)};
   padding-top: ${rhythm(1 / 7)};
   margin-bottom: 0;
-  color:  #4b5454;
-`
-
-const Tags = styled.span`
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
-  &:last-child {
-    margin-bottom: -0.5rem;
-  }
+  color: #4b5454;
 `

@@ -7,12 +7,13 @@ import Copyright from "../atoms/Copyright"
 import Toc from "../atoms/Toc"
 import ShareButtons from "../atoms/ShareButtons"
 import Divider from "../atoms/Divider"
+import Tag from "../atoms/Tag"
 import { responsive } from "../../../config"
 
 export default class BlogPage extends React.Component {
   getTags(tags) {
     return tags.map(tag => {
-      return <span className="label">{tag}</span>
+      return <Tag>{tag}</Tag>
     })
   }
 
@@ -29,7 +30,7 @@ export default class BlogPage extends React.Component {
             <Date>
               <h4>{meta.date}</h4>
             </Date>
-            <Tags className="tags">{this.getTags(meta.tags)}</Tags>
+            <Tags>{this.getTags(meta.tags)}</Tags>
           </Info>
           <Description>{meta.description}</Description>
           <Divider />
@@ -106,7 +107,7 @@ const MobileTitle = styled.h1`
 const Date = styled.div`
   & > h4 {
     font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(3)};
+    line-height: ${rhythm(2)};
     text-align: center;
     color: #4b5454;
     margin: auto;
@@ -119,10 +120,13 @@ const Description = styled.p`
 `
 
 const Tags = styled.div`
-  margin-left: ${rhythm(1)};
+  margin-left: ${rhythm(1 / 2)};
+  & > span {
+    line-height: ${rhythm(2)};
+  }
 `
 
 const Info = styled.div`
   display: flex;
-  height: ${rhythm(3)};
+  height: ${rhythm(2)};
 `
