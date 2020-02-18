@@ -97,7 +97,7 @@ const MobileTitle = styled.h1`
   }
 `
 
-const Header = styled.h2`
+const Header = styled.h2.attrs({className: "title is-4"})`
   font-size: ${scale(1 / 2).fontSize};
   line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);

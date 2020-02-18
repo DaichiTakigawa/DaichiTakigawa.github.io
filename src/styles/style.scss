@@ -6,10 +6,10 @@ $menu-item-active-color: hsl(217, 71%, 53%);
 $boy-overflow-x: initial;
 $family-sans-serif: 'Noto Sans JP', sans-selif;
 
-// @import '~bulma/bulma.sass';
 @import '~bulma/sass/utilities/_all.sass';
 @import '~bulma/sass/base/_all.sass';
 @import '~bulma/sass/elements/table.sass';
+@import '~bulma/sass/elements/title.sass';
 @import '~bulma/sass/components/menu.sass';
 @import '~bulma/sass/components/navbar.sass';
 @import '~bulma/sass/components/media.sass';

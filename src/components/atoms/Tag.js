@@ -6,9 +6,10 @@ const Tag = styled.span`
   background: rgba(204, 204, 204, 0.3);
   border-radius: 10%;
   margin-left: ${rhythm(1 / 2)};
+  display: inline-block;
 
   &::before {
-    content: " ";
+    content: "";
     padding-left: 0.5rem;
   }
 

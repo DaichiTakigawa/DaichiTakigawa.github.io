@@ -25,7 +25,7 @@ export default class BlogPage extends React.Component {
     return (
       <>
         <StyledContainer>
-          <MobileTitle>{meta.title}</MobileTitle>
+          <Title className="title">{meta.title}</Title>
           <Info>
             <Date>
               <h4>{meta.date}</h4>
@@ -37,9 +37,7 @@ export default class BlogPage extends React.Component {
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
           <ShareButtons url={url} title={title} />
           <Toc data={toc} />
-          <MobileStyledHtml
-            dangerouslySetInnerHTML={{ __html: this.props.html }}
-          />
+          <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
         </StyledContainer>
         <Copyright />
       </>
@@ -52,48 +50,56 @@ const StyledContainer = styled.div`
   margin: auto;
 `
 
-const MobileStyledHtml = styled.div`
+const Html = styled.div`
   padding-top: ${rhythm(2)};
-  & > p {
+  & p {
     font-size: ${scale(0).fontSize};
     line-height: ${rhythm(3 / 2)};
     margin: ${rhythm(1)} 0;
   }
-  & > ol > li {
+  & li {
     font-size: ${scale(0).fontSize};
     line-height: ${rhythm(1)};
   }
-  & > h2 {
+  & tr {
+    font-size: ${scale(0).fontSize};
+    line-height: ${rhythm(1)};
+  }
+  & h2 {
+    font-weight: bold;
     font-size: ${scale(1 / 2).fontSize};
     line-height: ${rhythm(2)};
+    margin: ${rhythm(3 / 2)} 0;
   }
-  & > ul > li {
-    font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(1)};
+  & h3 {
+    font-weight: bold;
+    font-size: ${scale(1 / 6).fontSize};
+    line-height: ${rhythm(2)};
+    margin: ${rhythm(1)} 0;
   }
 
   @media (min-width: ${responsive.tablet.minWidth}) {
     padding-top: ${rhythm(2)};
-    & > p {
-      font-size: ${scale(1 / 8).fontSize};
-      line-height: ${rhythm(2)};
+    & p {
+      font-size: ${scale(0).fontSize};
+      line-height: ${rhythm(3 / 2)};
       margin: ${rhythm(1)} 0;
     }
-    & > ol > li {
+    & li {
       font-size: ${scale(1 / 8).fontSize};
       line-height: ${rhythm(2)};
     }
-    & > h2 {
+    & tr {
+      font-size: ${scale(0).fontSize};
+      line-height: ${rhythm(3 / 2)};
+    }
+    & h2 {
       font-size: ${scale(1 / 2).fontSize};
-      line-height: ${rhythm(2)};
-    }
-    & > ul > li {
-      font-size: ${scale(1 / 8).fontSize};
       line-height: ${rhythm(2)};
     }
   }
 `
-const MobileTitle = styled.h1`
+const Title = styled.h1`
   padding-top: ${rhythm(2)};
   font-size: ${scale(1).fontSize};
   line-height: ${rhythm(2)};
@@ -121,9 +127,9 @@ const Description = styled.p`
 
 const Tags = styled.div`
   margin-left: ${rhythm(1 / 2)};
-  & > span {
-    line-height: ${rhythm(2)};
-  }
+  height: ${rhythm(1)};
+  line-height: ${rhythm(1)};
+  align-self: center;
 `
 
 const Info = styled.div`
