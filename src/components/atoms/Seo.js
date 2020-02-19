@@ -60,6 +60,11 @@ export default class Seo extends React.Component {
           defer
           src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
         ></script>
+        <script
+          data-ad-client="ca-pub-6195920683902846"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        ></script>
         <link
           href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,700?display=swap"
           rel="stylesheet"

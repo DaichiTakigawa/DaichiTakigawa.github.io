@@ -73,7 +73,6 @@ export default class MoblieNavigation extends React.Component {
 const Nav = styled.nav`
   text-align: center;
   background: white;
-  border: 1px solid rgb(221, 221, 221);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
   position: absolute;
   top: 0;
