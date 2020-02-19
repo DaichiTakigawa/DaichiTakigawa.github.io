@@ -60,11 +60,11 @@ export default class Home extends React.Component {
         <Header className="title is-3">運営者について</Header>
         <article className="media">
           <figure className="media-left">
-            <p class="image is-164x164">
+            <p className="image is-164x164">
               <CustomImage fileName="profile" alt="プロファイル画像" />
             </p>
           </figure>
-          <Introduce class="media-content">
+          <Introduce className="media-content">
             <p>都内に住む学生。</p>
           </Introduce>
         </article>
