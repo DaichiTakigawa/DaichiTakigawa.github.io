@@ -59,11 +59,11 @@ const Html = styled.div`
   }
   & li {
     font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(1)};
+    line-height: ${rhythm(3 / 2)};
   }
   & tr {
     font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(1)};
+    line-height: ${rhythm(1.2)};
   }
   & h2 {
     font-weight: bold;
@@ -96,6 +96,12 @@ const Html = styled.div`
     & h2 {
       font-size: ${scale(1 / 2).fontSize};
       line-height: ${rhythm(2)};
+    }
+    & h3 {
+      font-weight: bold;
+      font-size: ${scale(1 / 6).fontSize};
+      line-height: ${rhythm(2)};
+      margin: ${rhythm(1)} 0;
     }
   }
 `

@@ -3,7 +3,7 @@ title: "KotlinのDIライブラリKoinを試してみる"
 date: "2020-02-18 16:00:00 +0800"
 slug: "/android-kotlin-koin/"
 thumbnail: "android-thumbnail.png"
-description: "KotlinのDpencancy InjectionライブラリであるKoinをAndroidアプリに導入する方法をまとめました。"
+description: "KotlinのDpendancy InjectionライブラリであるKoinをAndroidアプリに導入する方法をまとめました。"
 tags:
     - "Android"
     - "Kotlin"
@@ -148,7 +148,7 @@ AndroidManifestファイルにてApplicationクラスを自作したものに置
 
 ```xml:title=AndroidManifest.xml
     <application
-        android:name=".app.App"  <- この行を追加
+        android:name=".App"  <- この行を追加
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

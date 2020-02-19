@@ -5,13 +5,15 @@ $menu-item-active-background-color: hsl(0, 0%, 96%);
 $menu-item-active-color: hsl(217, 71%, 53%);
 $boy-overflow-x: initial;
 $family-sans-serif: 'Noto Sans JP', sans-selif;
+$dimensions: 16 24 32 48 64 96 128 164;
 
 @import '~bulma/sass/utilities/_all.sass';
 @import '~bulma/sass/base/_all.sass';
-@import '~bulma/sass/elements/table.sass';
-@import '~bulma/sass/elements/title.sass';
 @import '~bulma/sass/components/menu.sass';
 @import '~bulma/sass/components/navbar.sass';
 @import '~bulma/sass/components/media.sass';
+@import '~bulma/sass/elements/table.sass';
+@import '~bulma/sass/elements/title.sass';
+@import '~bulma/sass/elements/image.sass';
 @import '~bulma/sass/grid/columns.sass';
 @import '~bulma-extensions/bulma-divider/src/sass/index.sass';

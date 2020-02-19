@@ -60,9 +60,9 @@ export default class Home extends React.Component {
         <Header className="title is-3">運営者について</Header>
         <article className="media">
           <figure className="media-left">
-            <Profile class="image">
+            <p class="image is-164x164">
               <CustomImage fileName="profile" alt="プロファイル画像" />
-            </Profile>
+            </p>
           </figure>
           <Introduce class="media-content">
             <p>都内に住む学生。</p>
@@ -207,11 +207,6 @@ const Table = styled.table`
   margin-top: ${rhythm(1)};
   margin-bottom: ${rhythm(3)};
   color: rgb(80, 80, 80);
-`
-
-const Profile = styled.p`
-  width: ${rhythm(8)};
-  margin-right: ${rhythm(1)};
 `
 
 const Introduce = styled.div`

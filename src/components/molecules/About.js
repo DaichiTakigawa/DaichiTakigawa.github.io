@@ -14,9 +14,9 @@ export default class Home extends React.Component {
           <a href="/">TAKIGAWA MEMO</a>
           はプログラミング初心者の当ブログ運営者が備忘録としてまとめたものです。
           <br />
-          <s>GatsbyとSemantic UIを用いて作成しました。</s>
+          Gatsbyと<s>Semantic UI</s>を用いて作成しました。
           <br />
-          2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しています。
+          2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。
         </P>
         <P>
           主に、Android、AWS、Javasricpt、Windowsについて、躓いたことや、気付いた点をまとめていきたいです。
@@ -99,7 +99,7 @@ const MobileTitle = styled.h1`
   }
 `
 
-const Header = styled.h2.attrs({className: "title is-4"})`
+const Header = styled.h2.attrs({ className: "title is-4" })`
   font-size: ${scale(1 / 2).fontSize};
   line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);
@@ -112,7 +112,6 @@ const MobileText = styled.div`
     font-size: ${scale(1 / 8).fontSize};
     margin-top: ${rhythm(2)};
   }
-
 `
 const P = styled.p`
   margin: ${rhythm(1)} 0;
