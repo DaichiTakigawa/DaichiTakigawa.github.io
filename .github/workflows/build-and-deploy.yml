@@ -33,7 +33,17 @@ jobs:
           echo www.takigawa-memo.com > CNAME
           git add CNAME
           git commit -m 'add CNAME file'
-          git push
         env:
           GITHUB_TOKEN: ${{ github.token }}
           EMAIL: ${{ secrets.EMAIL }}
+
+      - name: Add ads file
+        run: |
+          git checkout deploy static/ads.txt
+          git mv ./static/ads.txt .
+          git add ads.txt
+          git commit -m 'add ads.txt'
+
+      - name: push
+        run: git push
+
