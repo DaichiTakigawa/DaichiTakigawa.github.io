@@ -39,7 +39,7 @@ jobs:
 
       - name: Add ads file
         run: |
-          git checkout deploy static/ads.txt
+          git checkout origin/deploy static/ads.txt
           git mv ./static/ads.txt .
           git add ads.txt
           git commit -m 'add ads.txt'
