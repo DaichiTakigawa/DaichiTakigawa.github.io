@@ -22,29 +22,3 @@ jobs:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: master
           PUBLISH_DIR: ./public
-
-      - name: Add CNAME file
-        run: |
-          git config user.email $EMAIL
-          git config user.name "DaichiTakigawa"
-          git remote set-url origin https://DaichiTakigawa:${GITHUB_TOKEN}@github.com/DaichiTakigawa/DaichiTakigawa.github.io.git
-          git checkout master
-          git pull
-          echo www.takigawa-memo.com > CNAME
-          git add CNAME
-          git commit -m 'add CNAME file'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          EMAIL: ${{ secrets.EMAIL }}
-
-      - name: Add ads file
-        run: |
-          git checkout origin/deploy static/ads.txt
-          rm ads.txt
-          git mv ./static/ads.txt .
-          git add ads.txt
-          git commit -m 'add ads.txt'
-
-      - name: push
-        run: git push
-
