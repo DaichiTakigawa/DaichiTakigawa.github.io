@@ -16,7 +16,7 @@ export default class Home extends React.Component {
           <br />
           Gatsbyと<s>Semantic UI</s>を用いて作成しました。
           <br />
-          2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。
+          <i>2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。</i>
         </P>
         <P>
           主に、Android、AWS、Javasricpt、Windowsについて、躓いたことや、気付いた点をまとめていきたいです。
