@@ -103,5 +103,11 @@ module.exports = {
         minify: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-6195920683902846`,
+      },
+    },
   ],
 }

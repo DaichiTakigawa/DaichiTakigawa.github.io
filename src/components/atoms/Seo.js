@@ -65,11 +65,11 @@ export default class Seo extends React.Component {
           rel="stylesheet"
           type="text/css"
         ></link>
-        <script
+        {/* <script
           data-ad-client="ca-pub-6195920683902846"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        ></script>
+        ></script> */}
       </Helmet>
     )
   }
