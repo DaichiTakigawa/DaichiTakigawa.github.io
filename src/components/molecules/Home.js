@@ -201,12 +201,14 @@ const P = styled.p`
 `
 
 const TableContaienr = styled.div`
+  margin-top: ${rhythm(2)};
+  margin-bottom: ${rhythm(3)} !important;
   padding-left: 1px;
+  padding-top: 1px;
 `
 const Table = styled.table`
-  margin-top: ${rhythm(1)};
-  margin-bottom: ${rhythm(3)};
   color: rgb(80, 80, 80);
+  margin-bottom: 0;
 `
 
 const Introduce = styled.div`
