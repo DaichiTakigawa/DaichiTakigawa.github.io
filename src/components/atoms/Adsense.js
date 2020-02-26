@@ -5,9 +5,26 @@ import { rhythm } from "../../utils/typography"
 import { responsive } from "../../../config"
 
 export default class Adsense extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      showAds: false
+    }
+  }
+
+  componentDidMount() {
+    if (window) {
+      if (!this.state.showAds && (window.innerWidth >= responsive.tablet.minWidth)) {
+        this.setState({showAds: true})
+      }
+    }
+  }
+
+
   render() {
     let format = this.props.format || "auto"
-    if (window && window.innerWidth >= responsive.tablet.minWidth) {
+    if (this.state.showAds) {
       return (
         <Container>
           <Ins
