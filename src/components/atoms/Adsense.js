@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Adsense from "react-adsense"
+import AdSense from "react-adsense"
 
 import { rhythm } from "../../utils/typography"
 import { responsive } from "../../../config"
