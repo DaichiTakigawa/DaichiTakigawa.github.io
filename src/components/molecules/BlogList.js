@@ -81,7 +81,7 @@ class Item extends React.Component {
             <CutomImage fileName={name} alt="thumbnail" />
           </ImgContainer>
           <PageData>
-            <StyledLink className="title" to={slug}>{title}</StyledLink>
+            <StyledLink to={slug}>{title}</StyledLink>
             <Info>
               <Date>{date}</Date>
               <div>{this.getTags(tags)}</div>
@@ -143,6 +143,7 @@ const StyledDivider = styled(Divider)`
 const StyledLink = styled(Link)`
   color: #3273dc;
   font-size: ${scale(1).fontSize};
+  font-weight: bold;
   line-height: ${rhythm(2)};
 `
 const Info = styled.div`

@@ -64,10 +64,13 @@ const StyledContainer = styled.div`
   padding-bottom: ${rhythm(4)};
   width: 90%;
   margin: auto;
+
+  @media (min-width: ${responsive.tablet.minWidth}) {
+    width: 86%;
+  }
 `
 
 const Html = styled.div`
-  // padding-top: ${rhythm(2)};
   & p {
     font-size: ${scale(0).fontSize};
     line-height: ${rhythm(3 / 2)};

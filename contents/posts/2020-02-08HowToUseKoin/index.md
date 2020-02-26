@@ -17,7 +17,7 @@ AndroidアプリへのKoinの導入方法や利用方法をまとめてみまし
 ## Dependancy Injectionとは
 
 Dependancy Injectionは日本語訳すると、依存性の注入となります。  
-日本語にするとなんとも危ない感じがしますね。
+なんとも危ない感じがしますね。
 
 Depndancy Injection自体のコンセプトはそんなにむずかしいものではありません。
 
