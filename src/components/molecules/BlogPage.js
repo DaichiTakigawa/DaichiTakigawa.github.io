@@ -8,7 +8,6 @@ import Toc from "../atoms/Toc"
 import ShareButtons from "../atoms/ShareButtons"
 import Divider from "../atoms/Divider"
 import Tag from "../atoms/Tag"
-import AdSense from "../atoms/AdSense"
 import { responsive } from "../../../config"
 
 export default class BlogPage extends React.Component {

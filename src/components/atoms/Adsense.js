@@ -4,6 +4,10 @@ import styled from "styled-components"
 import { rhythm } from "../../utils/typography"
 
 export default class AdSense extends React.Component {
+  componentDidMount() {
+    if (window) (window.adsbygoogle = window.adsbygoogle || []).push({})
+  }
+
   render() {
     let format = this.props.format || "auto"
     return (
