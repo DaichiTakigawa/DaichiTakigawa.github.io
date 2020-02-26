@@ -7,7 +7,7 @@ import { responsive } from "../../../config"
 export default class Adsense extends React.Component {
   render() {
     let format = this.props.format || "auto"
-    if (!window && window.innerWidth >= responsive.tablet.minWidth) {
+    if (window && window.innerWidth >= responsive.tablet.minWidth) {
       return (
         <Container>
           <Ins
