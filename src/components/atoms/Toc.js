@@ -5,7 +5,7 @@ import { scale, rhythm } from "../../utils/typography"
 import { responsive } from "../../../config"
 
 export default class Toc extends Component {
-  state = { active: false }
+  state = { active: true }
 
   getToc(active) {
     if (active) {

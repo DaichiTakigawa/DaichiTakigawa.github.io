@@ -5,7 +5,11 @@ import { rhythm } from "../../utils/typography"
 
 export default class AdSense extends React.Component {
   componentDidMount() {
-    if (window) (window.adsbygoogle = window.adsbygoogle || []).push({})
+    if (window) {
+      window.adsbygoogle = window.adsbygoogle || []
+      window.adsbygoogle.push({})
+      console.log("new adsbygoogle was pushed")
+    }
   }
 
   render() {
