@@ -43,13 +43,13 @@ const Container = styled.main`
   }
 `
 
-const MobileNavigationContainer = styled.header`
+const MobileNavigationContainer = styled.div`
   @media (min-width: ${resp.tablet.minWidth}) {
     display: none;
   }
 `
 
-const NavigationContainer = styled.header`
+const NavigationContainer = styled.div`
   padding-top: ${rhythm(2)};
   padding-bottom: ${rhythm(2)};
   background-color: white;

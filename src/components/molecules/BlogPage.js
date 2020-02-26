@@ -8,6 +8,7 @@ import Toc from "../atoms/Toc"
 import ShareButtons from "../atoms/ShareButtons"
 import Divider from "../atoms/Divider"
 import Tag from "../atoms/Tag"
+import AdSense from "../atoms/Adsense"
 import { responsive } from "../../../config"
 
 export default class BlogPage extends React.Component {
@@ -37,6 +38,7 @@ export default class BlogPage extends React.Component {
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
           <ShareButtons url={url} title={title} />
           <Toc data={toc} />
+          <AdSense />
           <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
         </StyledContainer>
         <Copyright />
