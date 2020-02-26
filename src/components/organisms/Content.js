@@ -51,6 +51,7 @@ const MobileNavigationContainer = styled.header`
 
 const NavigationContainer = styled.header`
   padding-top: ${rhythm(2)};
+  padding-bottom: ${rhythm(2)};
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 5px;
 

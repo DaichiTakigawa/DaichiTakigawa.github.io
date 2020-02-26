@@ -11,6 +11,13 @@ export default class Seo extends React.Component {
     this.description = this.props.description
   }
 
+  componentDidMount() {
+    if (window)
+      (window.adsbygoogle = window.adsbygoogle || []).push({
+        overlays: { bottom: true },
+      })
+  }
+
   getGOP() {
     let title = this.title
     let description = this.description

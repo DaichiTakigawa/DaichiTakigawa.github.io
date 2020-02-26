@@ -5,9 +5,6 @@ import { rhythm } from "../../utils/typography"
 import { responsive } from "../../../config"
 
 export default class Adsense extends React.Component {
-  componentDidMount() {
-    if (window) (window.adsbygoogle = window.adsbygoogle || []).push({})
-  }
   render() {
     let format = this.props.format || "auto"
     return (
@@ -24,8 +21,7 @@ export default class Adsense extends React.Component {
 }
 
 const Container = styled.div`
-  width: 90%;
-  margin: ${rhythm(1)} auto;
+  margin: ${rhythm(1)} ${rhythm(1 / 2)};
 `
 
 const Ins = styled.ins`
