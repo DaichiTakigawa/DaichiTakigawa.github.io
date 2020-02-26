@@ -8,7 +8,7 @@ import Toc from "../atoms/Toc"
 import ShareButtons from "../atoms/ShareButtons"
 import Divider from "../atoms/Divider"
 import Tag from "../atoms/Tag"
-import AdSense from "../atoms/Adsense"
+import AdSense from "../atoms/AdSense"
 import { responsive } from "../../../config"
 
 export default class BlogPage extends React.Component {
@@ -17,6 +17,20 @@ export default class BlogPage extends React.Component {
       return <Tag>{tag}</Tag>
     })
   }
+
+  // insertAds(html) {
+  //   const parser = typeof DOMParser !== "undefined" && new DOMParser()
+  
+  //   const insertAdsense = ad => html => {
+  //     if (!parser) return html
+  //     const dom = parser.parseFromString(html, "text/html")
+  //     const eles = [].slice.call(dom.querySelectorAll(".adsense"))
+  //     if (eles) {
+  //       eles.map(ele => (ele.innerHTML = ad))
+  //     }
+  //     return dom.body.innerHTML
+  //   }
+  // }
 
   render() {
     let meta = this.props.metadata
@@ -38,7 +52,7 @@ export default class BlogPage extends React.Component {
           <CustomImage fileName={meta.thumbnail.name} alt="thumbnail" />
           <ShareButtons url={url} title={title} />
           <Toc data={toc} />
-          <AdSense />
+          {/* <AdSense /> */}
           <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
         </StyledContainer>
         <Copyright />

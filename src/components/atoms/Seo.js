@@ -12,10 +12,7 @@ export default class Seo extends React.Component {
   }
 
   componentDidMount() {
-    if (window)
-      (window.adsbygoogle = window.adsbygoogle || []).push({
-        overlays: { bottom: true },
-      })
+    if (window) (window.adsbygoogle = window.adsbygoogle || []).push({})
   }
 
   getGOP() {

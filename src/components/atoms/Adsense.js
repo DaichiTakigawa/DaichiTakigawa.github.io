@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { rhythm } from "../../utils/typography"
 
-export default class Adsense extends React.Component {
+export default class AdSense extends React.Component {
   render() {
     let format = this.props.format || "auto"
     return (
