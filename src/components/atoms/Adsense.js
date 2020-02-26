@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import { rhythm } from "../../utils/typography"
+import { responsive } from "../../../config"
 
 export default class Adsense extends React.Component {
   componentDidMount() {
@@ -11,13 +12,11 @@ export default class Adsense extends React.Component {
     let format = this.props.format || "auto"
     return (
       <Container>
-        <ins
+        <Ins
           className="adsbygoogle"
-          style={{ display: "block" }}
           data-ad-client="ca-pub-6195920683902846"
           data-ad-slot="4511974705"
           data-ad-format={format}
-          // data-full-width-responsive="true"
         />
       </Container>
     )
@@ -25,7 +24,14 @@ export default class Adsense extends React.Component {
 }
 
 const Container = styled.div`
-  margin: ${rhythm(1)} ${rhythm(1 / 2)};
-  position: sticky;
-  bottom: 0;
+  width: 90%;
+  margin: ${rhythm(1)} auto;
+`
+
+const Ins = styled.ins`
+  display: none;
+
+  @media (min-width: ${responsive.tablet.minWidth}) {
+    display: block;
+  }
 `
