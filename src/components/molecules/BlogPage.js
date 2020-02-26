@@ -54,6 +54,7 @@ export default class BlogPage extends React.Component {
           <Toc data={toc} />
           <AdSense />
           <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
+          <AdSense />
         </StyledContainer>
         <Copyright />
       </>
