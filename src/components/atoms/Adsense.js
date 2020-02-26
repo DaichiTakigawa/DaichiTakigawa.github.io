@@ -4,18 +4,30 @@ import styled from "styled-components"
 import { rhythm } from "../../utils/typography"
 
 export default class AdSense extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.ref = React.createRef()
+  }
+
   componentDidMount() {
     if (window) {
-      window.adsbygoogle = window.adsbygoogle || []
-      window.adsbygoogle.push({})
-      console.log("new adsbygoogle was pushed")
+      let dom = this.ref.current
+      let width = dom.getBoundingClientRect().width
+      console.log(dom.getBoundingClientRect())
+      if (width !== 0) {
+        window.adsbygoogle = window.adsbygoogle || []
+        window.adsbygoogle.push({})
+        console.log("new adsbygoogle was pushed")
+      }
     }
   }
 
   render() {
     let format = this.props.format || "auto"
+    let ref = this.ref
     return (
-      <Container>
+      <Container ref={ref}>
         <Ins
           className="adsbygoogle"
           data-ad-client="ca-pub-6195920683902846"
