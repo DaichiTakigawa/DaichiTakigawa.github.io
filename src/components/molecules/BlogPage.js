@@ -67,7 +67,7 @@ const StyledContainer = styled.div`
 `
 
 const Html = styled.div`
-  padding-top: ${rhythm(2)};
+  // padding-top: ${rhythm(2)};
   & p {
     font-size: ${scale(0).fontSize};
     line-height: ${rhythm(3 / 2)};
@@ -95,7 +95,6 @@ const Html = styled.div`
   }
 
   @media (min-width: ${responsive.tablet.minWidth}) {
-    padding-top: ${rhythm(2)};
     & p {
       font-size: ${scale(0).fontSize};
       line-height: ${rhythm(3 / 2)};

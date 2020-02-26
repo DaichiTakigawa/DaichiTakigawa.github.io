@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Title from "../atoms/Title"
 import Divider from "../atoms/Divider"
+import AdSense from "../atoms/Adsense"
 import { rhythm } from "../../utils/typography"
 
 export default class Navigation extends React.Component {
@@ -69,6 +70,7 @@ export default class Navigation extends React.Component {
           <StyledDivider />
           {this.getLinkList()}
           {this.getSNSLink()}
+          <AdSense form="rectangle" />
         </StyledSticky>
       </>
     )
