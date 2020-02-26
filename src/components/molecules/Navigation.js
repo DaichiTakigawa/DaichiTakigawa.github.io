@@ -70,7 +70,7 @@ export default class Navigation extends React.Component {
           <StyledDivider />
           {this.getLinkList()}
           {this.getSNSLink()}
-          <AdSense form="rectangle" />
+          <AdSense format="rectangle" />
         </StyledSticky>
       </>
     )

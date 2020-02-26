@@ -37,7 +37,7 @@ export default class Toc extends Component {
 }
 
 const Background = styled.div`
-  margin: ${rhythm(3)} 0 ${rhythm(1)} 0;
+  margin: ${rhythm(3)} 0 ${rhythm(2)} 0;
   padding: ${rhythm(1 / 2)} ${rhythm(1)};
   background-color: rgba(224, 224, 224, 0.5);
 

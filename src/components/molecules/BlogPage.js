@@ -40,7 +40,7 @@ export default class BlogPage extends React.Component {
     return (
       <>
         <StyledContainer>
-          <Title className="title">{meta.title}</Title>
+          <Title>{meta.title}</Title>
           <Info>
             <Date>
               <h4>{meta.date}</h4>
@@ -124,6 +124,8 @@ const Title = styled.h1`
   padding-top: ${rhythm(2)};
   font-size: ${scale(1).fontSize};
   line-height: ${rhythm(2)};
+  font-weight: bold;
+  margin-bottom: 0;
 
   @media (min-width: ${responsive.tablet.minWidth}) {
     padding-top: ${rhythm(4)};
