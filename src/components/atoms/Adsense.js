@@ -17,7 +17,6 @@ export default class AdSense extends React.Component {
           data-ad-client="ca-pub-6195920683902846"
           data-ad-slot="4511974705"
           data-ad-format={format}
-          data-full-width-responsive="true"
         />
       </Container>
     )
