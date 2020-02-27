@@ -16,7 +16,9 @@ export default class Home extends React.Component {
           <br />
           Gatsbyと<s>Semantic UI</s>を用いて作成しました。
           <br />
-          <i>2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。</i>
+          <i>
+            2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。
+          </i>
         </P>
         <P>
           主に、Android、AWS、Javasricpt、Windowsについて、躓いたことや、気付いた点をまとめていきたいです。
@@ -68,24 +70,24 @@ export default class Home extends React.Component {
   render() {
     return (
       <>
-        <StyledContainer>
-          <MobileTitle>About</MobileTitle>
-          <MobileText>{this.getText()}</MobileText>
-        </StyledContainer>
+        <Container>
+          <Title>About</Title>
+          <Text>{this.getText()}</Text>
+        </Container>
         <Copyright />
       </>
     )
   }
 }
 
-const StyledContainer = styled.div`
+const Container = styled.div`
   padding-bottom: ${rhythm(4)};
   padding-top: ${rhythm(2)};
   margin: auto;
   width: 80%;
 `
 
-const MobileTitle = styled.h1`
+const Title = styled.h1`
   font-size: ${scale(1 / 2).fontSize};
   line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);
@@ -104,7 +106,7 @@ const Header = styled.h2.attrs({ className: "title is-4" })`
   line-height: ${rhythm(2)};
   color: rgb(70, 70, 70);
 `
-const MobileText = styled.div`
+const Text = styled.div`
   font-size: ${scale(0).fontSize};
   margin-top: ${rhythm(1)};
 

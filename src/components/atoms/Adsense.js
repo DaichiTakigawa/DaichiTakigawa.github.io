@@ -8,7 +8,6 @@ export default class AdSense extends React.Component {
     if (window) {
       window.adsbygoogle = window.adsbygoogle || []
       window.adsbygoogle.push({})
-      console.log("new adsbygoogle was pushed")
     }
   }
 
@@ -29,6 +28,7 @@ export default class AdSense extends React.Component {
 
 const Container = styled.div`
   margin: ${rhythm(1)} ${rhythm(1 / 2)};
+  width: 100%;
 `
 
 const Ins = styled.ins`

@@ -20,7 +20,7 @@ export default class BlogPage extends React.Component {
 
   // insertAds(html) {
   //   const parser = typeof DOMParser !== "undefined" && new DOMParser()
-  
+
   //   const insertAdsense = ad => html => {
   //     if (!parser) return html
   //     const dom = parser.parseFromString(html, "text/html")
@@ -63,27 +63,31 @@ export default class BlogPage extends React.Component {
 }
 const StyledContainer = styled.div`
   padding-bottom: ${rhythm(4)};
-  width: 90%;
-  margin: auto;
+  margin: 0 ${rhythm(1)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
     width: 86%;
+    margin: 0 auto;
   }
 `
 
 const Html = styled.div`
   & p {
     font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(3 / 2)};
+    line-height: ${rhythm(1)};
     margin: ${rhythm(1)} 0;
   }
   & li {
     font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(3 / 2)};
+    line-height: ${rhythm(1)};
+  }
+  & ul {
+    list-style: disc;
+    list-style-position: inside;
   }
   & tr {
     font-size: ${scale(0).fontSize};
-    line-height: ${rhythm(1.2)};
+    line-height: ${rhythm(1)};
   }
   & h2 {
     font-weight: bold;
@@ -100,27 +104,13 @@ const Html = styled.div`
 
   @media (min-width: ${responsive.tablet.minWidth}) {
     & p {
-      font-size: ${scale(0).fontSize};
       line-height: ${rhythm(3 / 2)};
-      margin: ${rhythm(1)} 0;
     }
     & li {
-      font-size: ${scale(1 / 8).fontSize};
-      line-height: ${rhythm(2)};
-    }
-    & tr {
-      font-size: ${scale(0).fontSize};
       line-height: ${rhythm(3 / 2)};
     }
-    & h2 {
-      font-size: ${scale(1 / 2).fontSize};
-      line-height: ${rhythm(2)};
-    }
-    & h3 {
-      font-weight: bold;
-      font-size: ${scale(1 / 6).fontSize};
-      line-height: ${rhythm(2)};
-      margin: ${rhythm(1)} 0;
+    & tr {
+      line-height: ${rhythm(3 / 2)};
     }
   }
 `

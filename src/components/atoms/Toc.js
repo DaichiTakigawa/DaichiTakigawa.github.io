@@ -64,6 +64,7 @@ const ClickCircle = styled.div`
   border-radius: 50%;
   background: rgba(156, 156, 156, 0.5);
   text-align: center;
+  padding-top: 2px;
   & > span {
     font-weight: bold;
   }

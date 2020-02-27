@@ -15,9 +15,9 @@ export default class ResponsiveAdSense extends React.Component {
 
   componentDidMount() {
     if (window) {
-      let minWidth = 769
+      let minWidth = responsive.tablet.minWidth.split(/px/)[0]
       let shouldShowAds = window.innerWidth >= minWidth
-      if (!this.state.showAds && shouldShowAds) {
+      if (shouldShowAds) {
         this.setState({ showAds: true })
       }
     }
@@ -28,16 +28,14 @@ export default class ResponsiveAdSense extends React.Component {
       if (this.state.showAds) {
         window.adsbygoogle = window.adsbygoogle || []
         window.adsbygoogle.push({})
-        console.log("new adsbygoogle was pushed")
       }
     }
   }
 
   render() {
     let format = this.props.format || "auto"
-    let res = null
     if (this.state.showAds) {
-      res = (
+      return (
         <Container>
           <Ins
             className="adsbygoogle"
@@ -48,7 +46,7 @@ export default class ResponsiveAdSense extends React.Component {
         </Container>
       )
     }
-    return res
+    return false
   }
 }
 
