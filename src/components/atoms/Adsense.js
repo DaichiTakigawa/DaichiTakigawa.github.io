@@ -27,9 +27,10 @@ export default class AdSense extends React.Component {
 }
 
 const Container = styled.div`
-  width: 100%;
+  margin: 0 auto;
 `
 
 const Ins = styled.ins`
   display: block;
+  width: 90%;
 `

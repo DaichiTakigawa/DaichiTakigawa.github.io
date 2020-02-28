@@ -18,20 +18,6 @@ export default class BlogPage extends React.Component {
     })
   }
 
-  // insertAds(html) {
-  //   const parser = typeof DOMParser !== "undefined" && new DOMParser()
-
-  //   const insertAdsense = ad => html => {
-  //     if (!parser) return html
-  //     const dom = parser.parseFromString(html, "text/html")
-  //     const eles = [].slice.call(dom.querySelectorAll(".adsense"))
-  //     if (eles) {
-  //       eles.map(ele => (ele.innerHTML = ad))
-  //     }
-  //     return dom.body.innerHTML
-  //   }
-  // }
-
   render() {
     let meta = this.props.metadata
     let toc = this.props.toc
@@ -54,15 +40,15 @@ export default class BlogPage extends React.Component {
           <Toc data={toc} />
           <AdSense />
           <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
-          <AdSense />
         </StyledContainer>
+        <AdSense />
         <Copyright />
       </>
     )
   }
 }
 const StyledContainer = styled.div`
-  padding-bottom: ${rhythm(4)};
+  padding-bottom: ${rhythm(2)};
   margin: 0 ${rhythm(1)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
