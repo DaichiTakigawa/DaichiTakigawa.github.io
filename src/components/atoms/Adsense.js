@@ -27,7 +27,6 @@ export default class AdSense extends React.Component {
 }
 
 const Container = styled.div`
-  margin: ${rhythm(1)} ${rhythm(1 / 2)};
   width: 100%;
 `
 
