@@ -41,6 +41,7 @@ export default class BlogPage extends React.Component {
           <AdSense />
           <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
         </StyledContainer>
+        <ShareButtons url={url} title={title} />
         <AdSense />
         <Copyright />
       </>
