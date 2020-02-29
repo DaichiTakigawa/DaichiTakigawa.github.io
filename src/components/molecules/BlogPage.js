@@ -40,16 +40,16 @@ export default class BlogPage extends React.Component {
           <Toc data={toc} />
           <AdSense />
           <Html dangerouslySetInnerHTML={{ __html: this.props.html }} />
+          <ShareButtons url={url} title={title} />
+          <AdSense />
         </StyledContainer>
-        <ShareButtons url={url} title={title} />
-        <AdSense />
         <Copyright />
       </>
     )
   }
 }
 const StyledContainer = styled.div`
-  padding-bottom: ${rhythm(2)};
+  padding-bottom: ${rhythm(4)};
   margin: 0 ${rhythm(1)};
 
   @media (min-width: ${responsive.tablet.minWidth}) {
@@ -59,6 +59,8 @@ const StyledContainer = styled.div`
 `
 
 const Html = styled.div`
+  padding-bottom: ${rhythm(2)};
+
   & p {
     font-size: ${scale(0).fontSize};
     line-height: ${rhythm(1)};
