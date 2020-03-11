@@ -1,25 +1,37 @@
 module.exports = {
   siteMetadata: {
     title: `たきがわのメモ`,
-    description: `日頃の備忘録をまとめたものです。主に、Android、AWS、競プロ、Windowsのことについて書いていきます。競技プログラミングもやっています。 `,
+    description: `日頃の備忘録をまとめたものです。主に、Android、AWS、競プロ、Windowsのことについて書いていきます。競技プログラミングもやっています。`,
     author: `Daichi Takigawa`,
-    siteUrl: `https://www.takigawa-memo.com`,
+    siteUrl: `https://www.takigawa-memo.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: `types/graphql-types.ts`,
+        documentPaths: [
+          './src/**/*.{ts,tsx}',
+          './node_modules/gatsby-*/**/*.js'
+        ],
+        codegenDelay: 200
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/contents/posts`,
-      },
+        path: `${__dirname}/contents/posts`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/contents/images`,
-      },
+        path: `${__dirname}/contents/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -32,8 +44,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/icon.png`,
-      },
+        icon: `static/icon.png`
+      }
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -43,43 +55,43 @@ module.exports = {
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              offsetY: `10`,
-            },
+              offsetY: `10`
+            }
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
               inlineCodeMarker: null,
               showLineNumbers: true,
-              noInlineHighlight: false,
-            },
+              noInlineHighlight: false
+            }
           },
           {
             resolve: `gatsby-remark-katex`,
             options: {
-              strict: `ignore`,
-            },
+              strict: `ignore`
+            }
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
-            },
-          },
-        ],
-      },
+              maxWidth: 800
+            }
+          }
+        ]
+      }
     },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        pathToConfigModule: `src/utils/typography`
+      }
     },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: "GTM-M7PKKQ6",
-      },
+        id: 'GTM-M7PKKQ6'
+      }
     },
     {
       resolve: `gatsby-plugin-robots-txt`,
@@ -88,26 +100,20 @@ module.exports = {
         sitemap: `https://www.takigawa-memo.com/sitemap.xml`,
         env: {
           production: {
-            policy: [{ userAgent: "*", allow: "/" }],
-          },
-        },
-      },
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        displayName: false,
-        minify: true,
-      },
-    },
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-google-adsense`,
       options: {
-        publisherId: `ca-pub-6195920683902846`,
-      },
-    },
-  ],
-}
+        publisherId: `ca-pub-6195920683902846`
+      }
+    }
+  ]
+};

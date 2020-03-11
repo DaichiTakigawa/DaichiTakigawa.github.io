@@ -11,8 +11,8 @@ tags:
 
 ## これは何
 
-kotlinのDIライブラリであるKoinを使ってみたところ、ViewModelやRepository、WebInterface周りの連携がめちゃくちゃ楽になったので、
-AndroidアプリへのKoinの導入方法や利用方法をまとめてみました。
+kotlinのDIライブラリであるKoinを使ってみたところ、ViewModelやRepository、WebInterface周りの連携がめちゃくちゃ楽になりました。
+今回はそのkoinをAndroidアプリへ導入する方法や利用方法をまとめます。
 
 ## Dependancy Injectionとは
 
@@ -104,7 +104,8 @@ fun main() {
 DIライブラリはこの依存関係の管理をしてくれるライブラリです。
 JavaだとDaggerというライブラリが有名です。  
 もちろん、KotlinでもDaggerを利用することはできるのですが、よりKotlinっぽく書けるように作成されたKoinというライブラリがあります。
-Android + kotlinのDIライブラリとしてはほぼデファクトスタンダードとなっているようなので今回はKoinを使っていきましょう。
+AndroidのDIライブラリとしてはKoinがほぼデファクトスタンダードとなっているようなので今回はKoinを使っていきましょう。
+
 
 ## 導入方法
 

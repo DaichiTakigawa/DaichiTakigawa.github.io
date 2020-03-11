@@ -31,7 +31,7 @@ GraphQLとの比較対象に挙げられることが多いのがREST APIなの�
 ## AppSyncとは
 
 AWSが提供するGraphQLサーバーを作成するためのマネージドサービスです。
-ノーコードでGraphQLサーバーを構築できる、DynamoDBやLambdaなどの他のサービスとの連携が簡単に可能であるなどの特徴があります。
+ノーコードに近い感じでGraphQLサーバーを構築できる、DynamoDBやLambdaなどの他のサービスとの連携が簡単に可能であるなどの特徴があります。
 
 ## Amplifyを用いてクラウド環境を構築
 
@@ -46,7 +46,7 @@ GraphQL TransoformはSchema directiveを拡張しているみたいです。
 
 [Schema directives - GraphQL Tools - Apollo GraphQL Docs](https://www.apollographql.com/docs/graphql-tools/schema-directives/)
 
-@modelや@connection、@keyなどのdirectiveを活用することで、データベースの構築と簡単なクエリが可能になります。
+@modelや@connection、@keyなどのdirectiveを活用することで、データベースの構築とデータベースに対する簡単なクエリが可能になります。
 
 以下で、主要なものだけ紹介します。
 

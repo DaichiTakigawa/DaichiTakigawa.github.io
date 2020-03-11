@@ -389,7 +389,7 @@ class PushListenerService : FirebaseMessagingService() {
 ここで一度アプリをビルドしてみてください。  
 ビルド出来れば問題ありませんが、当ブログ運営者の環境では以下のようなエラーを出力してクラッシュしました。
 
-```txt
+```
 E/AWSUtils: initialize onResult exception: Attempt to invoke virtual method 'org.json.JSONObject org.json.JSONObject.getJSONObject(java.lang.String)' on a null object reference
 E/AndroidRuntime: FATAL EXCEPTION: DefaultDispatcher-worker-2
     Process: com.example.amplifytutorial, PID: 8440

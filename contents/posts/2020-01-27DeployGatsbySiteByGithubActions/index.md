@@ -108,10 +108,14 @@ jobs:
 
 ## まとめ
 
-カスタムドメインを設定するためのCNAMEファイルなどはgatsbyのプラグイン__[gatsby-plugin-cname | GatsbyJS](https://www.gatsbyjs.org/packages/gatsby-plugin-cname/)__を利用すれば簡単に配置できるのですが、せっかくなのでGitHub Actionsを使ってpushしました。
-
+カスタムドメインを設定するためのCNAMEファイルなどはgatsbyのプラグイン[gatsby-plugin-cname | GatsbyJS](https://www.gatsbyjs.org/packages/gatsby-plugin-cname/)を利用すれば簡単に配置できるのですが、せっかくなのでGitHub Actionsを使ってpushしました。
 
 拙い文章であったと存じますが、最後まで読んでいただきありがとうございました。
+
+*2020/03/09 追記*  
+__Gatsbyではstaticという名前のディレクトリをプロジェクトのルートディレクトリに作成しておくと、ビルド時にstaticディレクトリ内のファイルを全て、ビルド先のルートディレクトリ(デフォルトではpublic)に展開してくれるそうです。  
+ですので、CNAMEファイルをstaticディレクトリ内に置いておけば、プラグインを使わなくても、またCD時に追加の処理を書かなくても、ちゃんとデプロイ先のルートディレクトリに配置されます。__
+
 
 ## 参考リンク
 
