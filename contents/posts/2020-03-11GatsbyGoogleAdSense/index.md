@@ -11,7 +11,7 @@ tags:
 
 ## これは何
 
-先日当ブログにGoogleAdSenseを導入致しました。  
+先日当ブログにGoogleAdSenseを導入しました。  
 申請してから承認されるまで待たされたり、承認された後もGoogleからサイトが認識されるまで時間がかかったりともどかしい日々が続きましたが、一週間程度で問題なく広告が表示されるようになっていました。  
 今回は、GatsbyサイトにGoogleAdSenseを導入する方法、特にGatsbyのSSRに対応する方法や、表示される画面のサイズに応じて広告の表示非表示を切り替える方法などをまとめていきます。  
 なお、GoogleAdSenseに自身のサイトを登録する方法などは検索すればいろんなサイトで紹介されていると思いますので今回は省略させて頂きます。
@@ -43,8 +43,8 @@ AdSenseでは適当なプロパティが設定されたins要素を配置する�
 しかし、ただins要素を配置しただけでは広告は表示されません。ins要素がdomツリーに追加されたことをAdSenseスクリプトに知らせるため以下のjavascirptコードを実行する必要があります。
 
 ```javascript
-    window.adsbygoogle = window.adsbygoogle || []
-    window.adsbygoogle.push({})
+  window.adsbygoogle = window.adsbygoogle || []
+  window.adsbygoogle.push({})
 ```
 
 windowオブジェクトに新しく追加されたadsbygoogleプロパティとinsタグの関係については以下のサイトが参考になります。
