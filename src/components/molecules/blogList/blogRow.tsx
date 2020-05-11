@@ -25,7 +25,7 @@ const BlogRow: React.FC<Props> = ({ title, slug, description, date, tags, thumbn
       <StyledLink to={slug}>{title}</StyledLink>
       <Info>
         <Date>{date}</Date>
-        <div>{tags.map(tag => <Tag>{tag}</Tag>)}</div>
+        <div>{tags.map((tag, idx) => <Tag key={idx}>{tag}</Tag>)}</div>
       </Info>
       <Description>{description}</Description>
     </PageData>

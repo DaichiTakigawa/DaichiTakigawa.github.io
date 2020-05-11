@@ -14,7 +14,7 @@ const Gop: React.FC<Props> = props => {
     return null
   } else {
     return (
-      <div>
+      <>
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
         <meta property="og:url" content={props.url} />
@@ -27,7 +27,7 @@ const Gop: React.FC<Props> = props => {
         <meta property="fb:app_id" content={props.facebookAppId} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="bob_yama" />
-      </div>
+      </>
     )
   }
 }

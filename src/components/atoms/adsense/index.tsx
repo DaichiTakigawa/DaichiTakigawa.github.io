@@ -22,8 +22,12 @@ interface AdSense extends React.FC<Props> {
 const AdSense: AdSense = ({ format = "auto" }) => {
   useEffect(() => {
     if (window) {
-      window.adsbygoogle = window.adsbygoogle || []
-      window.adsbygoogle.push({})
+      try {
+        window.adsbygoogle = window.adsbygoogle || []
+        window.adsbygoogle.push({})
+      } catch (e) {
+        // console.log(e)
+      }
     }
   })
 
@@ -44,8 +48,12 @@ AdSense.Responsive = ({ format = "auto" }) => {
 
   useEffect(() => {
     if (state.showAds) {
-      window.adsbygoogle = window.adsbygoogle || []
-      window.adsbygoogle.push({})
+      try {
+        window.adsbygoogle = window.adsbygoogle || []
+        window.adsbygoogle.push({})
+      } catch (e) {
+        // console.log(e)
+      }
     }
     if (window) {
       const minWidth = responsive.tablet.minWidth
