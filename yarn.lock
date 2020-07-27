@@ -6627,7 +6627,7 @@ gatsby-plugin-manifest@^2.2.42:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-offline@^3.0.35:
+gatsby-plugin-offline@^3.2.21:
   version "3.2.21"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.21.tgz#c308c7eb571b98effbb134a706c7af49711fc637"
   integrity sha512-MvkWmieiXIlm70xawJgIQFUnGlMUWhrRk6jGoVCiiZ8xrViiluZONttCm/tiDdiZTFOwvOPN7RQj/zB+50grMg==

@@ -47,6 +47,7 @@ module.exports = {
         icon: `static/icon.png`
       }
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
