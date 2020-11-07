@@ -27,11 +27,6 @@ const Portfolio: React.FC = () => (
             <td>since 2019.12</td>
           </tr>
           <tr>
-            <td>機械学習</td>
-            <td>始めたい ... </td>
-            <td>not yet</td>
-          </tr>
-          <tr>
             <td>競プロ</td>
             <td>
               リクルート開催 CodeThanksFestival2018本戦出場(43位)
