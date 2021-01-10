@@ -81,6 +81,9 @@ const Html = styled.div({
     listStyle: "disc",
     listStylePosition: "inside"
   },
+  ol: {
+    listStylePosition: "inside"
+  },
   tr: {
     fontSize: scale(0).fontSize,
     lineHeight: rhythm(1)
