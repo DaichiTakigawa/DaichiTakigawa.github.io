@@ -1,12 +1,12 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from 'react'
+import styled from '@emotion/styled'
+import {useStaticQuery, graphql} from 'gatsby'
 
-import BlogRow from "./blogRow"
-import Divider from "../../atoms/divider"
-import { rhythm, scale } from "../../../utils/typography"
-import { responsive } from "../../../../config"
-import { MarkdownRemarkFrontmatter } from "../../../../types/graphql-types"
+import BlogRow from './blogRow'
+import {Divider} from '../../atoms'
+import {rhythm, scale} from '../../../utils/typography'
+import {responsive} from '../../../../config'
+import {MarkdownRemarkFrontmatter} from '../../../../types/graphql-types'
 
 type edge = {
   node: {
@@ -21,9 +21,11 @@ type data = {
 }
 
 const BlogList: React.FC = () => {
-  const { markdown }: data = useStaticQuery(graphql`
+  const {markdown}: data = useStaticQuery(graphql`
     query {
-      markdown: allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+      markdown: allMarkdownRemark(
+        sort: {fields: frontmatter___date, order: DESC}
+      ) {
         edges {
           node {
             frontmatter {
@@ -43,7 +45,7 @@ const BlogList: React.FC = () => {
   `)
 
   const list = markdown.edges.map((edge: edge) => {
-    let fm = edge.node.frontmatter
+    const fm = edge.node.frontmatter
     return (
       <>
         <BlogRow
@@ -71,21 +73,21 @@ const BlogList: React.FC = () => {
 const Container = styled.div({
   paddingTop: rhythm(2),
   paddingBottom: rhythm(4),
-  margin: "auto",
-  width: "80%"
+  margin: 'auto',
+  width: '80%',
 })
 
 const Title = styled.h1({
   fontSize: scale(1 / 2).fontSize,
   lineHeight: rhythm(2),
-  color: "rgb(70, 70, 70)",
+  color: 'rgb(70, 70, 70)',
   paddingTop: rhythm(1),
   [`@media (min-width: ${responsive.tablet.minWidth}px)`]: {
     fontSize: scale(1).fontSize,
     lineHeight: rhythm(3),
     paddingTop: rhythm(2),
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 })
 
 export default BlogList

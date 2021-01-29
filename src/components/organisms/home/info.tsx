@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react'
 
 const Info: React.FC = () => (
   <>
@@ -6,29 +6,27 @@ const Info: React.FC = () => (
     <p>
       <ul>
         <li>
-          Atcoder :{" "}
+          Atcoder :{' '}
           <a
             href="https://atcoder.jp/users/Bobyama"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://atcoder.jp/users/Bobyama{" "}
+            rel="noopener noreferrer">
+            https://atcoder.jp/users/Bobyama{' '}
             <i className="fas fa-external-link-alt"></i>
-          </a>{" "}
+          </a>{' '}
           (Rating : 1762)
-            </li>
+        </li>
         <li>
-          TopCoder :{" "}
+          TopCoder :{' '}
           <a
             href="https://www.topcoder.com/members/Bobyama"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://www.topcoder.com/members/Bobyama{" "}
+            rel="noopener noreferrer">
+            https://www.topcoder.com/members/Bobyama{' '}
             <i className="fas fa-external-link-alt"></i>
-          </a>{" "}
+          </a>{' '}
           (Raging : 1335)
-            </li>
+        </li>
       </ul>
     </p>
   </>

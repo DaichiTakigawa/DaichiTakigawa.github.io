@@ -1,12 +1,10 @@
-import * as React from "react"
-import styled from "@emotion/styled"
+import * as React from 'react'
+import styled from '@emotion/styled'
 
-import { rhythm, scale } from "../../utils/typography"
-import { responsive } from "../../../config"
+import {rhythm, scale} from '../../utils/typography'
+import {responsive} from '../../../config'
 
-const App: React.FC = ({ children }) => (
-  <Layout>{children}</Layout>
-)
+const App: React.FC = ({children}) => <Layout>{children}</Layout>
 
 const Layout = styled.div({
   p: {
@@ -14,14 +12,14 @@ const Layout = styled.div({
     lineHeight: rhythm(1),
     margin: `${rhythm(1)} 0`,
     [`@media (min-width: ${responsive.tablet.minWidth}px)`]: {
-      lineHeight: rhythm(3 / 2)
-    }
+      lineHeight: rhythm(3 / 2),
+    },
   },
   blockquote: {
     paddingLeft: rhythm(1),
     borderLeft: `${rhythm(1 / 3)} solid #8fa0ba`,
-    fontStyle: "italic"
-  }
+    fontStyle: 'italic',
+  },
 })
 
 export default App

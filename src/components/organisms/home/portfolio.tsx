@@ -1,8 +1,8 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import { rhythm } from "../../../utils/typography"
+import * as React from 'react'
+import styled from '@emotion/styled'
+import {rhythm} from '../../../utils/typography'
 
-import { H2 } from "./me"
+import {H2} from './me'
 
 const Portfolio: React.FC = () => (
   <>
@@ -30,9 +30,9 @@ const Portfolio: React.FC = () => (
             <td>競プロ</td>
             <td>
               リクルート開催 CodeThanksFestival2018本戦出場(43位)
-                <br />
+              <br />
               第二回アスプローバプログラミングコンテスト5位入賞
-              </td>
+            </td>
             <td>since 2018.06</td>
           </tr>
           <tr>
@@ -46,16 +46,15 @@ const Portfolio: React.FC = () => (
   </>
 )
 
-
 const TableContaienr = styled.div({
   marginTop: rhythm(2),
   marginBottom: `${rhythm(3)} !important`,
-  paddingLeft: "1px",
-  paddingTop: "1px",
+  paddingLeft: '1px',
+  paddingTop: '1px',
 })
 
 const Table = styled.table({
-  color: "rgb(80, 80, 80)",
+  color: 'rgb(80, 80, 80)',
   marginBottom: 0,
 })
 

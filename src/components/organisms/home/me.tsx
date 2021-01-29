@@ -1,9 +1,8 @@
-import * as React from "react"
-import styled from "@emotion/styled"
+import * as React from 'react'
+import styled from '@emotion/styled'
 
-import Image from "../../atoms/image"
-import { rhythm, scale } from "../../../utils/typography"
-
+import {Image} from '../../atoms'
+import {rhythm, scale} from '../../../utils/typography'
 
 const Me: React.FC = () => (
   <>
@@ -21,24 +20,22 @@ const Me: React.FC = () => (
     <p>
       <ul>
         <li>
-          GitHub :{" "}
+          GitHub :{' '}
           <a
             href="https://github.com/DaichiTakigawa"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://github.com/DaichiTakigawa{" "}
+            rel="noopener noreferrer">
+            https://github.com/DaichiTakigawa{' '}
             <i className="fas fa-external-link-alt"></i>
           </a>
         </li>
         <li>
-          Twitter :{" "}
+          Twitter :{' '}
           <a
             href="https://twitter.com/damenin27844103"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            https://twitter.com/damenin27844103{" "}
+            rel="noopener noreferrer">
+            https://twitter.com/damenin27844103{' '}
             <i className="fas fa-external-link-alt"></i>
           </a>
         </li>
@@ -50,16 +47,16 @@ const Me: React.FC = () => (
 export const H2 = styled.h2({
   fontSize: scale(1).fontSize,
   lineHeight: rhythm(2),
-  fontWeight: "bold",
+  fontWeight: 'bold',
   paddingTop: rhythm(3),
-  color: "rgb(70, 70, 70)"
+  color: 'rgb(70, 70, 70)',
 })
 
 const Introduce = styled.div({
-  marginTop: "auto",
-  "& > p": {
-    marginBottom: rhythm(2)
-  }
+  marginTop: 'auto',
+  '& > p': {
+    marginBottom: rhythm(2),
+  },
 })
 
 export default Me

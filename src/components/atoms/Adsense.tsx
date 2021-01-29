@@ -1,15 +1,16 @@
-import * as React from "react"
-import { useEffect, useState } from "react"
-import styled from "@emotion/styled"
+import * as React from 'react'
+import {useEffect, useState} from 'react'
+import styled from '@emotion/styled'
 
-import { rhythm } from "../../../utils/typography"
-import { responsive } from "../../../../config"
+import {rhythm} from '../../utils/typography'
+import {responsive} from '../../../config'
 
 type Props = {
   format?: string
 }
 
 declare global {
+  // eslint-disable-next-line no-unused-vars
   interface Window {
     adsbygoogle: any[]
   }
@@ -19,7 +20,7 @@ interface AdSense extends React.FC<Props> {
   Responsive: React.FC<Props>
 }
 
-const AdSense: AdSense = ({ format = "auto" }) => {
+const AdSense: AdSense = ({format = 'auto'}) => {
   useEffect(() => {
     if (window) {
       try {
@@ -43,8 +44,8 @@ const AdSense: AdSense = ({ format = "auto" }) => {
   )
 }
 
-AdSense.Responsive = ({ format = "auto" }) => {
-  const [state, setState] = useState({ showAds: false })
+AdSense.Responsive = ({format = 'auto'}) => {
+  const [state, setState] = useState({showAds: false})
 
   useEffect(() => {
     if (state.showAds) {
@@ -54,12 +55,11 @@ AdSense.Responsive = ({ format = "auto" }) => {
       } catch (e) {
         // console.log(e)
       }
-    }
-    if (window) {
+    } else if (window) {
       const minWidth = responsive.tablet.minWidth
       const shouldShowAds = window.innerWidth >= minWidth
       if (shouldShowAds) {
-        setState({ showAds: true })
+        setState({showAds: true})
       }
     }
   }, [state.showAds])
@@ -78,11 +78,11 @@ AdSense.Responsive = ({ format = "auto" }) => {
   )
 }
 const Container = styled.div({
-  margin: `${rhythm(1)} ${rhythm(1 / 2)}`
+  margin: `${rhythm(1)} ${rhythm(1 / 2)}`,
 })
 
 const Ins = styled.ins({
-  display: "block"
+  display: 'block',
 })
 
 export default AdSense
