@@ -1,9 +1,9 @@
-import * as React from "react"
+import * as React from 'react'
 
-import Content from "../components/organisms/content"
-import App from "../components/organisms/app"
-import Seo from "../components/atoms/seo"
-import Contact from "../components/molecules/contact"
+import Content from '../components/organisms/content'
+import App from '../components/organisms/app'
+import Seo from '../components/atoms/seo'
+import Contact from '../components/organisms/contact'
 
 const Component: React.FC = () => (
   <App>

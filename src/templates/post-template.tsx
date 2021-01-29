@@ -1,20 +1,20 @@
-import * as React from "react"
-import { graphql } from "gatsby"
+import * as React from 'react'
+import {graphql} from 'gatsby'
 
-import App from "../components/organisms/app"
-import Content from "../components/organisms/content"
-import Seo from "../components/atoms/seo"
-import BlogPage from "../components/molecules/blogPage"
-import { PostTemplateQuery } from "../../types/graphql-types"
+import App from '../components/organisms/app'
+import Content from '../components/organisms/content'
+import Seo from '../components/atoms/seo'
+import BlogPage from '../components/organisms/blogPage'
+import {PostTemplateQuery} from '../../types/graphql-types'
 
 type Props = {
   data: PostTemplateQuery
 }
 
-const Post: React.FC<Props> = ({ data }) => {
-  let fm = data.markdown.frontmatter
-  let url = `${data.site.siteMetadata.siteUrl}${fm.slug}`
-  let imageUrl = `${data.site.siteMetadata.siteUrl}${fm.thumbnail.publicURL}`
+const Post: React.FC<Props> = ({data}) => {
+  const fm = data.markdown.frontmatter
+  const url = `${data.site.siteMetadata.siteUrl}${fm.slug}`
+  const imageUrl = `${data.site.siteMetadata.siteUrl}${fm.thumbnail.publicURL}`
 
   return (
     <App>
@@ -38,13 +38,12 @@ const Post: React.FC<Props> = ({ data }) => {
         />
       </Content>
     </App>
-
   )
 }
 
 export const query = graphql`
   query PostTemplate($slug: String!) {
-    markdown: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdown: markdownRemark(frontmatter: {slug: {eq: $slug}}) {
       frontmatter {
         slug
         date(formatString: "YYYY.MM.DD")

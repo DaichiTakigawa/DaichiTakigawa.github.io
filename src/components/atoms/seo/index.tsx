@@ -1,7 +1,7 @@
-import * as React from "react"
-import Helmet from "react-helmet"
+import * as React from 'react'
+import Helmet from 'react-helmet'
 
-import Gop from "./gop"
+import Gop from './gop'
 
 type Props = {
   title: string
@@ -11,8 +11,8 @@ type Props = {
   isPostPage?: boolean
 }
 
-const Seo: React.FC<Props> = props => {
-  let title = props.title + " - TAKIGAWA MEMO"
+const Seo: React.FC<Props> = (props) => {
+  const title = props.title + ' - TAKIGAWA MEMO'
   return (
     <Helmet>
       <html lang="ja" />
@@ -33,13 +33,11 @@ const Seo: React.FC<Props> = props => {
       />
       <script
         defer
-        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-      ></script>
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
       <link
         href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap"
         rel="stylesheet"
-        type="text/css"
-      ></link>
+        type="text/css"></link>
     </Helmet>
   )
 }

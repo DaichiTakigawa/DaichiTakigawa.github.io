@@ -1,15 +1,15 @@
-import * as React from "react"
+import * as React from 'react'
 
 type Props = {
-  isPostPage: boolean,
-  title: string,
-  description: string,
-  url: string,
-  imageUrl: string,
-  facebookAppId: string,
+  isPostPage: boolean
+  title: string
+  description: string
+  url: string
+  imageUrl: string
+  facebookAppId: string
 }
 
-const Gop: React.FC<Props> = props => {
+const Gop: React.FC<Props> = (props) => {
   if (!props.isPostPage) {
     return null
   } else {

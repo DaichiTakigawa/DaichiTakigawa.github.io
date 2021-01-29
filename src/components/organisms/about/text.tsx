@@ -1,8 +1,8 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import { scale, rhythm } from "../../../utils/typography"
+import * as React from 'react'
+import styled from '@emotion/styled'
+import {scale, rhythm} from '../../../utils/typography'
 
-import { responsive } from "../../../../config"
+import {responsive} from '../../../../config'
 
 const Text: React.FC = () => (
   <Container>
@@ -13,9 +13,7 @@ const Text: React.FC = () => (
       <br />
       Gatsbyと<s>Semantic UI</s>を用いて作成しました。
       <br />
-      <i>
-        2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。
-      </i>
+      <i>2020/02/18日現在CSSライブラリはSemantic UIからBulmaに移行しました。</i>
     </p>
     <p>
       主に、Android、AWS、Javasricpt、Windowsについて、躓いたことや、気付いた点をまとめていきたいです。
@@ -37,22 +35,21 @@ const Text: React.FC = () => (
       <br />
       アクセスログは匿名で収集されており、個人を特定するものではありません。
       また、収集したログを解析するためにGoogle Analyticsを使用しています。
-      Google Analyticsでデータが収集、処理される仕組みやプライバシーポリシーについては以下のサイトをご覧ください。
+      Google
+      Analyticsでデータが収集、処理される仕組みやプライバシーポリシーについては以下のサイトをご覧ください。
     </p>
     <p>
       <a
         href="https://developers.google.com/analytics/?hl=ja"
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         Google アナリティクス <i className="fas fa-external-link-alt" />
       </a>
       <br />
       <a
         href="https://policies.google.com/privacy?hl=ja"
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         Google プライバシーポリシー <i className="fas fa-external-link-alt" />
       </a>
     </p>
@@ -67,15 +64,15 @@ const Container = styled.div({
   marginTop: rhythm(1),
   [`@media (min-width: ${responsive.tablet.minWidth}px)`]: {
     fontSize: scale(1 / 8).fontSize,
-    marginTop: rhythm(2)
-  }
+    marginTop: rhythm(2),
+  },
 })
 
 const H2 = styled.h2({
   fontSize: scale(1 / 2).fontSize,
   lineHeight: rhythm(2),
-  fontWeight: "bold",
-  color: "rgb(70, 70, 70)"
+  fontWeight: 'bold',
+  color: 'rgb(70, 70, 70)',
 })
 
 export default Text
