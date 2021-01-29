@@ -1,5 +1,5 @@
 export {default as Seo} from './seo'
-export {default as Adsense} from './Adsense'
+export {default as AdSense} from './AdSense'
 export {default as Copyright} from './Copyright'
 export {default as Divider} from './Divider'
 export {default as Image} from './Image'

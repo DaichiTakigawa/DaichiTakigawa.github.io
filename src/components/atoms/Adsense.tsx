@@ -44,11 +44,12 @@ const AdSense: AdSense = ({format = 'auto'}) => {
   )
 }
 
+// eslint-disable-next-line react/display-name
 AdSense.Responsive = ({format = 'auto'}) => {
-  const [state, setState] = useState({showAds: false})
+  const [showAds, setShowAds] = useState(false)
 
   useEffect(() => {
-    if (state.showAds) {
+    if (showAds) {
       try {
         window.adsbygoogle = window.adsbygoogle || []
         window.adsbygoogle.push({})
@@ -59,12 +60,12 @@ AdSense.Responsive = ({format = 'auto'}) => {
       const minWidth = responsive.tablet.minWidth
       const shouldShowAds = window.innerWidth >= minWidth
       if (shouldShowAds) {
-        setState({showAds: true})
+        setShowAds(true)
       }
     }
-  }, [state.showAds])
+  }, [showAds])
 
-  if (!state.showAds) return null
+  if (!showAds) return null
 
   return (
     <Container>

@@ -1,12 +1,12 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
-import {rhythm, scale} from '../../utils/typography'
-import {responsive} from '../../../config'
+import {rhythm, scale} from '../utils/typography'
+import {responsive} from '../../config'
 
-const App: React.FC = ({children}) => <Layout>{children}</Layout>
+const Layout: React.FC = ({children}) => <Div>{children}</Div>
 
-const Layout = styled.div({
+const Div = styled.div({
   p: {
     fontSize: scale(0).fontSize,
     lineHeight: rhythm(1),
@@ -22,4 +22,4 @@ const Layout = styled.div({
   },
 })
 
-export default App
+export default Layout

@@ -32,7 +32,7 @@ const Container = styled.div({
   margin: `${rhythm(2)} ${rhythm(1)}`,
   flexDirection: 'row',
   display: 'flex',
-  justifyContent: 'right',
+  justifyContent: 'flex-end',
   '& > div': {
     marginRight: rhythm(1 / 2),
   },

@@ -1,17 +1,21 @@
 import * as React from 'react'
 
-import Content from '../components/organisms/content'
-import App from '../components/organisms/app'
-import Seo from '../components/atoms/seo'
-import Contact from '../components/organisms/contact'
+import {Seo} from '../components/atoms'
+import {Context as UiContext, PageName} from '../contexts/ui'
+import {Content, Contact} from '../components/organisms'
 
-const Component: React.FC = () => (
-  <App>
-    <Seo title="コンタクト" description="Contact" />
-    <Content currentPage="Contact">
-      <Contact />
-    </Content>
-  </App>
-)
+const Component: React.FC = () => {
+  const {setPageName} = React.useContext(UiContext)
+  setPageName(PageName.CONTACT)
+
+  return (
+    <>
+      <Seo title="コンタクト" description="Contact" />
+      <Content>
+        <Contact />
+      </Content>
+    </>
+  )
+}
 
 export default Component

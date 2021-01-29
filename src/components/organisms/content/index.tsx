@@ -1,22 +1,17 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import {rhythm} from '../../utils/typography'
+import {rhythm} from '../../../utils/typography'
 
-import Navigation from '../molecules/navigation'
-import Navbar from '../molecules/navbar'
-import {responsive} from '../../../config'
+import {Navbar, Navigation} from '../../molecules'
+import {responsive} from '../../../../config'
 
-type Props = {
-  currentPage?: string
-}
-
-const Content: React.FC<Props> = ({currentPage, children}) => (
+const Content: React.FC = ({children}) => (
   <FlexContainer>
     <NavbarContainer>
-      <Navbar currentPage={currentPage} />
+      <Navbar />
     </NavbarContainer>
     <NavigationContainer>
-      <Navigation currentPage={currentPage} />
+      <Navigation />
     </NavigationContainer>
     <Container>{children}</Container>
   </FlexContainer>
@@ -36,7 +31,7 @@ const FlexContainer = styled.div({
 })
 
 const Container = styled.div({
-  margin: `${rhythm(4)} ${rhythm(1 / 2)} ${rhythm(1)} ${rhythm(1 / 2)}`,
+  marginTop: rhythm(4),
   background: 'white',
   boxShadow: 'rgba(0, 0, 0, 0.5) 0px 3px 5px',
   [`@media (max-width: ${responsive.tablet.maxWidth}px) and (min-width: ${responsive.tablet.minWidth}px)`]: {

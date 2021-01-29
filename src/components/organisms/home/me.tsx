@@ -9,15 +9,15 @@ const Me: React.FC = () => (
     <H2>運営者について</H2>
     <article className="media">
       <figure className="media-left">
-        <p className="image is-164x164">
+        <div className="image is-164x164">
           <Image fileName="profile.png" alt="プロファイル画像" />
-        </p>
+        </div>
       </figure>
       <Introduce className="media-content">
         <p>都内に住む学生。</p>
       </Introduce>
     </article>
-    <p>
+    <div>
       <ul>
         <li>
           GitHub :{' '}
@@ -40,7 +40,7 @@ const Me: React.FC = () => (
           </a>
         </li>
       </ul>
-    </p>
+    </div>
   </>
 )
 

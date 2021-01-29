@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 
 import {
-  Adsense,
+  AdSense,
   Image,
   Divider,
   ShareButtons,
@@ -41,10 +41,10 @@ const BlogPage: React.FC<Props> = (props) => {
         <Image fileName={props.thumbnail} alt="thumbnail" />
         <ShareButtons url={url} title={shareTitle} />
         <Toc html={props.toc} />
-        <Adsense />
+        <AdSense />
         <Html dangerouslySetInnerHTML={{__html: props.html}} />
         <ShareButtons url={url} title={shareTitle} />
-        <Adsense />
+        <AdSense />
       </Container>
       <Copyright />
     </>

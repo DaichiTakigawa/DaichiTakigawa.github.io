@@ -1,12 +1,11 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
+import {Seo} from '../components/atoms'
 import {rhythm, scale} from '../utils/typography'
-import Seo from '../components/atoms/seo'
-import App from '../components/organisms/app'
 
 const Component: React.FC = () => (
-  <App>
+  <>
     <Seo title="404" description="無効なURLです。" />
     <Main>
       <p>404</p>
@@ -19,7 +18,7 @@ const Component: React.FC = () => (
         </span>
       </p>
     </Main>
-  </App>
+  </>
 )
 
 const Main = styled.main({

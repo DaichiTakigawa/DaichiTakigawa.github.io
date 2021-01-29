@@ -3,7 +3,7 @@ import * as React from 'react'
 const Info: React.FC = () => (
   <>
     <p>競技プログラミングやっています。 </p>
-    <p>
+    <div>
       <ul>
         <li>
           Atcoder :{' '}
@@ -28,7 +28,7 @@ const Info: React.FC = () => (
           (Raging : 1335)
         </li>
       </ul>
-    </p>
+    </div>
   </>
 )
 

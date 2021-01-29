@@ -1,4 +1,4 @@
-export let responsive = {
+export const responsive = {
   mobile: {
     maxWidth: 768,
   },

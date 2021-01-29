@@ -1,17 +1,21 @@
 import * as React from 'react'
 
-import Content from '../components/organisms/content'
-import App from '../components/organisms/app'
-import Seo from '../components/atoms/seo'
-import About from '../components/organisms/about'
+import {Seo} from '../components/atoms'
+import {Context as UiContext, PageName} from '../contexts/ui'
+import {About, Content} from '../components/organisms'
 
-const Component: React.FC = () => (
-  <App>
-    <Seo title="このサイトについて" description="このサイトについて" />
-    <Content currentPage="About">
-      <About />
-    </Content>
-  </App>
-)
+const Component: React.FC = () => {
+  const {setPageName} = React.useContext(UiContext)
+  setPageName(PageName.ABOUT)
+
+  return (
+    <>
+      <Seo title="このサイトについて" description="このサイトについて" />
+      <Content>
+        <About />
+      </Content>
+    </>
+  )
+}
 
 export default Component

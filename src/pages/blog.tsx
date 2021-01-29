@@ -1,10 +1,10 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
 
-import Content from '../components/organisms/content'
-import App from '../components/organisms/app'
-import BlogList from '../components/molecules/blogList'
-import Seo from '../components/atoms/seo'
+import {Seo} from '../components/atoms'
+import {Content} from '../components/organisms'
+import {BlogList} from '../components/molecules'
+import {Context as UiContext, PageName} from '../contexts/ui'
 
 import {SiteDescriptionQuery} from '../../types/graphql-types'
 
@@ -12,15 +12,19 @@ type Props = {
   data: SiteDescriptionQuery
 }
 
-const Component: React.FC<Props> = ({data}) => (
-  <App>
-    <Seo title="ブログ" description={data.site.siteMetadata.description} />
+const Component: React.FC<Props> = ({data}) => {
+  const {setPageName} = React.useContext(UiContext)
+  setPageName(PageName.BLOG)
 
-    <Content currentPage="Blog">
-      <BlogList />
-    </Content>
-  </App>
-)
+  return (
+    <>
+      <Seo title="ブログ" description={data.site.siteMetadata.description} />
+      <Content>
+        <BlogList />
+      </Content>
+    </>
+  )
+}
 
 export const query = graphql`
   query SiteDescription {

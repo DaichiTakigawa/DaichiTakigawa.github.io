@@ -1,10 +1,9 @@
 import * as React from 'react'
 import {graphql} from 'gatsby'
 
-import App from '../components/organisms/app'
-import Content from '../components/organisms/content'
-import Seo from '../components/atoms/seo'
-import BlogPage from '../components/organisms/blogPage'
+import {Seo} from '../components/atoms'
+import {BlogPage, Content} from '../components/organisms'
+import {Context as UiContext} from '../contexts/ui'
 import {PostTemplateQuery} from '../../types/graphql-types'
 
 type Props = {
@@ -12,12 +11,15 @@ type Props = {
 }
 
 const Post: React.FC<Props> = ({data}) => {
+  const {setPageName} = React.useContext(UiContext)
+  setPageName(null)
+
   const fm = data.markdown.frontmatter
   const url = `${data.site.siteMetadata.siteUrl}${fm.slug}`
   const imageUrl = `${data.site.siteMetadata.siteUrl}${fm.thumbnail.publicURL}`
 
   return (
-    <App>
+    <>
       <Seo
         isPostPage
         title={fm.title}
@@ -37,7 +39,7 @@ const Post: React.FC<Props> = ({data}) => {
           toc={data.markdown.toc}
         />
       </Content>
-    </App>
+    </>
   )
 }
 

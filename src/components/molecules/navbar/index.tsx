@@ -1,16 +1,14 @@
 import * as React from 'react'
-import {useState} from 'react'
 import styled from '@emotion/styled'
 import {Link} from 'gatsby'
 
 import {rhythm, scale} from '../../../utils/typography'
+import {Context as UiContext, PageName} from '../../../contexts/ui'
 
-type Props = {
-  currentPage: string
-}
+const Navbar: React.FC = () => {
+  const {pageName} = React.useContext(UiContext)
+  const [state, setState] = React.useState({expand: false})
 
-const Navbar: React.FC<Props> = ({currentPage}) => {
-  const [state, setState] = useState({expand: false})
   return (
     <Nav className="navbar">
       <div className="navbar-brand">
@@ -31,31 +29,31 @@ const Navbar: React.FC<Props> = ({currentPage}) => {
         <div className="navbar-start">
           <Link
             className={`navbar-item ${
-              currentPage === 'Home' ? 'is-active' : ''
+              pageName === PageName.HOME ? 'is-active' : ''
             }`}
             to="/">
-            Home
+            {PageName.HOME}
           </Link>
           <Link
             className={`navbar-item ${
-              currentPage === 'Blog' ? 'is-active' : ''
+              pageName === PageName.BLOG ? 'is-active' : ''
             }`}
             to="/blog/">
-            Blog
+            {PageName.BLOG}
           </Link>
           <Link
             className={`navbar-item ${
-              currentPage === 'About' ? 'is-active' : ''
+              pageName === PageName.ABOUT ? 'is-active' : ''
             }`}
             to="/about/">
-            About
+            {PageName.ABOUT}
           </Link>
           <Link
             className={`navbar-item ${
-              currentPage === 'Contact' ? 'is-active' : ''
+              pageName === PageName.CONTACT ? 'is-active' : ''
             }`}
             to="/contact/">
-            Contact
+            {PageName.CONTACT}
           </Link>
         </div>
       </div>

@@ -1,27 +1,28 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
-import {Title, Divider, Adsense} from '../../atoms'
+import {Title, Divider, AdSense} from '../../atoms'
+import {Context as UiContext} from '../../../contexts/ui'
 import {rhythm} from '../../../utils/typography'
 
 import SNS from './sns'
 import Linklist from './linklist'
 
-type Props = {
-  currentPage: string
-}
+const Navigation: React.FC = () => {
+  const {pageName} = React.useContext(UiContext)
 
-const Navigation: React.FC<Props> = ({currentPage}) => (
-  <>
-    <Title />
-    <StickyContainer>
-      <StyledDivider />
-      <Linklist currentPage={currentPage} />
-      <SNS />
-      <Adsense.Responsive format="rectangle" />
-    </StickyContainer>
-  </>
-)
+  return (
+    <>
+      <Title />
+      <StickyContainer>
+        <StyledDivider />
+        <Linklist currentPage={pageName} />
+        <SNS />
+        <AdSense.Responsive format="rectangle" />
+      </StickyContainer>
+    </>
+  )
+}
 
 const StickyContainer = styled.div({
   position: 'sticky',
