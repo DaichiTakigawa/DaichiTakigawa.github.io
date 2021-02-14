@@ -5,7 +5,7 @@ import {rhythm} from '../../../lib/typography';
 
 import {UiContext} from '../../../contexts';
 
-const Linklist: React.FC = () => {
+const LinkList: React.FC = () => {
   const {slug} = React.useContext(UiContext.Context);
 
   return (
@@ -48,4 +48,4 @@ const Menu = styled.nav({
   margin: `${rhythm(2)} ${rhythm(1)}`,
 });
 
-export default Linklist;
+export default LinkList;

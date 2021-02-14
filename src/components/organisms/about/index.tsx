@@ -4,13 +4,13 @@ import {scale, rhythm} from '../../../lib/typography';
 
 import {responsive} from '../../../constants';
 import {Copyright} from '../../atoms';
-import Text from './text';
+import Main from './Main';
 
 const About: React.FC = () => (
   <>
     <Container>
       <H1>About</H1>
-      <Text />
+      <Main />
     </Container>
     <Copyright />
   </>

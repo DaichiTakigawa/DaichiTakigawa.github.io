@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import {rhythm} from '../../../lib/typography';
 
-import {H2} from './me';
+import {H2} from './Me';
 
 const Portfolio: React.FC = () => (
   <>
     <H2>ポートフォリオ</H2>
-    <TableContaienr className="table-container">
+    <TableContainer className="table-container">
       <Table className="table is-striped is-bordered">
         <tbody>
           <tr />
@@ -42,11 +42,11 @@ const Portfolio: React.FC = () => (
           </tr>
         </tbody>
       </Table>
-    </TableContaienr>
+    </TableContainer>
   </>
 );
 
-const TableContaienr = styled.div({
+const TableContainer = styled.div({
   marginTop: rhythm(2),
   marginBottom: `${rhythm(3)} !important`,
   paddingLeft: '1px',

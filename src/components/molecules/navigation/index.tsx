@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 import {Title, Divider, AdSense} from '../../atoms';
 import {rhythm} from '../../../lib/typography';
 
-import SNS from './sns';
-import LinkList from './linklist';
+import Sns from './Sns';
+import LinkList from './LinkList';
 
 const Navigation: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Navigation: React.FC = () => {
       <StickyContainer>
         <StyledDivider />
         <LinkList />
-        <SNS />
+        <Sns />
         <AdSense.Responsive format="rectangle" />
       </StickyContainer>
     </>

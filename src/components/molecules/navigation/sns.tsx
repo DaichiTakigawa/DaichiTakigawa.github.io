@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import {Image} from '../../atoms';
 import {rhythm} from '../../../lib/typography';
 
-const SNS: React.FC = () => (
+const Sns: React.FC = () => (
   <Container>
     <div>
       <span className="icon is-medium">
@@ -50,4 +50,4 @@ const Qiita = styled.div({
   height: rhythm(1),
 });
 
-export default SNS;
+export default Sns;

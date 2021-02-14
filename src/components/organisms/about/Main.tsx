@@ -4,7 +4,7 @@ import {scale, rhythm} from '../../../lib/typography';
 
 import {responsive} from '../../../constants';
 
-const Text: React.FC = () => (
+const Main: React.FC = () => (
   <Container>
     <H2>このサイトについて</H2>
     <p>
@@ -75,4 +75,4 @@ const H2 = styled.h2({
   color: 'rgb(70, 70, 70)',
 });
 
-export default Text;
+export default Main;

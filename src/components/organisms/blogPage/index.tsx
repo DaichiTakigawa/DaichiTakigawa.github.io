@@ -10,7 +10,7 @@ import {
   Copyright,
 } from '../../atoms';
 import {Comment} from '../../../containers';
-import BlogMeta from './blogMeta';
+import BlogMeta from './BlogMeta';
 import {rhythm, scale} from '../../../lib/typography';
 import {responsive} from '../../../constants';
 

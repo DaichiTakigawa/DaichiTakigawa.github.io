@@ -4,9 +4,9 @@ import styled from '@emotion/styled';
 import {Divider, Copyright, Image} from '../../atoms';
 import {rhythm, scale} from '../../../lib/typography';
 import {responsive} from '../../../constants';
-import Me from './me';
-import Portfolio from './portfolio';
-import Info from './info';
+import Me from './Me';
+import Portfolio from './Portfolio';
+import Info from './Info';
 
 const Home: React.FC = () => (
   <>
