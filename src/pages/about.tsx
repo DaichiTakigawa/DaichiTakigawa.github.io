@@ -1,12 +1,14 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import {Seo} from '../components/atoms'
-import {Context as UiContext, PageName} from '../contexts/ui'
-import {About, Content} from '../components/organisms'
+import {Seo} from '../components/atoms';
+import {UiContext} from '../contexts';
+import {About, Content} from '../components/organisms';
 
 const Component: React.FC = () => {
-  const {setPageName} = React.useContext(UiContext)
-  setPageName(PageName.ABOUT)
+  const {setSlug} = React.useContext(UiContext.Context);
+  React.useEffect(() => {
+    setSlug(UiContext.TopPages.ABOUT);
+  }, []);
 
   return (
     <>
@@ -15,7 +17,7 @@ const Component: React.FC = () => {
         <About />
       </Content>
     </>
-  )
-}
+  );
+};
 
-export default Component
+export default Component;

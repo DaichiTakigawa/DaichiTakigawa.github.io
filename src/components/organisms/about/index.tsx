@@ -1,10 +1,10 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {scale, rhythm} from '../../../utils/typography'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {scale, rhythm} from '../../../lib/typography';
 
-import {responsive} from '../../../../config'
-import {Copyright} from '../../atoms'
-import Text from './text'
+import {responsive} from '../../../constants';
+import {Copyright} from '../../atoms';
+import Text from './text';
 
 const About: React.FC = () => (
   <>
@@ -14,14 +14,14 @@ const About: React.FC = () => (
     </Container>
     <Copyright />
   </>
-)
+);
 
 const Container = styled.div({
   paddingBottom: rhythm(4),
   paddingTop: rhythm(2),
   margin: 'auto',
   width: '80%',
-})
+});
 
 const H1 = styled.h1({
   fontSize: scale(1 / 2).fontSize,
@@ -33,6 +33,6 @@ const H1 = styled.h1({
     lineHeight: rhythm(3),
     paddingTop: rhythm(2),
   },
-})
+});
 
-export default About
+export default About;

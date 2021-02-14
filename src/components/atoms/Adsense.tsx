@@ -1,36 +1,36 @@
-import * as React from 'react'
-import {useEffect, useState} from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import {useEffect, useState} from 'react';
+import styled from '@emotion/styled';
 
-import {rhythm} from '../../utils/typography'
-import {responsive} from '../../../config'
+import {rhythm} from '../../lib/typography';
+import {responsive} from '../../constants';
 
 type Props = {
-  format?: string
-}
+  format?: string;
+};
 
 declare global {
   // eslint-disable-next-line no-unused-vars
   interface Window {
-    adsbygoogle: any[]
+    adsbygoogle: any[];
   }
 }
 
 interface AdSense extends React.FC<Props> {
-  Responsive: React.FC<Props>
+  Responsive: React.FC<Props>;
 }
 
 const AdSense: AdSense = ({format = 'auto'}) => {
   useEffect(() => {
     if (window) {
       try {
-        window.adsbygoogle = window.adsbygoogle || []
-        window.adsbygoogle.push({})
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({});
       } catch (e) {
         // console.log(e)
       }
     }
-  })
+  });
 
   return (
     <div>
@@ -41,31 +41,31 @@ const AdSense: AdSense = ({format = 'auto'}) => {
         data-ad-format={format}
       />
     </div>
-  )
-}
+  );
+};
 
 // eslint-disable-next-line react/display-name
 AdSense.Responsive = ({format = 'auto'}) => {
-  const [showAds, setShowAds] = useState(false)
+  const [showAds, setShowAds] = useState(false);
 
   useEffect(() => {
     if (showAds) {
       try {
-        window.adsbygoogle = window.adsbygoogle || []
-        window.adsbygoogle.push({})
+        window.adsbygoogle = window.adsbygoogle || [];
+        window.adsbygoogle.push({});
       } catch (e) {
         // console.log(e)
       }
     } else if (window) {
-      const minWidth = responsive.tablet.minWidth
-      const shouldShowAds = window.innerWidth >= minWidth
+      const minWidth = responsive.tablet.minWidth;
+      const shouldShowAds = window.innerWidth >= minWidth;
       if (shouldShowAds) {
-        setShowAds(true)
+        setShowAds(true);
       }
     }
-  }, [showAds])
+  }, [showAds]);
 
-  if (!showAds) return null
+  if (!showAds) return null;
 
   return (
     <Container>
@@ -76,14 +76,14 @@ AdSense.Responsive = ({format = 'auto'}) => {
         data-ad-format={format}
       />
     </Container>
-  )
-}
+  );
+};
 const Container = styled.div({
   margin: `${rhythm(1)} ${rhythm(1 / 2)}`,
-})
+});
 
 const Ins = styled.ins({
   display: 'block',
-})
+});
 
-export default AdSense
+export default AdSense;

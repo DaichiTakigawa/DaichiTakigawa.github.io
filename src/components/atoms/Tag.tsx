@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import {rhythm, scale} from '../../utils/typography'
+import styled from '@emotion/styled';
+import {rhythm, scale} from '../../lib/typography';
 
 const Tag = styled.span({
   fontSize: scale(-1 / 6).fontSize,
@@ -15,6 +15,6 @@ const Tag = styled.span({
     content: `""`,
     paddingRight: '0.5rem',
   },
-})
+});
 
-export default Tag
+export default Tag;

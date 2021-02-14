@@ -1,20 +1,22 @@
-import * as React from 'react'
-import {graphql} from 'gatsby'
+import * as React from 'react';
+import {graphql} from 'gatsby';
 
-import {Seo} from '../components/atoms'
-import {Home, Content} from '../components/organisms'
-import {Context as UiContext, PageName} from '../contexts/ui'
-import {BaseSiteDataQuery} from '../../types/graphql-types'
+import {Seo} from '../components/atoms';
+import {Home, Content} from '../components/organisms';
+import {UiContext} from '../contexts';
+import {BaseSiteDataQuery} from '../../types/graphql-types';
 
 type Props = {
-  data: BaseSiteDataQuery
-}
+  data: BaseSiteDataQuery;
+};
 const Component: React.FC<Props> = ({data}) => {
-  const {setPageName} = React.useContext(UiContext)
-  setPageName(PageName.HOME)
+  const {setSlug} = React.useContext(UiContext.Context);
+  React.useEffect(() => {
+    setSlug(UiContext.TopPages.HOME);
+  }, []);
 
-  const title = data.site?.siteMetadata?.title
-  const description = data.site?.siteMetadata?.description
+  const title = data.site?.siteMetadata?.title;
+  const description = data.site?.siteMetadata?.description;
 
   return (
     <>
@@ -23,9 +25,9 @@ const Component: React.FC<Props> = ({data}) => {
         <Home />
       </Content>
     </>
-  )
-}
-export default Component
+  );
+};
+export default Component;
 
 export const query = graphql`
   query BaseSiteData {
@@ -36,4 +38,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

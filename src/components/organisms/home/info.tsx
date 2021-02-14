@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 const Info: React.FC = () => (
   <>
@@ -30,6 +30,6 @@ const Info: React.FC = () => (
       </ul>
     </div>
   </>
-)
+);
 
-export default Info
+export default Info;

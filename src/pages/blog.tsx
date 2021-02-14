@@ -1,20 +1,22 @@
-import * as React from 'react'
-import {graphql} from 'gatsby'
+import * as React from 'react';
+import {graphql} from 'gatsby';
 
-import {Seo} from '../components/atoms'
-import {Content} from '../components/organisms'
-import {BlogList} from '../components/molecules'
-import {Context as UiContext, PageName} from '../contexts/ui'
+import {Seo} from '../components/atoms';
+import {Content} from '../components/organisms';
+import {BlogList} from '../components/molecules';
+import {UiContext} from '../contexts';
 
-import {SiteDescriptionQuery} from '../../types/graphql-types'
+import {SiteDescriptionQuery} from '../../types/graphql-types';
 
 type Props = {
-  data: SiteDescriptionQuery
-}
+  data: SiteDescriptionQuery;
+};
 
 const Component: React.FC<Props> = ({data}) => {
-  const {setPageName} = React.useContext(UiContext)
-  setPageName(PageName.BLOG)
+  const {setSlug} = React.useContext(UiContext.Context);
+  React.useEffect(() => {
+    setSlug(UiContext.TopPages.BLOG);
+  }, []);
 
   return (
     <>
@@ -23,8 +25,8 @@ const Component: React.FC<Props> = ({data}) => {
         <BlogList />
       </Content>
     </>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query SiteDescription {
@@ -34,6 +36,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Component
+export default Component;

@@ -1,16 +1,16 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import {Tag} from '../../atoms'
-import {rhythm, scale} from '../../../utils/typography'
-import {responsive} from '../../../../config'
+import {Tag} from '../../atoms';
+import {rhythm, scale} from '../../../lib/typography';
+import {responsive} from '../../../constants';
 
 type Props = {
-  title: string
-  date: string
-  tags: string[]
-  description: string
-}
+  title: string;
+  date: string;
+  tags: string[];
+  description: string;
+};
 
 const BlogMeta: React.FC<Props> = ({title, date, tags, description}) => (
   <>
@@ -27,7 +27,7 @@ const BlogMeta: React.FC<Props> = ({title, date, tags, description}) => (
     </Info>
     <Description>{description}</Description>
   </>
-)
+);
 
 const Title = styled.h1({
   paddingTop: rhythm(2),
@@ -40,7 +40,7 @@ const Title = styled.h1({
     fontSize: scale(3 / 2).fontSize,
     lineHeight: scale(3 / 2).lineHeight,
   },
-})
+});
 
 const Date = styled.h4({
   fontSize: scale(0).fontSize,
@@ -48,23 +48,23 @@ const Date = styled.h4({
   textAlign: 'center',
   color: '#4b5454',
   margin: 'auto',
-})
+});
 
 const Tags = styled.div({
   marginLeft: rhythm(1 / 2),
   lineHeight: rhythm(1),
   alignSelf: 'center',
-})
+});
 
 const Description = styled.p({
   fontSize: `${scale(0).fontSize} !important`,
   lineHeight: `${scale(0).lineHeight} !important`,
   margin: '0 !important',
-})
+});
 
 const Info = styled.div({
   display: 'flex',
   paddingTop: rhythm(1 / 4),
-})
+});
 
-export default BlogMeta
+export default BlogMeta;

@@ -9,4 +9,4 @@ export const responsive = {
   computer: {
     minWidth: 1024,
   },
-}
+};

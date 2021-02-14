@@ -1,18 +1,18 @@
-import * as React from 'react'
-import Helmet from 'react-helmet'
+import * as React from 'react';
+import Helmet from 'react-helmet';
 
-import Gop from './gop'
+import Gop from './gop';
 
 type Props = {
-  title: string
-  description: string
-  url?: string
-  imageUrl?: string
-  isPostPage?: boolean
-}
+  title: string;
+  description: string;
+  url?: string;
+  imageUrl?: string;
+  isPostPage?: boolean;
+};
 
 const Seo: React.FC<Props> = (props) => {
-  const title = props.title + ' - TAKIGAWA MEMO'
+  const title = props.title + ' - TAKIGAWA MEMO';
   return (
     <Helmet>
       <html lang="ja" />
@@ -35,11 +35,12 @@ const Seo: React.FC<Props> = (props) => {
         defer
         src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
       <link
-        href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap"
+        href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700&display=swap"
         rel="stylesheet"
         type="text/css"></link>
+      <script src="https://apis.google.com/js/api.js"></script>
     </Helmet>
-  )
-}
+  );
+};
 
-export default Seo
+export default Seo;

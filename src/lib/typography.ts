@@ -1,4 +1,4 @@
-import Typography from 'typography'
+import Typography from 'typography';
 
 const typography = new Typography({
   baseFontSize: '20px',
@@ -7,8 +7,9 @@ const typography = new Typography({
   headerFontFamily: ['Noto Sans JP', 'sans-serif'],
   bodyFontFamily: ['Noto Sans JP', 'sans-serif'],
   headerWeight: 700,
-})
+  bodyWeight: 400,
+});
 
-export default typography
+export default typography;
 
-export const {scale, rhythm} = typography
+export const {scale, rhythm} = typography;

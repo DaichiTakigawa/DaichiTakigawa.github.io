@@ -1,7 +1,7 @@
-import * as React from 'react'
-import {Link} from 'gatsby'
-import styled from '@emotion/styled'
-import {rhythm, scale} from '../../utils/typography'
+import * as React from 'react';
+import {Link} from 'gatsby';
+import styled from '@emotion/styled';
+import {rhythm, scale} from '../../lib/typography';
 
 const Component: React.FC = () => (
   <Link to="/">
@@ -11,7 +11,7 @@ const Component: React.FC = () => (
       MEMO
     </Title>
   </Link>
-)
+);
 
 const Title = styled.div({
   fontSize: scale(1).fontSize,
@@ -27,6 +27,6 @@ const Title = styled.div({
     border: '2px solid #4f4f4f',
     color: 'white',
   },
-})
+});
 
-export default Component
+export default Component;

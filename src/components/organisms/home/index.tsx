@@ -1,12 +1,12 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import {Divider, Copyright, Image} from '../../atoms'
-import {rhythm, scale} from '../../../utils/typography'
-import {responsive} from '../../../../config'
-import Me from './me'
-import Portfolio from './portfolio'
-import Info from './info'
+import {Divider, Copyright, Image} from '../../atoms';
+import {rhythm, scale} from '../../../lib/typography';
+import {responsive} from '../../../constants';
+import Me from './me';
+import Portfolio from './portfolio';
+import Info from './info';
 
 const Home: React.FC = () => (
   <>
@@ -20,13 +20,13 @@ const Home: React.FC = () => (
     </Container>
     <Copyright />
   </>
-)
+);
 
 const Container = styled.div({
   paddingBottom: rhythm(4),
   margin: 'auto',
   width: '80%',
-})
+});
 
 const H1 = styled.h1({
   fontSize: scale(1).fontSize,
@@ -45,6 +45,6 @@ const H1 = styled.h1({
     lineHeight: rhythm(4),
     paddingTop: rhythm(2),
   },
-})
+});
 
-export default Home
+export default Home;

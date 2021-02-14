@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {rhythm} from '../../../utils/typography'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {rhythm} from '../../../lib/typography';
 
-import {H2} from './me'
+import {H2} from './me';
 
 const Portfolio: React.FC = () => (
   <>
@@ -44,18 +44,18 @@ const Portfolio: React.FC = () => (
       </Table>
     </TableContaienr>
   </>
-)
+);
 
 const TableContaienr = styled.div({
   marginTop: rhythm(2),
   marginBottom: `${rhythm(3)} !important`,
   paddingLeft: '1px',
   paddingTop: '1px',
-})
+});
 
 const Table = styled.table({
   color: 'rgb(80, 80, 80)',
   marginBottom: 0,
-})
+});
 
-export default Portfolio
+export default Portfolio;

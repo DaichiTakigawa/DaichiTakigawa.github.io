@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import {Image} from '../../atoms'
-import {rhythm, scale} from '../../../utils/typography'
+import {Image} from '../../atoms';
+import {rhythm, scale} from '../../../lib/typography';
 
 const Me: React.FC = () => (
   <>
@@ -14,7 +14,7 @@ const Me: React.FC = () => (
         </div>
       </figure>
       <Introduce className="media-content">
-        <p>都内に住む学生。</p>
+        <p>未熟者の成れの果て。</p>
       </Introduce>
     </article>
     <div>
@@ -39,10 +39,20 @@ const Me: React.FC = () => (
             <i className="fas fa-external-link-alt"></i>
           </a>
         </li>
+        <li>
+          Qiita :{' '}
+          <a
+            href="https://qiita.com/bob_yama"
+            target="_blank"
+            rel="noopener noreferrer">
+            https://qiita.com/bob_yama{' '}
+            <i className="fas fa-external-link-alt"></i>
+          </a>
+        </li>
       </ul>
     </div>
   </>
-)
+);
 
 export const H2 = styled.h2({
   fontSize: scale(1).fontSize,
@@ -50,13 +60,13 @@ export const H2 = styled.h2({
   fontWeight: 'bold',
   paddingTop: rhythm(3),
   color: 'rgb(70, 70, 70)',
-})
+});
 
 const Introduce = styled.div({
   marginTop: 'auto',
   '& > p': {
     marginBottom: rhythm(2),
   },
-})
+});
 
-export default Me
+export default Me;

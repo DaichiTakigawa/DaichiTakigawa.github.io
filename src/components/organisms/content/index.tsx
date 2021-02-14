@@ -1,9 +1,9 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {rhythm} from '../../../utils/typography'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {rhythm} from '../../../lib/typography';
 
-import {Navbar, Navigation} from '../../molecules'
-import {responsive} from '../../../../config'
+import {Navbar, Navigation} from '../../molecules';
+import {responsive} from '../../../constants';
 
 const Content: React.FC = ({children}) => (
   <FlexContainer>
@@ -15,7 +15,7 @@ const Content: React.FC = ({children}) => (
     </NavigationContainer>
     <Container>{children}</Container>
   </FlexContainer>
-)
+);
 
 const FlexContainer = styled.div({
   backgroundColor: '#ececec',
@@ -28,9 +28,9 @@ const FlexContainer = styled.div({
     display: 'flex',
     flexDirection: 'row',
   },
-})
+});
 
-const Container = styled.div({
+const Container = styled.main({
   marginTop: rhythm(4),
   background: 'white',
   boxShadow: 'rgba(0, 0, 0, 0.5) 0px 3px 5px',
@@ -44,21 +44,21 @@ const Container = styled.div({
     width: '100%',
     minWidth: 0,
   },
-})
+});
 
-const NavbarContainer = styled.div({
+const NavbarContainer = styled.nav({
   [`@media (min-width: ${responsive.tablet.minWidth}px)`]: {
     display: 'none',
   },
-})
+});
 
-const NavigationContainer = styled.div({
+const NavigationContainer = styled.nav({
   padding: `${rhythm(2)} 0`,
   backgroundColor: 'white',
   boxShadow: 'rgba(0, 0, 0, 0.5) 0px 3px 5px',
   [`@media (max-width: ${responsive.mobile.maxWidth}px)`]: {
     display: 'none',
   },
-})
+});
 
-export default Content
+export default Content;

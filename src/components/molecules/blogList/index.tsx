@@ -1,24 +1,24 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {useStaticQuery, graphql} from 'gatsby'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {useStaticQuery, graphql} from 'gatsby';
 
-import BlogRow from './blogRow'
-import {Divider} from '../../atoms'
-import {rhythm, scale} from '../../../utils/typography'
-import {responsive} from '../../../../config'
-import {MarkdownRemarkFrontmatter} from '../../../../types/graphql-types'
+import BlogRow from './blogRow';
+import {Divider} from '../../atoms';
+import {rhythm, scale} from '../../../lib/typography';
+import {responsive} from '../../../constants';
+import {MarkdownRemarkFrontmatter} from '../../../../types/graphql-types';
 
 type edge = {
   node: {
-    frontmatter: MarkdownRemarkFrontmatter
-  }
-}
+    frontmatter: MarkdownRemarkFrontmatter;
+  };
+};
 
 type data = {
   markdown: {
-    edges: edge[]
-  }
-}
+    edges: edge[];
+  };
+};
 
 const BlogList: React.FC = () => {
   const {markdown}: data = useStaticQuery(graphql`
@@ -42,12 +42,12 @@ const BlogList: React.FC = () => {
         }
       }
     }
-  `)
+  `);
 
   const list = markdown.edges.map((edge: edge) => {
-    const fm = edge.node.frontmatter
+    const fm = edge.node.frontmatter;
     return (
-      <>
+      <React.Fragment key={fm.slug}>
         <BlogRow
           title={fm.title}
           slug={fm.slug}
@@ -57,9 +57,9 @@ const BlogList: React.FC = () => {
           thumbnail={fm.thumbnail.name}
         />
         <Divider />
-      </>
-    )
-  })
+      </React.Fragment>
+    );
+  });
 
   return (
     <Container>
@@ -67,15 +67,15 @@ const BlogList: React.FC = () => {
       <Divider />
       {list}
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div({
   paddingTop: rhythm(2),
   paddingBottom: rhythm(4),
   margin: 'auto',
   width: '80%',
-})
+});
 
 const Title = styled.h1({
   fontSize: scale(1 / 2).fontSize,
@@ -88,6 +88,6 @@ const Title = styled.h1({
     paddingTop: rhythm(2),
     marginBottom: 0,
   },
-})
+});
 
-export default BlogList
+export default BlogList;

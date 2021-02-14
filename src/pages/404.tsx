@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import {Seo} from '../components/atoms'
-import {rhythm, scale} from '../utils/typography'
+import {Seo} from '../components/atoms';
+import {rhythm, scale} from '../lib/typography';
 
 const Component: React.FC = () => (
   <>
@@ -19,7 +19,7 @@ const Component: React.FC = () => (
       </p>
     </Main>
   </>
-)
+);
 
 const Main = styled.main({
   textAlign: 'center',
@@ -30,10 +30,10 @@ const Main = styled.main({
     lineHeight: rhythm(2),
     margin: rhythm(3),
   },
-})
+});
 
 const Hr = styled.hr({
   backgroundColor: 'rgba(34, 36, 38, 0.15)',
-})
+});
 
-export default Component
+export default Component;

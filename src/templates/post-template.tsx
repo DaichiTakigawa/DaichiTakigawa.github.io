@@ -1,22 +1,25 @@
-import * as React from 'react'
-import {graphql} from 'gatsby'
+import * as React from 'react';
+import {graphql} from 'gatsby';
 
-import {Seo} from '../components/atoms'
-import {BlogPage, Content} from '../components/organisms'
-import {Context as UiContext} from '../contexts/ui'
-import {PostTemplateQuery} from '../../types/graphql-types'
+import {Seo} from '../components/atoms';
+import {BlogPage, Content} from '../components/organisms';
+import {UiContext} from '../contexts';
+import {PostTemplateQuery} from '../../types/graphql-types';
 
 type Props = {
-  data: PostTemplateQuery
-}
+  data: PostTemplateQuery;
+};
 
 const Post: React.FC<Props> = ({data}) => {
-  const {setPageName} = React.useContext(UiContext)
-  setPageName(null)
+  const {setSlug} = React.useContext(UiContext.Context);
 
-  const fm = data.markdown.frontmatter
-  const url = `${data.site.siteMetadata.siteUrl}${fm.slug}`
-  const imageUrl = `${data.site.siteMetadata.siteUrl}${fm.thumbnail.publicURL}`
+  const fm = data.markdown.frontmatter;
+  const url = `${data.site.siteMetadata.siteUrl}${fm.slug}`;
+  const imageUrl = `${data.site.siteMetadata.siteUrl}${fm.thumbnail.publicURL}`;
+
+  React.useEffect(() => {
+    setSlug(fm.slug);
+  }, []);
 
   return (
     <>
@@ -40,8 +43,8 @@ const Post: React.FC<Props> = ({data}) => {
         />
       </Content>
     </>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query PostTemplate($slug: String!) {
@@ -66,6 +69,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Post
+export default Post;

@@ -1,24 +1,24 @@
-import * as React from 'react'
-import {useState} from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import {useState} from 'react';
+import styled from '@emotion/styled';
 
-import {rhythm, scale} from '../../utils/typography'
-import {responsive} from '../../../config'
+import {rhythm, scale} from '../../lib/typography';
+import {responsive} from '../../constants';
 
 type Props = {
-  html: string
-}
+  html: string;
+};
 
 const Toc: React.FC<Props> = ({html}) => {
-  const [state, setState] = useState({expand: true})
+  const [state, setState] = useState({expand: true});
 
-  let toc = null
+  let toc = null;
   if (state.expand) {
     toc = (
       <TocContainer>
         <div dangerouslySetInnerHTML={{__html: html}} />
       </TocContainer>
-    )
+    );
   }
 
   return (
@@ -33,8 +33,8 @@ const Toc: React.FC<Props> = ({html}) => {
       </FlexContainer>
       {toc}
     </Background>
-  )
-}
+  );
+};
 
 const Background = styled.div({
   margin: `${rhythm(3)} 0 ${rhythm(2)} 0`,
@@ -43,19 +43,19 @@ const Background = styled.div({
   [`@media (min-width: ${responsive.tablet.minWidth}px)`]: {
     width: '56%',
   },
-})
+});
 
 const Title = styled.span({
   fontSize: scale(1 / 6).fontSize,
   fontWeight: 'bold',
   color: 'rgb(87, 87, 87)',
-})
+});
 
 const FlexContainer = styled.div({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
-})
+});
 
 const ClickCircle = styled.div({
   cursor: 'pointer',
@@ -68,7 +68,7 @@ const ClickCircle = styled.div({
   '& > span': {
     fontWeight: 'bold',
   },
-})
+});
 
 const TocContainer = styled.div({
   width: '80%',
@@ -93,6 +93,6 @@ const TocContainer = styled.div({
       color: 'rgb(82, 82, 82)',
     },
   },
-})
+});
 
-export default Toc
+export default Toc;

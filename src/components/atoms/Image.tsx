@@ -1,22 +1,22 @@
-import * as React from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
-import Img, {FluidObject} from 'gatsby-image'
+import * as React from 'react';
+import {graphql, useStaticQuery} from 'gatsby';
+import Img, {FluidObject} from 'gatsby-image';
 
 type Props = {
-  fileName: string
-  alt: string
-  style?: object
-}
+  fileName: string;
+  alt: string;
+  style?: object;
+};
 
 type data = {
   image: {
     nodes: [
       {
-        fluid: FluidObject
+        fluid: FluidObject;
       }
-    ]
-  }
-}
+    ];
+  };
+};
 
 const Image: React.FC<Props> = ({fileName, alt, style}) => {
   const {image}: data = useStaticQuery(graphql`
@@ -33,15 +33,15 @@ const Image: React.FC<Props> = ({fileName, alt, style}) => {
         }
       }
     }
-  `)
+  `);
 
-  const {fluid} = image.nodes.find((n) => n.fluid.src.includes(fileName))
+  const {fluid} = image.nodes.find((n) => n.fluid.src.includes(fileName));
 
   if (!fluid) {
-    return null
+    return null;
   }
 
-  return <Img fluid={fluid} alt={alt} style={style} />
-}
+  return <Img fluid={fluid} alt={alt} style={style} />;
+};
 
-export default Image
+export default Image;

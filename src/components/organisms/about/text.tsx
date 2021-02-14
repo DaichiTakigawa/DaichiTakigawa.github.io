@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {scale, rhythm} from '../../../utils/typography'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {scale, rhythm} from '../../../lib/typography';
 
-import {responsive} from '../../../../config'
+import {responsive} from '../../../constants';
 
 const Text: React.FC = () => (
   <Container>
@@ -57,7 +57,7 @@ const Text: React.FC = () => (
       なお、Cookieを無効にすることでアクセスログの収集の拒否が可能ですので、お使いのブラウザの設定をご確認ください。
     </p>
   </Container>
-)
+);
 
 const Container = styled.div({
   fontSize: scale(0).fontSize,
@@ -66,13 +66,13 @@ const Container = styled.div({
     fontSize: scale(1 / 8).fontSize,
     marginTop: rhythm(2),
   },
-})
+});
 
 const H2 = styled.h2({
   fontSize: scale(1 / 2).fontSize,
   lineHeight: rhythm(2),
   fontWeight: 'bold',
   color: 'rgb(70, 70, 70)',
-})
+});
 
-export default Text
+export default Text;

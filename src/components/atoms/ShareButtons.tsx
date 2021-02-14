@@ -1,15 +1,15 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {rhythm} from '../../utils/typography'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {rhythm} from '../../lib/typography';
 
 type Props = {
-  url: string
-  title: string
-}
+  url: string;
+  title: string;
+};
 
 type SBProps = {
-  color: string
-}
+  color: string;
+};
 
 const ShareButtons: React.FC<Props> = ({url, title}) => (
   <Container className="columns is-mobile">
@@ -46,13 +46,13 @@ const ShareButtons: React.FC<Props> = ({url, title}) => (
       </a>
     </ShareButton>
   </Container>
-)
+);
 
 const Container = styled.div({
   marginTop: 0,
   width: '100%',
   margin: 'auto',
-})
+});
 
 const ShareButton = styled.div((props: SBProps) => ({
   background: `${props.color}`,
@@ -64,10 +64,10 @@ const ShareButton = styled.div((props: SBProps) => ({
     textAlign: 'center',
     fontSize: '1.3rem',
   },
-}))
+}));
 
 const Hatena = styled.span({
   fontWeight: 'bold',
-})
+});
 
-export default ShareButtons
+export default ShareButtons;

@@ -1,16 +1,16 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import {Link} from 'gatsby'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import {Link} from 'gatsby';
 
-import {rhythm, scale} from '../../../utils/typography'
-import {Context as UiContext, PageName} from '../../../contexts/ui'
+import {rhythm, scale} from '../../../lib/typography';
+import {UiContext} from '../../../contexts';
 
 const Navbar: React.FC = () => {
-  const {pageName} = React.useContext(UiContext)
-  const [state, setState] = React.useState({expand: false})
+  const {slug} = React.useContext(UiContext.Context);
+  const [state, setState] = React.useState({expand: false});
 
   return (
-    <Nav className="navbar">
+    <Container className="navbar">
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
           <Title>TAKIGAWA MEMO</Title>
@@ -29,39 +29,39 @@ const Navbar: React.FC = () => {
         <div className="navbar-start">
           <Link
             className={`navbar-item ${
-              pageName === PageName.HOME ? 'is-active' : ''
+              slug === UiContext.TopPages.HOME ? 'is-active' : ''
             }`}
             to="/">
-            {PageName.HOME}
+            Home
           </Link>
           <Link
             className={`navbar-item ${
-              pageName === PageName.BLOG ? 'is-active' : ''
+              slug === UiContext.TopPages.BLOG ? 'is-active' : ''
             }`}
             to="/blog/">
-            {PageName.BLOG}
+            Blog
           </Link>
           <Link
             className={`navbar-item ${
-              pageName === PageName.ABOUT ? 'is-active' : ''
+              slug === UiContext.TopPages.ABOUT ? 'is-active' : ''
             }`}
             to="/about/">
-            {PageName.ABOUT}
+            About
           </Link>
           <Link
             className={`navbar-item ${
-              pageName === PageName.CONTACT ? 'is-active' : ''
+              slug === UiContext.TopPages.CONTACT ? 'is-active' : ''
             }`}
             to="/contact/">
-            {PageName.CONTACT}
+            Contact
           </Link>
         </div>
       </div>
-    </Nav>
-  )
-}
+    </Container>
+  );
+};
 
-const Nav = styled.nav({
+const Container = styled.div({
   textAlign: 'center',
   background: 'white',
   boxShadow: 'rgba(0, 0, 0, 0.5) 0px 3px 5px',
@@ -69,11 +69,11 @@ const Nav = styled.nav({
   top: 0,
   right: 0,
   left: 0,
-})
+});
 
-const Title = styled.span({
+const Title = styled.header({
   fontSize: scale(1 / 2).fontSize,
   paddingLeft: rhythm(1 / 2),
-})
+});
 
-export default Navbar
+export default Navbar;

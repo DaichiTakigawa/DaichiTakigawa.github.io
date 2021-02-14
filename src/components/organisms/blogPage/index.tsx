@@ -1,5 +1,5 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
 import {
   AdSense,
@@ -8,25 +8,26 @@ import {
   ShareButtons,
   Toc,
   Copyright,
-} from '../../atoms'
-import BlogMeta from './blogMeta'
-import {rhythm, scale} from '../../../utils/typography'
-import {responsive} from '../../../../config'
+} from '../../atoms';
+import {Comment} from '../../../containers';
+import BlogMeta from './blogMeta';
+import {rhythm, scale} from '../../../lib/typography';
+import {responsive} from '../../../constants';
 
 type Props = {
-  title: string
-  slug: string
-  date: string
-  description: string
-  tags: string[]
-  thumbnail: string
-  html: string
-  toc: string
-}
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  tags: string[];
+  thumbnail: string;
+  html: string;
+  toc: string;
+};
 
 const BlogPage: React.FC<Props> = (props) => {
-  const url = `https://www.takigawa-memo.com${props.slug}`
-  const shareTitle = `${props.title} - TAKIGAWA MEMO`
+  const url = `https://www.takigawa-memo.com${props.slug}`;
+  const shareTitle = `${props.title} - TAKIGAWA MEMO`;
 
   return (
     <>
@@ -45,11 +46,12 @@ const BlogPage: React.FC<Props> = (props) => {
         <Html dangerouslySetInnerHTML={{__html: props.html}} />
         <ShareButtons url={url} title={shareTitle} />
         <AdSense />
+        <Comment slug={props.slug} />
       </Container>
       <Copyright />
     </>
-  )
-}
+  );
+};
 
 const Container = styled.div({
   paddingBottom: rhythm(4),
@@ -58,7 +60,7 @@ const Container = styled.div({
     width: '86%',
     margin: '0 auto',
   },
-})
+});
 
 const Html = styled.div({
   paddingBottom: rhythm(2),
@@ -97,6 +99,6 @@ const Html = styled.div({
       lineHeight: rhythm(3 / 2),
     },
   },
-})
+});
 
-export default BlogPage
+export default BlogPage;

@@ -1,10 +1,10 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import {rhythm, scale} from '../utils/typography'
-import {responsive} from '../../config'
+import {rhythm, scale} from '../lib/typography';
+import {responsive} from '../constants';
 
-const Layout: React.FC = ({children}) => <Div>{children}</Div>
+const Layout: React.FC = ({children}) => <Div>{children}</Div>;
 
 const Div = styled.div({
   p: {
@@ -20,6 +20,6 @@ const Div = styled.div({
     borderLeft: `${rhythm(1 / 3)} solid #8fa0ba`,
     fontStyle: 'italic',
   },
-})
+});
 
-export default Layout
+export default Layout;

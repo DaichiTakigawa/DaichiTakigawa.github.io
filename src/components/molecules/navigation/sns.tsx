@@ -1,8 +1,8 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
+import * as React from 'react';
+import styled from '@emotion/styled';
 
-import {Image} from '../../atoms'
-import {rhythm} from '../../../utils/typography'
+import {Image} from '../../atoms';
+import {rhythm} from '../../../lib/typography';
 
 const SNS: React.FC = () => (
   <Container>
@@ -26,7 +26,7 @@ const SNS: React.FC = () => (
       </a>
     </Qiita>
   </Container>
-)
+);
 
 const Container = styled.div({
   margin: `${rhythm(2)} ${rhythm(1)}`,
@@ -36,18 +36,18 @@ const Container = styled.div({
   '& > div': {
     marginRight: rhythm(1 / 2),
   },
-})
+});
 
 const A = styled.a({
   color: '#363636',
   '&:hover': {
     color: '#3273dc',
   },
-})
+});
 
 const Qiita = styled.div({
   width: rhythm(1),
   height: rhythm(1),
-})
+});
 
-export default SNS
+export default SNS;

@@ -1,17 +1,17 @@
-import * as React from 'react'
+import * as React from 'react';
 
 type Props = {
-  isPostPage: boolean
-  title: string
-  description: string
-  url: string
-  imageUrl: string
-  facebookAppId: string
-}
+  isPostPage: boolean;
+  title: string;
+  description: string;
+  url: string;
+  imageUrl: string;
+  facebookAppId: string;
+};
 
 const Gop: React.FC<Props> = (props) => {
   if (!props.isPostPage) {
-    return null
+    return null;
   } else {
     return (
       <>
@@ -28,8 +28,8 @@ const Gop: React.FC<Props> = (props) => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="bob_yama" />
       </>
-    )
+    );
   }
-}
+};
 
-export default Gop
+export default Gop;
