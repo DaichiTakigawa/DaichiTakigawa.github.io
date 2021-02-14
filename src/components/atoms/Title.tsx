@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Link} from 'gatsby';
 import styled from '@emotion/styled';
+
 import {rhythm, scale} from '../../lib/typography';
 
 const Component: React.FC = () => (

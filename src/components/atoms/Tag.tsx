@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 import {rhythm, scale} from '../../lib/typography';
 
 const Tag = styled.span({

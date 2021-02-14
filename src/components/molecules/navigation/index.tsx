@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-
 import {Title, Divider, AdSense} from '../../atoms';
 import {rhythm} from '../../../lib/typography';
 

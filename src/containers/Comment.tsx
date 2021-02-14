@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-
 import {selectFormattedDateComments} from '../selectors/comments';
 import {PostModel} from '../domain/models/comment';
 import {Comment} from '../components/molecules';

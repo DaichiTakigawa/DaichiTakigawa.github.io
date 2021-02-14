@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import {useStaticQuery, graphql} from 'gatsby';
-
-import BlogRow from './blogRow';
+import BlogRow from './BlogRow';
 import {Divider} from '../../atoms';
 import {rhythm, scale} from '../../../lib/typography';
 import {responsive} from '../../../constants';

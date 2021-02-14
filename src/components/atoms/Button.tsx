@@ -2,7 +2,6 @@ import * as React from 'react';
 
 type Size = 'small' | 'default' | 'medium' | 'large';
 type Color = 'primary' | 'link' | 'info' | 'success' | 'warning' | 'danger';
-
 interface Props {
   label: string;
   onClick: () => void;

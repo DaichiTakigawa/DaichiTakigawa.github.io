@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import {scale, rhythm} from '../../../lib/typography';
-
 import {responsive} from '../../../constants';
 
 const Main: React.FC = () => (
