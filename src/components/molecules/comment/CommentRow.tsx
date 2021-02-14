@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import {Ellipsis} from '../../atoms';
 import {Comment} from '../../../domain/models';
+import {UserContext} from '../../../contexts';
 import {rhythm, scale} from '../../../lib/typography';
 
 export interface RemoveAction {
@@ -16,18 +17,29 @@ interface Props {
 }
 
 const CommentRow: React.FC<Props> = ({comment, remove}) => {
+  const {user} = React.useContext(UserContext.Context);
+
+  let ellipsis = null;
+  if (!user) {
+    if (user.id == parseInt(comment.userId)) {
+      ellipsis = (
+        <Ellipsis
+          menuLabels={['コメントを削除']}
+          onSelectMenu={() => {
+            remove(comment.id);
+          }}
+        />
+      );
+    }
+  }
+
   return (
     <Container>
       <Header>
         <UserName>{`@ ${comment.userName}`}</UserName>
         <FlexRowDiv>
           <UpdatedAt>{comment.createdAt}</UpdatedAt>
-          <Ellipsis
-            menuLabels={['コメントを削除']}
-            onSelectMenu={() => {
-              remove(comment.id);
-            }}
-          />
+          {ellipsis}
         </FlexRowDiv>
       </Header>
       <p>{comment.text}</p>

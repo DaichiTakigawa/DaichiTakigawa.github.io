@@ -1,7 +1,9 @@
 import * as React from 'react';
 import Image from './Image';
 
-import {UiContext} from '../../contexts';
+interface Props {
+  slug: string;
+}
 
 const base_url = 'https://accounts.google.com/o/oauth2/auth';
 const clientId =
@@ -11,10 +13,7 @@ const redirect_uri = encodeURIComponent(
 );
 const scope = 'profile email';
 
-const GoogleAuth: React.FC = () => {
-  const {slug} = React.useContext(UiContext.Context);
-  console.log(slug);
-
+const GoogleAuth: React.FC<Props> = ({slug}) => {
   const href = `${base_url}?client_id=${clientId}&redirect_uri=${redirect_uri}&scope=${scope}&response_type=code&state=${slug}`;
 
   const onClick = React.useCallback(() => {
@@ -26,7 +25,7 @@ const GoogleAuth: React.FC = () => {
       <span className={'icon'}>
         <Image fileName={'google.png'} alt={'google'} />
       </span>
-      <span>Sign in with Google</span>
+      <span>Sign Up With Google</span>
     </button>
   );
 };

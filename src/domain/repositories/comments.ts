@@ -20,7 +20,6 @@ type DeleteCommentResponse = AxiosResponse<null>;
 export async function getAll(slug: string) {
   const response: GetCommentsResponse = await api.get(`/comment?slug=${slug}`);
   if (200 <= response.status && response.status < 300) {
-    console.log('data', response.data);
     return response.data;
   }
 }

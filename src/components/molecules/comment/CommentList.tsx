@@ -12,13 +12,12 @@ interface Props {
 const CommentList: React.FC<Props> = ({data, remove}) => {
   return (
     <>
-      {data &&
-        data.map((comment) => (
-          <React.Fragment key={comment.id}>
-            <Divider />
-            <CommentRow comment={comment} remove={remove} />
-          </React.Fragment>
-        ))}
+      {data.map((comment) => (
+        <React.Fragment key={comment.id}>
+          <Divider />
+          <CommentRow comment={comment} remove={remove} />
+        </React.Fragment>
+      ))}
     </>
   );
 };

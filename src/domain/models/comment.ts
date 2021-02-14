@@ -1,6 +1,7 @@
 export interface Model {
   readonly id: number;
   readonly slug: string;
+  readonly userId: string;
   readonly userName: string;
   readonly text: string;
   readonly createdAt: string;
@@ -9,7 +10,6 @@ export interface Model {
 
 export interface PostModel {
   slug: string;
-  userId: string;
   userName: string;
   text: string;
 }

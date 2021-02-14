@@ -1,16 +1,13 @@
 /* eslint-disable no-unused-vars */
 import * as React from 'react';
 
-export interface User {
-  id: number;
-  name: string;
-}
+import {User} from '../domain/models';
 
-export function createInitialUser(): User | null {
+export function createInitialUser(): User.Model | null {
   return null;
 }
 
 export const Context = React.createContext({
   user: createInitialUser(),
-  setUser: (_: User) => {},
+  setUser: (_: User.Model) => {},
 });

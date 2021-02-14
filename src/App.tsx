@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Provider} from 'react-redux';
 
 import {UiContext, UserContext} from './contexts';
-import login from './lib/login';
+import {User} from './domain/models';
 import store from './store';
 
 const App: React.FC = ({children}) => {
@@ -11,8 +11,12 @@ const App: React.FC = ({children}) => {
 
   React.useEffect(() => {
     (async () => {
-      const user = await login();
-      setUser(user);
+      try {
+        const user = await User.login();
+        setUser(user);
+      } catch (e) {
+        console.log(e);
+      }
     })();
   }, [setUser]);
 

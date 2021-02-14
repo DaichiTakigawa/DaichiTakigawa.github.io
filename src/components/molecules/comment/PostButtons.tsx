@@ -5,29 +5,20 @@ import {Button} from '../../atoms';
 import {rhythm} from '../../../lib/typography';
 
 interface Props {
-  logout(): void;
   submit(): void;
 }
 
-const PostButtons: React.FC<Props> = ({logout, submit}) => {
+const PostButtons: React.FC<Props> = ({submit}) => {
   return (
-    <Contaienr className="field">
-      <div className="control">
-        <Button
-          label={'ログアウト'}
-          onClick={logout}
-          color={'link'}
-          isInverted
-        />
-      </div>
+    <Container className="field">
       <div className="control">
         <Button label={'投稿する'} onClick={submit} color={'link'} />
       </div>
-    </Contaienr>
+    </Container>
   );
 };
 
-const Contaienr = styled.div({
+const Container = styled.div({
   display: 'flex',
   justifyContent: 'flex-end',
   flexDirection: 'row',

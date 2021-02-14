@@ -8,7 +8,6 @@ export function syncWithServer(slug: string) {
   return async (dispatch: Dispatch) => {
     try {
       const res = await CommentRepository.getAll(slug);
-      console.log('GET comments', res.comments);
       if (res) {
         dispatch(add(slug, res.comments));
       }
@@ -22,7 +21,6 @@ export function postAndSync(comment: Comment.PostModel) {
   return async (dispatch: Dispatch) => {
     try {
       const res = await CommentRepository.post(comment);
-      console.log('POST comment', res.comment);
       if (res) {
         dispatch(add(comment.slug, [res.comment]));
       }

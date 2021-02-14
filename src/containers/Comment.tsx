@@ -32,7 +32,6 @@ const ConnectedComment: React.FC<Props> = ({slug}) => {
     []
   );
 
-  console.log(comments);
   return <Comment slug={slug} comments={comments[slug]} actions={actions} />;
 };
 

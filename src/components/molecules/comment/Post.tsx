@@ -3,7 +3,7 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 
 import {TextArea} from '../../atoms';
-import LoginButtons from './LoginButtons';
+import Login from './Login';
 import UserName from './UserName';
 import PostButtons from './PostButtons';
 import {UserContext} from '../../../contexts';
@@ -20,29 +20,26 @@ interface Props {
 }
 
 const Post: React.FC<Props> = ({slug, post}) => {
-  const {user, setUser} = React.useContext(UserContext.Context);
+  const {user} = React.useContext(UserContext.Context);
+  const [userName, setUserName] = React.useState('');
   const [text, setText] = React.useState('');
 
+  React.useEffect(() => {
+    if (user) {
+      setUserName(user.name);
+    }
+  }, [user]);
+
   const submit = React.useCallback(() => {
-    console.log(user);
-    console.log(user && user.name);
-    console.log(text);
-    if (user && user.name && text) {
+    if (userName && text) {
       console.log('post');
       post({
         slug: slug,
-        userId: 'hogehoge@example.com',
-        userName: user.name,
+        userName: userName,
         text: text,
       });
     }
-  }, [user, text]);
-
-  const logout = React.useCallback(() => {
-    console.log('logout');
-    setUser(null);
-    setText('');
-  }, []);
+  }, [userName, text]);
 
   const onTextChange = React.useCallback(
     (e) => {
@@ -52,16 +49,15 @@ const Post: React.FC<Props> = ({slug, post}) => {
   );
   const onUserNameChange = React.useCallback(
     (e) => {
-      setUser({...user, name: e.target.value});
+      setUserName(e.target.value);
     },
-    [setUser]
+    [setUserName]
   );
 
-  console.log(!user);
   return (
     <PostContainer>
       <UserName
-        userName={(user && user.name) || ''}
+        userName={userName}
         onChange={onUserNameChange}
         disabled={!user}
       />
@@ -73,11 +69,7 @@ const Post: React.FC<Props> = ({slug, post}) => {
         size={'small'}
         disabled={!user}
       />
-      {user ? (
-        <PostButtons logout={logout} submit={submit} />
-      ) : (
-        <LoginButtons />
-      )}
+      {user ? <PostButtons submit={submit} /> : <Login slug={slug} />}
     </PostContainer>
   );
 };

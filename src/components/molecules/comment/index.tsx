@@ -2,7 +2,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 
-import {Divider, GoogleAuth} from '../../atoms';
+import {Divider} from '../../atoms';
 import {Comment} from '../../../domain/models';
 import CommentList from './CommentList';
 import {RemoveAction} from './CommentRow';
@@ -19,7 +19,6 @@ interface Props {
 }
 
 const CommentSection: React.FC<Props> = ({slug, comments, actions}) => {
-  console.log('CommentSection', comments);
   return (
     <Container>
       <H3>コメント</H3>
@@ -27,7 +26,6 @@ const CommentSection: React.FC<Props> = ({slug, comments, actions}) => {
       <Divider />
       <H3>投稿する</H3>
       <Post slug={slug} post={actions.post} />
-      <GoogleAuth />
     </Container>
   );
 };
