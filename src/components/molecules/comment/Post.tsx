@@ -23,6 +23,8 @@ const Post: React.FC<Props> = ({slug, post}) => {
   const {user} = React.useContext(UserContext.Context);
   const [userName, setUserName] = React.useState('');
   const [text, setText] = React.useState('');
+  const [userNameErrMsg, setUserNameErrMsg] = React.useState('');
+  const [textErrMsg, setTextErrMsg] = React.useState('');
 
   React.useEffect(() => {
     if (user) {
@@ -31,23 +33,33 @@ const Post: React.FC<Props> = ({slug, post}) => {
   }, [user]);
 
   const submit = React.useCallback(() => {
-    if (userName && text) {
-      post({
-        slug: slug,
-        userName: userName,
-        text: text,
-      });
+    if (!userName) {
+      setUserNameErrMsg('ユーザー名を指定してください');
+      return;
     }
+    if (!text) {
+      setTextErrMsg('コメントが空白です。');
+      return;
+    }
+    post({
+      slug: slug,
+      userName: userName,
+      text: text,
+    });
   }, [userName, text]);
 
   const onTextChange = React.useCallback(
-    (e) => {
+    (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+      e.preventDefault();
+      setTextErrMsg('');
       setText(e.target.value);
     },
     [setText]
   );
   const onUserNameChange = React.useCallback(
-    (e) => {
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      e.preventDefault();
+      setUserNameErrMsg('');
       setUserName(e.target.value);
     },
     [setUserName]
@@ -59,6 +71,7 @@ const Post: React.FC<Props> = ({slug, post}) => {
         userName={userName}
         onChange={onUserNameChange}
         disabled={!user}
+        errorMessage={userNameErrMsg}
       />
       <TextArea
         text={text}
@@ -67,6 +80,7 @@ const Post: React.FC<Props> = ({slug, post}) => {
         placeholder={'コメントを投稿する'}
         size={'small'}
         disabled={!user}
+        errorMessage={textErrMsg}
       />
       {user ? <PostButtons submit={submit} /> : <Login slug={slug} />}
     </PostContainer>
