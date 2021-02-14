@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
 import styled from '@emotion/styled';
-
 import {rhythm} from '../../lib/typography';
 import {responsive} from '../../constants';
 

@@ -2,7 +2,6 @@ import * as React from 'react';
 import {Link} from 'gatsby';
 import styled from '@emotion/styled';
 import {rhythm} from '../../../lib/typography';
-
 import {UiContext} from '../../../contexts';
 
 const LinkList: React.FC = () => {

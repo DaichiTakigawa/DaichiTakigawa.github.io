@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import {rhythm} from '../../../lib/typography';
-
 import {H2} from './Me';
 
 const Portfolio: React.FC = () => (
