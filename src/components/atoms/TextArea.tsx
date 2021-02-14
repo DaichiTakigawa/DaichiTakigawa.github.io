@@ -10,6 +10,7 @@ interface Props {
   rows?: number;
   size?: Size;
   disabled?: boolean;
+  errorMessage?: string;
 }
 
 function sizeToClassName(size: Size): string {
@@ -32,18 +33,27 @@ const TextArea: React.FC<Props> = ({
   rows,
   size = 'normal',
   disabled,
+  errorMessage,
 }) => {
-  const className = `textarea ${sizeToClassName(size)}`;
+  let className = `textarea ${sizeToClassName(size)}`;
+  if (errorMessage) {
+    className = className + ' is-danger';
+  }
   return (
-    <div className={'control'}>
-      <textarea
-        value={text}
-        className={className}
-        placeholder={placeholder}
-        rows={rows}
-        disabled={disabled}
-        onChange={onChange}
-      />
+    <div className={'field'}>
+      <div className={'control'}>
+        <textarea
+          value={text}
+          className={className}
+          placeholder={placeholder}
+          rows={rows}
+          disabled={disabled}
+          onChange={onChange}
+        />
+        {errorMessage ? (
+          <p className={'help is-danger'}>{errorMessage}</p>
+        ) : null}
+      </div>
     </div>
   );
 };

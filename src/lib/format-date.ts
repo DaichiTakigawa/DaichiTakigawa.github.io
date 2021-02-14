@@ -8,7 +8,6 @@ function paddingInfixZero(n: number): string {
 
 export default function formatDate(dateStr: string) {
   const date = new Date(dateStr);
-  console.log(date);
   const year = date.getFullYear();
   const month = paddingInfixZero(date.getMonth() + 1);
   const dayOfMonth = paddingInfixZero(date.getDate());

@@ -20,17 +20,15 @@ const CommentRow: React.FC<Props> = ({comment, remove}) => {
   const {user} = React.useContext(UserContext.Context);
 
   let ellipsis = null;
-  if (!user) {
-    if (user.id == parseInt(comment.userId)) {
-      ellipsis = (
-        <Ellipsis
-          menuLabels={['コメントを削除']}
-          onSelectMenu={() => {
-            remove(comment.id);
-          }}
-        />
-      );
-    }
+  if (user && user.id == parseInt(comment.userId)) {
+    ellipsis = (
+      <Ellipsis
+        menuLabels={['コメントを削除']}
+        onSelectMenu={() => {
+          remove(comment.id);
+        }}
+      />
+    );
   }
 
   return (

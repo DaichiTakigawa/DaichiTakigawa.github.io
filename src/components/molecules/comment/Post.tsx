@@ -32,7 +32,6 @@ const Post: React.FC<Props> = ({slug, post}) => {
 
   const submit = React.useCallback(() => {
     if (userName && text) {
-      console.log('post');
       post({
         slug: slug,
         userName: userName,
