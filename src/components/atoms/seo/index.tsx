@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
-import Gop from './gop';
+import Gop from './Gop';
 
 type Props = {
   title: string;

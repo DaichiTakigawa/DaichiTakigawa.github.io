@@ -24,19 +24,23 @@ const UserName: React.FC<Props> = ({
   }
 
   return (
-    <Container className={'field'}>
+    <Container>
       <div>@</div>
-      <div className={'control'}>
-        <input
-          value={userName}
-          className={inputClassName}
-          type={'text'}
-          placeholder={'user name'}
-          disabled={disabled}
-          onChange={onChange}
-        />
+      <div className={'field'}>
+        <div className={'control'}>
+          <input
+            value={userName}
+            className={inputClassName}
+            type={'text'}
+            placeholder={'user name'}
+            disabled={disabled}
+            onChange={onChange}
+          />
+        </div>
+        {errorMessage ? (
+          <span className={'help is-danger'}>{errorMessage}</span>
+        ) : null}
       </div>
-      {errorMessage ? <p className={'help is-danger'}>{errorMessage}</p> : null}
     </Container>
   );
 };

@@ -51,7 +51,7 @@ const TextArea: React.FC<Props> = ({
           onChange={onChange}
         />
         {errorMessage ? (
-          <p className={'help is-danger'}>{errorMessage}</p>
+          <span className={'help is-danger'}>{errorMessage}</span>
         ) : null}
       </div>
     </div>

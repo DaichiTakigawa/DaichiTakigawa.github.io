@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import {TextArea} from '../../atoms';
 import Login from './Login';
 import UserName from './UserName';
-import PostButtons from './PostButtons';
+import PostButtons from './PostButton';
 import {UserContext} from '../../../contexts';
 import {Comment} from '../../../domain/models';
 import {rhythm} from '../../../lib/typography';
