@@ -16,6 +16,11 @@ const Portfolio: React.FC = () => (
             <td>since 2019.9</td>
           </tr>
           <tr>
+            <td>iOS</td>
+            <td>アルバイトで開発に従事</td>
+            <td>since 2021.2</td>
+          </tr>
+          <tr>
             <td>AWS</td>
             <td>アルバイトで開発に従事</td>
             <td>since 2019.12</td>

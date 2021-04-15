@@ -10,8 +10,8 @@ import Info from './Info';
 
 const Home: React.FC = () => (
   <>
-    <Image fileName="home-image.jpg" alt="実家の犬ども" />
     <Container>
+      <Image fileName="home-image.jpg" alt="実家の犬ども" />
       <H1>TAKIGAWA MEMO</H1>
       <Divider />
       <Me />
@@ -23,9 +23,10 @@ const Home: React.FC = () => (
 );
 
 const Container = styled.div({
+  paddingTop: rhythm(4),
   paddingBottom: rhythm(4),
-  margin: 'auto',
-  width: '80%',
+  paddingLeft: rhythm(1),
+  paddingRight: rhythm(1),
 });
 
 const H1 = styled.h1({

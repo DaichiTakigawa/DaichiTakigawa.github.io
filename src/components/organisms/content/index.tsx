@@ -18,30 +18,31 @@ const Content: React.FC = ({children}) => (
 );
 
 const FlexContainer = styled.div({
-  backgroundColor: '#ececec',
-  padding: 0,
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
+  backgroundColor: 'white',
   [`@media (min-width: ${responsive.tablet.minWidth}px)`]: {
     display: 'flex',
     flexDirection: 'row',
+    marginLeft: rhythm(0),
+    marginRight: rhythm(1),
+  },
+  [`@media (min-width: ${responsive.computer.minWidth}px)`]: {
+    width: '80%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 });
 
 const Container = styled.main({
-  marginTop: rhythm(4),
-  background: 'white',
-  boxShadow: 'rgba(0, 0, 0, 0.5) 0px 3px 5px',
+  paddingTop: rhythm(4),
+  paddingBottom: rhythm(2),
   [`@media (max-width: ${responsive.tablet.maxWidth}px) and (min-width: ${responsive.tablet.minWidth}px)`]: {
-    margin: `${rhythm(2)} ${rhythm(1)} ${rhythm(2)} ${rhythm(1)}`,
-    width: '100%',
+    paddingLeft: rhythm(1),
+    flexGrow: 1,
     minWidth: 0,
   },
   [`@media (min-width: ${responsive.computer.minWidth}px)`]: {
-    margin: `${rhythm(4)} 10%`,
-    width: '100%',
+    paddingLeft: rhythm(4),
+    flexGrow: 1,
     minWidth: 0,
   },
 });
@@ -53,9 +54,8 @@ const NavbarContainer = styled.nav({
 });
 
 const NavigationContainer = styled.nav({
-  padding: `${rhythm(2)} 0`,
+  paddingTop: rhythm(4),
   backgroundColor: 'white',
-  boxShadow: 'rgba(0, 0, 0, 0.5) 0px 3px 5px',
   [`@media (max-width: ${responsive.mobile.maxWidth}px)`]: {
     display: 'none',
   },
