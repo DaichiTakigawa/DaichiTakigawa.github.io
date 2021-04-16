@@ -23,10 +23,10 @@ const Home: React.FC = () => (
 );
 
 const Container = styled.div({
-  paddingTop: rhythm(4),
   paddingBottom: rhythm(4),
-  paddingLeft: rhythm(1),
-  paddingRight: rhythm(1),
+  paddingTop: rhythm(2),
+  margin: 'auto',
+  width: '80%',
 });
 
 const H1 = styled.h1({
