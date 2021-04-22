@@ -8,5 +8,8 @@
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017"]
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "./src/**/*",
+    "contents/posts/2021-04-22QuadraticBezierCurve/index.tsx"
+  ]
 }

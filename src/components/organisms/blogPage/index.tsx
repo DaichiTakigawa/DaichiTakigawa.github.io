@@ -21,7 +21,7 @@ type Props = {
   description: string;
   tags: string[];
   thumbnail: string;
-  html: string;
+  html?: string;
   toc: string;
 };
 
@@ -44,6 +44,7 @@ const BlogPage: React.FC<Props> = (props) => {
         <Toc html={props.toc} />
         <AdSense />
         <Html dangerouslySetInnerHTML={{__html: props.html}} />
+        <ReactContainer>{props.children}</ReactContainer>
         <ShareButtons url={url} title={shareTitle} />
         <AdSense />
         <Comment slug={props.slug} />
@@ -63,7 +64,6 @@ const Container = styled.div({
 });
 
 const Html = styled.div({
-  paddingBottom: rhythm(2),
   h2: {
     fontWeight: 'bold',
     fontSize: scale(1 / 2).fontSize,
@@ -99,6 +99,10 @@ const Html = styled.div({
       lineHeight: rhythm(3 / 2),
     },
   },
+});
+
+const ReactContainer = styled.div({
+  paddingBottom: rhythm(2),
 });
 
 export default BlogPage;

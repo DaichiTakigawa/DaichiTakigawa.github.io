@@ -9,6 +9,7 @@ exports.createPages = ({graphql, actions}) => {
           node {
             frontmatter {
               slug
+              content
             }
           }
         }
@@ -16,10 +17,21 @@ exports.createPages = ({graphql, actions}) => {
     }
   `).then((result) => {
     result.data.allMarkdownRemark.edges.forEach(({node}) => {
-      console.log('slug', node.frontmatter.slug);
+      console.log(
+        'slug',
+        node.frontmatter.slug,
+        'content',
+        node.frontmatter.content
+      );
+      let component;
+      if (node.frontmatter.content == 'react') {
+        component = path.resolve('./src/templates/post-react-template.tsx');
+      } else {
+        component = path.resolve('./src/templates/post-template.tsx');
+      }
       createPage({
         path: node.frontmatter.slug,
-        component: path.resolve('./src/templates/post-template.tsx'),
+        component: component,
         context: {
           slug: node.frontmatter.slug,
         },
