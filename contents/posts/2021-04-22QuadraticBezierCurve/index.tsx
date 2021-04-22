@@ -201,11 +201,10 @@ function init() {
 }
 
 const Post: React.FC = () => {
-  const [state, setState] = React.useState({
-    numsteps: 20,
-    showControlPoints: true,
-    showSamplePoints: true,
-  });
+  const [numsteps, setNumsteps] = React.useState(20);
+  const [showControlPoints, setShowControlPoints] = React.useState(true);
+  const [showSamplePoints, setShowSamplePoints] = React.useState(true);
+
   const canvasContainerRef: React.LegacyRef<HTMLDivElement> = React.useRef(
     null
   );
@@ -221,24 +220,24 @@ const Post: React.FC = () => {
 
   const numStepsCallback = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setState({...state, numsteps: Number(e.target.value)});
+      setNumsteps(Number(e.target.value));
       draw();
     },
-    [setState]
+    [setNumsteps]
   );
   const showControlPointsCallBack = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setState({...state, showControlPoints: e.target.checked});
+      setShowControlPoints(e.target.checked);
       draw();
     },
-    [setState]
+    [setShowControlPoints]
   );
   const showSamplePointsCallback = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setState({...state, showSamplePoints: e.target.checked});
+      setShowSamplePoints(e.target.checked);
       draw();
     },
-    [setState]
+    [setShowSamplePoints]
   );
 
   return (
@@ -258,7 +257,7 @@ const Post: React.FC = () => {
                   id="input_numsteps"
                   step="1"
                   min="2"
-                  value={state.numsteps}
+                  value={numsteps}
                   onChange={numStepsCallback}
                 />
               </td>
@@ -269,7 +268,7 @@ const Post: React.FC = () => {
                 <input
                   type="checkbox"
                   id="input_show_controlpoints"
-                  checked={state.showControlPoints}
+                  checked={showControlPoints}
                   onChange={showControlPointsCallBack}
                 />
               </td>
@@ -280,7 +279,7 @@ const Post: React.FC = () => {
                 <input
                   type="checkbox"
                   id="input_show_samplepoints"
-                  checked={state.showSamplePoints}
+                  checked={showSamplePoints}
                   onChange={showSamplePointsCallback}
                 />
               </td>

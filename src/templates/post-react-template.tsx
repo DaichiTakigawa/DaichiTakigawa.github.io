@@ -13,11 +13,11 @@ type Props = {
 };
 
 type Posts = {
-  [key: string]: React.FC;
+  [key: string]: JSX.Element;
 };
 
 const posts: Posts = {
-  ['/quadratic-bezeir-curve/']: QuadraticBezierCurvePost,
+  ['/quadratic-bezeir-curve/']: <QuadraticBezierCurvePost />,
 };
 
 const Post: React.FC<Props> = ({data}) => {
@@ -30,8 +30,6 @@ const Post: React.FC<Props> = ({data}) => {
   React.useEffect(() => {
     setSlug(fm.slug);
   }, []);
-
-  console.log(posts[fm.slug]);
 
   return (
     <>
@@ -52,7 +50,7 @@ const Post: React.FC<Props> = ({data}) => {
           html={data.markdown.html}
           tags={fm.tags}
           toc={data.markdown.toc}>
-          {posts[fm.slug](null)}
+          {posts[fm.slug]}
         </BlogPage>
       </Content>
     </>
