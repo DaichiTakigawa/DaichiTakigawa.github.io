@@ -341,6 +341,18 @@ function init() {
   document.onmouseup = function (evt) {
     if (camera.is_moving()) camera.finish_moving();
   };
+  canvas.ontouchstart = function (evt) {
+    camera.start_moving(canvas.get_touchpos(evt), 'rotate');
+  };
+  canvas.ontouchmove = function (evt) {
+    if (camera.is_moving()) {
+      camera.move(canvas.get_touchpos(evt));
+      draw();
+    }
+  };
+  document.ontouchend = function () {
+    if (camera.is_moving()) camera.finish_moving();
+  };
   function read_mesh(filename: string, content: string) {
     const mesh_temp = meshio.read(filename, content);
     let has_nontriangle = false;
@@ -402,9 +414,7 @@ function init() {
     };
     xhr.send();
   }
-  read_default_mesh(
-    'https://www.takigawa-memo.com/introduction-2-computer-graphics/m2/cube.obj'
-  );
+  read_default_mesh('./cube.obj');
   // texture
   function read_texture(dataurl: string) {
     const img = document.getElementById('img_material') as HTMLImageElement;
@@ -442,9 +452,7 @@ function init() {
     };
     xhr.send();
   }
-  read_default_texture(
-    'https://www.takigawa-memo.com/introduction-2-computer-graphics/m2/blue-to-purple.jpg'
-  );
+  read_default_texture('./blue-to-purple.jpg');
 }
 
 const Post: React.FC = () => {
@@ -457,10 +465,6 @@ const Post: React.FC = () => {
 
   const subdivideButtonCallBack = React.useCallback(() => {
     subdivide_catmull_clark();
-    draw();
-  }, []);
-
-  const drawCallBack = React.useCallback(() => {
     draw();
   }, []);
 

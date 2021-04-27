@@ -3,6 +3,7 @@ import {vec2} from 'gl-matrix';
 declare global {
   interface HTMLCanvasElement {
     get_mousepos(event: MouseEvent, flip_y?: boolean): vec2;
+    get_touchpos(event: TouchEvent, flip_y?: boolean): vec2;
     aspect_ratio(): number;
   }
 }
@@ -30,6 +31,34 @@ if (typeof window !== `undefined`) {
     }
     const x = event.pageX - totalOffsetX;
     let y = event.pageY - totalOffsetY;
+    if (flip_y === undefined || flip_y)
+      // flip y by default
+      y = this.height - y;
+    return [x, y];
+  };
+  HTMLCanvasElement.prototype.get_touchpos = function (event, flip_y) {
+    let totalOffsetX = 0;
+    let totalOffsetY = 0;
+    for (
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
+      let currentElement = this;
+      currentElement;
+      currentElement = currentElement.offsetParent
+    ) {
+      totalOffsetX += currentElement.offsetLeft;
+      totalOffsetY += currentElement.offsetTop;
+    }
+    for (
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
+      let currentElement = this;
+      currentElement && currentElement != document.body;
+      currentElement = currentElement.parentElement
+    ) {
+      totalOffsetX -= currentElement.scrollLeft;
+      totalOffsetY -= currentElement.scrollTop;
+    }
+    const x = event.changedTouches[0].pageX - totalOffsetX;
+    let y = event.changedTouches[0].pageY - totalOffsetY;
     if (flip_y === undefined || flip_y)
       // flip y by default
       y = this.height - y;
