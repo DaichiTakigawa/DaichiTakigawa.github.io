@@ -7,6 +7,7 @@ import {UiContext} from '../contexts';
 import {PostReactTemplateQuery} from '../../types/graphql-types';
 
 import QuadraticBezierCurvePost from '../../contents/posts/2021-04-22QuadraticBezierCurve';
+import SubdivisionCatmullClark from '../../contents/posts/2021-04-27SubdivisionCatmullClark';
 
 type Props = {
   data: PostReactTemplateQuery;
@@ -18,6 +19,7 @@ type Posts = {
 
 const posts: Posts = {
   ['/quadratic-bezeir-curve/']: <QuadraticBezierCurvePost />,
+  ['/subdivision-catmull-clark/']: <SubdivisionCatmullClark />,
 };
 
 const Post: React.FC<Props> = ({data}) => {

@@ -10,6 +10,7 @@
   },
   "include": [
     "./src/**/*",
-    "contents/posts/2021-04-22QuadraticBezierCurve/index.tsx"
+    "contents/posts/2021-04-22QuadraticBezierCurve/index.tsx",
+    "contents/posts/2021-04-27SubdivisionCatmullClark/index.tsx"
   ]
 }

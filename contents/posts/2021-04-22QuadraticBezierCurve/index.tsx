@@ -2,13 +2,14 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 import {vec2, vec3, vec4, mat4} from 'gl-matrix';
 import {rhythm, scale} from '../../../src/lib/typography';
+import {Canvas} from '../../../src/components/atoms';
 import {
   glu,
   get_camera,
   get_drawutil,
   get_legacygl,
   Camera,
-  Drawutil,
+  DrawUtil,
   LegacyGL,
 } from '../../../src/lib/legacygl';
 
@@ -21,7 +22,7 @@ declare module '../../../src/lib/legacygl' {
 let gl: WebGLRenderingContext;
 let canvas: HTMLCanvasElement;
 let legacygl: LegacyGL;
-let drawutil: Drawutil;
+let drawutil: DrawUtil;
 let camera: Camera;
 let p0: vec2, p1: vec2, p2: vec2;
 let selected: vec2 = null;
@@ -205,18 +206,10 @@ const Post: React.FC = () => {
   const [showControlPoints, setShowControlPoints] = React.useState(true);
   const [showSamplePoints, setShowSamplePoints] = React.useState(true);
 
-  const canvasContainerRef: React.LegacyRef<HTMLDivElement> = React.useRef(
-    null
-  );
-  const canvasRef: React.LegacyRef<HTMLCanvasElement> = React.useRef(null);
   React.useEffect(() => {
-    const width = canvasContainerRef.current.clientWidth;
-    const height = canvasContainerRef.current.clientHeight;
-    canvasRef.current.width = width;
-    canvasRef.current.height = height;
     init();
     draw();
-  });
+  }, []);
 
   const numStepsCallback = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -242,9 +235,7 @@ const Post: React.FC = () => {
 
   return (
     <div>
-      <CanvasContainer ref={canvasContainerRef}>
-        <Canvas ref={canvasRef} id="canvas" />
-      </CanvasContainer>
+      <Canvas />
       <TableContainer className="table-container">
         <Table className="table is-bordered">
           <tbody>
@@ -308,21 +299,6 @@ const Post: React.FC = () => {
   );
 };
 
-const CanvasContainer = styled.div({
-  width: '80%',
-  position: 'relative',
-  paddingTop: '80%' /* initial ratio of 1:1 */,
-});
-
-const Canvas = styled.canvas({
-  border: '1px solid #000000',
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  bottom: 0,
-  right: 0,
-});
-
 const TableContainer = styled.div({
   marginTop: rhythm(2),
   marginBottom: `${rhythm(3)} !important`,
@@ -336,7 +312,7 @@ const Table = styled.table({
 });
 
 const H3 = styled.h3({
-  marginTop: rhythm(2),
+  marginTop: rhythm(1),
   fontSize: scale(1 / 4).fontSize,
   lineHeight: scale(1 / 4).lineHeight,
 });

@@ -11,3 +11,4 @@ export {default as Button} from './Button';
 export {default as TextArea} from './TextArea';
 export {default as Ellipsis} from './Ellipsis';
 export {default as GoogleAuth} from './GoogleAuth';
+export {default as Canvas} from './Canvas';

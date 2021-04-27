@@ -6,7 +6,6 @@ declare global {
     aspect_ratio(): number;
   }
 }
-
 if (typeof window !== `undefined`) {
   HTMLCanvasElement.prototype.get_mousepos = function (event, flip_y) {
     let totalOffsetX = 0;
@@ -46,7 +45,7 @@ export function get_filename_extension(filename: string) {
 }
 export function verify_filename_extension(
   filename: string,
-  supported_extensions: any
+  supported_extensions: string[]
 ) {
   const given_extension = get_filename_extension(filename);
   if (
