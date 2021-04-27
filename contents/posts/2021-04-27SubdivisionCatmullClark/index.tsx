@@ -342,9 +342,11 @@ function init() {
     if (camera.is_moving()) camera.finish_moving();
   };
   canvas.ontouchstart = function (evt) {
+    evt.preventDefault();
     camera.start_moving(canvas.get_touchpos(evt), 'rotate');
   };
   canvas.ontouchmove = function (evt) {
+    evt.preventDefault();
     if (camera.is_moving()) {
       camera.move(canvas.get_touchpos(evt));
       draw();
