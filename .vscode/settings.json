@@ -3,6 +3,7 @@
     "adsbygoogle",
     "gapi",
     "legacygl",
+    "pytorch",
     "takigawa",
     "usecase"
   ]
