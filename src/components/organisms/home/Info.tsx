@@ -14,8 +14,7 @@ const Info: React.FC = () => {
               rel="noopener noreferrer">
               https://atcoder.jp/users/Bobyama{' '}
               <i className="fas fa-external-link-alt"></i>
-            </a>{' '}
-            (Rating : 1762)
+            </a>
           </li>
           <li>
             TopCoder :{' '}
@@ -25,8 +24,7 @@ const Info: React.FC = () => {
               rel="noopener noreferrer">
               https://www.topcoder.com/members/Bobyama{' '}
               <i className="fas fa-external-link-alt"></i>
-            </a>{' '}
-            (Raging : 1335)
+            </a>
           </li>
         </ul>
       </div>
