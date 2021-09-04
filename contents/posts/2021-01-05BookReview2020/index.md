@@ -53,7 +53,7 @@ DIライブラリとしてKoinを使っており、かなりKoinに依存した�
 
 <a href="https://www.amazon.co.jp/Go%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0-%E6%B8%8B%E5%B7%9D-%E3%82%88%E3%81%97%E3%81%8D/dp/4908686033/ref=as_li_ss_il?&linkCode=li3&tag=takigawamemo-22&linkId=1ef65712d1ef867610c1d55481395bec&language=ja_JP" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4908686033&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=takigawamemo-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=takigawamemo-22&language=ja_JP&l=li3&o=9&a=4908686033" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-とにかく文章が分かりやすかった記憶があります笑。  
+なんか村上春樹みたいな文章を書くなぁと思った記憶があります笑。  
 UnixドメインソケットやWindowsの名前付きパイプなどは、この書籍で初めて知ったのですが、その後何度か触る機会があったので良かったです。
 
 ## Java
