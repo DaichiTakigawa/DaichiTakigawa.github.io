@@ -148,7 +148,7 @@ suspend fun doSomething(i: Int) {
         println("#$i enter critical section.")
 
         // do something
-        delay(1000) // <- The 'delay' suspension point is inside a critical section
+        delay(1000) 
 
         println("#$i exit critical section.")
     }

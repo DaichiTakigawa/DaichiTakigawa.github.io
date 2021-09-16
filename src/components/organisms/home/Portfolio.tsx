@@ -44,6 +44,13 @@ const Portfolio: React.FC = () => (
             <td>スコア 910</td>
             <td>2016.4</td>
           </tr>
+          <tr>
+            <td>その他</td>
+            <td>
+              アルバイトでアニーリングや遺伝的アルゴリズム等を用いたアルゴリズムの調査や評価に従事
+            </td>
+            <td>since 2019.2 to 2019.9</td>
+          </tr>
         </tbody>
       </Table>
     </TableContainer>
