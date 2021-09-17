@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"2l/u":function(t,e,n){"use strict";n.r(e);var u=n("q1tI"),c=n("WeT4"),l=n("sqT6"),o=n("lGJ9"),s=n("qKvR");e.default=function(){var t=u.useContext(l.a.Context).setSlug;return u.useEffect((function(){t(l.a.TopPages.ABOUT)}),[]),Object(s.b)(u.Fragment,null,Object(s.b)(c.h,{title:"このサイトについて",description:"このサイトについて"}),Object(s.b)(o.d,null,Object(s.b)(o.a,null)))}}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-ce3b6dd85fcf68bb0d22.js.map
