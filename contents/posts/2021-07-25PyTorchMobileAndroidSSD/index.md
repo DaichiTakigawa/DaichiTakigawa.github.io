@@ -7,6 +7,7 @@ description: "PyTorchで学習したモデルをMobileデバイスにシーム�
 tags:
     - "Android"
     - "PyTorch"
+content: "md"
 ---
 
 ## これは何
