@@ -37,7 +37,7 @@ const Portfolio: React.FC = () => (
               <br />
               第二回アスプローバプログラミングコンテスト5位入賞
             </td>
-            <td>since 2018.06</td>
+            <td>since 2018</td>
           </tr>
           <tr>
             <td>TOEIC</td>
