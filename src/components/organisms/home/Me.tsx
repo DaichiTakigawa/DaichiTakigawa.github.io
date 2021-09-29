@@ -14,7 +14,7 @@ const Me: React.FC = () => (
       </figure>
       <Introduce className="media-content">
         <p>
-          未熟者の成れの果て。
+          見ての通り、未熟者の成れの果て。
           <br />
           主に、Android(kotlin)やiOS(swift)の開発をしています。
         </p>
