@@ -28,6 +28,21 @@ const Info: React.FC = () => {
           </li>
         </ul>
       </div>
+      <p>機械学習の勉強も始めました。</p>
+      <div>
+        <ul>
+          <li>
+            SIGNATE :{' '}
+            <a
+              href="https://signate.jp/users/46314"
+              target="_blank"
+              rel="noopener noreferrer">
+              https://signate.jp/users/46314{' '}
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </>
   );
 };

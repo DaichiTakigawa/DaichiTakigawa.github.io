@@ -6,5 +6,8 @@
     "pytorch",
     "takigawa",
     "usecase"
-  ]
+  ],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
