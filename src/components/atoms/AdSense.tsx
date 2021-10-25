@@ -35,7 +35,7 @@ const AdSense: AdSense = ({format = 'auto'}) => {
     <div>
       <Ins
         className="adsbygoogle"
-        data-ad-client="ca-pub-6195920683902846"
+        data-ad-client="ca-pub-8690013250708757"
         data-ad-slot="4511974705"
         data-ad-format={format}
       />
@@ -70,7 +70,7 @@ AdSense.Responsive = ({format = 'auto'}) => {
     <Container>
       <Ins
         className="adsbygoogle"
-        data-ad-client="ca-pub-6195920683902846"
+        data-ad-client="ca-pub-8690013250708757"
         data-ad-slot="4511974705"
         data-ad-format={format}
       />

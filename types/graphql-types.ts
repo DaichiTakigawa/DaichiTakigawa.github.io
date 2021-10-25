@@ -2910,12 +2910,13 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___sourceComments'
   | 'pluginCreator___pluginOptions___sourceMapContents'
   | 'pluginCreator___pluginOptions___sourceMapEmbed'
-  | 'pluginCreator___pluginOptions___publisherId'
-  | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___pluginOptions___sourceMap'
   | 'pluginCreator___pluginOptions___autoLabel'
   | 'pluginCreator___pluginOptions___labelFormat'
   | 'pluginCreator___pluginOptions___cssPropOptimization'
+  | 'pluginCreator___pluginOptions___googleAdClientId'
+  | 'pluginCreator___pluginOptions___head'
+  | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
   | 'pluginCreator___ssrAPIs'
@@ -3190,12 +3191,13 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___sourceComments'
   | 'pluginOptions___sourceMapContents'
   | 'pluginOptions___sourceMapEmbed'
-  | 'pluginOptions___publisherId'
-  | 'pluginOptions___pathCheck'
   | 'pluginOptions___sourceMap'
   | 'pluginOptions___autoLabel'
   | 'pluginOptions___labelFormat'
   | 'pluginOptions___cssPropOptimization'
+  | 'pluginOptions___googleAdClientId'
+  | 'pluginOptions___head'
+  | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
   | 'ssrAPIs'
@@ -3372,12 +3374,13 @@ export type SitePluginPluginOptions = {
   sourceComments?: Maybe<Scalars['Boolean']>;
   sourceMapContents?: Maybe<Scalars['Boolean']>;
   sourceMapEmbed?: Maybe<Scalars['Boolean']>;
-  publisherId?: Maybe<Scalars['String']>;
-  pathCheck?: Maybe<Scalars['Boolean']>;
   sourceMap?: Maybe<Scalars['Boolean']>;
   autoLabel?: Maybe<Scalars['Boolean']>;
   labelFormat?: Maybe<Scalars['String']>;
   cssPropOptimization?: Maybe<Scalars['Boolean']>;
+  googleAdClientId?: Maybe<Scalars['String']>;
+  head?: Maybe<Scalars['Boolean']>;
+  pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
 export type SitePluginPluginOptionsEnv = {
@@ -3472,12 +3475,13 @@ export type SitePluginPluginOptionsFilterInput = {
   sourceComments?: Maybe<BooleanQueryOperatorInput>;
   sourceMapContents?: Maybe<BooleanQueryOperatorInput>;
   sourceMapEmbed?: Maybe<BooleanQueryOperatorInput>;
-  publisherId?: Maybe<StringQueryOperatorInput>;
-  pathCheck?: Maybe<BooleanQueryOperatorInput>;
   sourceMap?: Maybe<BooleanQueryOperatorInput>;
   autoLabel?: Maybe<BooleanQueryOperatorInput>;
   labelFormat?: Maybe<StringQueryOperatorInput>;
   cssPropOptimization?: Maybe<BooleanQueryOperatorInput>;
+  googleAdClientId?: Maybe<StringQueryOperatorInput>;
+  head?: Maybe<BooleanQueryOperatorInput>;
+  pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type SitePluginPluginOptionsPlugins = {

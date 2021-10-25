@@ -117,9 +117,10 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
     {
-      resolve: `gatsby-plugin-google-adsense`,
+      resolve: `@isamrish/gatsby-plugin-google-adsense`,
       options: {
-        publisherId: `ca-pub-8690013250708757`,
+        googleAdClientId: `ca-pub-8690013250708757`,
+        head: true,
       },
     },
   ],
