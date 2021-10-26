@@ -6,7 +6,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "@isamrish/gatsby-plugin-google-adsense": "^1.2.0",
     "axios": "^0.21.1",
     "bulma": "^0.8.0",
     "bulma-extensions": "^6.2.7",

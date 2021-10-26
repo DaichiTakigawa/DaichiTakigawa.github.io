@@ -116,12 +116,5 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
-    {
-      resolve: `@isamrish/gatsby-plugin-google-adsense`,
-      options: {
-        googleAdClientId: `ca-pub-8690013250708757`,
-        head: true,
-      },
-    },
   ],
 };
