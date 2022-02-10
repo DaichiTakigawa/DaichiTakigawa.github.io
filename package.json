@@ -39,7 +39,7 @@
     "gl-matrix": "^3.3.0",
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.19.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
