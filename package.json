@@ -7,7 +7,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "axios": "^0.21.1",
-    "bulma": "^0.8.0",
+    "bulma": "^0.9.3",
     "bulma-extensions": "^6.2.7",
     "css-loader": "^3.4.2",
     "gatsby": "^2.19.23",
@@ -39,7 +39,6 @@
     "gl-matrix": "^3.3.0",
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
-    "node-sass": "^7.0.0",
     "prismjs": "^1.19.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -82,7 +81,8 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "gatsby-remark-code-titles": "^1.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "sass": "^1.49.7"
   },
   "repository": {
     "type": "git",
