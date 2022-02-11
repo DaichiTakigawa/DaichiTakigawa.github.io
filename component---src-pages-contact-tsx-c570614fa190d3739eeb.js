@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{"0Aie":function(t,e,n){"use strict";n.r(e);var c=n("q1tI"),u=n("WeT4"),o=n("sqT6"),s=n("lGJ9"),a=n("qKvR");e.default=function(){var t=c.useContext(o.a.Context).setSlug;return c.useEffect((function(){t(o.a.TopPages.CONTACT)}),[]),Object(a.b)(c.Fragment,null,Object(a.b)(u.h,{title:"コンタクト",description:"Contact"}),Object(a.b)(s.d,null,Object(a.b)(s.c,null)))}}}]);
-//# sourceMappingURL=component---src-pages-contact-tsx-c570614fa190d3739eeb.js.map
