@@ -5,7 +5,6 @@ import {Divider, Copyright, Image} from '../../atoms';
 import {rhythm, scale} from '../../../lib/typography';
 import {responsive} from '../../../constants';
 import Me from './Me';
-import Portfolio from './Portfolio';
 import Info from './Info';
 
 const Home: React.FC = () => (
@@ -15,7 +14,6 @@ const Home: React.FC = () => (
       <H1>TAKIGAWA MEMO</H1>
       <Divider />
       <Me />
-      <Portfolio />
       <Info />
     </Container>
     <Copyright />
