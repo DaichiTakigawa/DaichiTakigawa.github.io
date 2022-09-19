@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktakigawa_memo=self.webpackChunktakigawa_memo||[]).push([[650],{6865:function(t,e,n){n.r(e);var u=n(7294),a=n(9448),l=n(236),o=n(4703),s=n(3431);e.default=function(){var t=u.useContext(l.K.Context).setSlug;return u.useEffect((function(){t(l.K.TopPages.CONTACT)}),[]),(0,s.tZ)(u.Fragment,null,(0,s.tZ)(a.pQ,{title:"コンタクト",description:"Contact"}),(0,s.tZ)(o.VY,null,(0,s.tZ)(o.r8,null)))}}}]);
+//# sourceMappingURL=component---src-pages-contact-tsx-9879bb52e5898b444019.js.map

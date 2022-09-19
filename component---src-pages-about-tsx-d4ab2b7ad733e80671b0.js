@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunktakigawa_memo=self.webpackChunktakigawa_memo||[]).push([[49],{2766:function(t,e,n){n.r(e);var u=n(7294),a=n(9448),l=n(236),s=n(4703),i=n(3431);e.default=function(){var t=u.useContext(l.K.Context).setSlug;return u.useEffect((function(){t(l.K.TopPages.ABOUT)}),[]),(0,i.tZ)(u.Fragment,null,(0,i.tZ)(a.pQ,{title:"このサイトについて",description:"このサイトについて"}),(0,i.tZ)(s.VY,null,(0,i.tZ)(s.CL,null)))}}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-d4ab2b7ad733e80671b0.js.map
